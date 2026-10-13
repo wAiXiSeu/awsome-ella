@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="GJtLWi6Uzs5svZ22xqeMR0">
+<head data-page-node-id="xweRwDw2dtgZSavn5VzkfB">
+<meta charset="UTF-8" data-page-node-id="BHEW6uXqsl0eH4HE0tPfqb">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" data-page-node-id="TwJZ6HLAvKGFGxS2KHiLvd">
+<title>Ella和她的4班</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html{font-size:16px}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#F0F4F8;color:#2D3748;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:env(safe-area-inset-bottom)}button{font-family:inherit;cursor:pointer;border:none;background:none;font-size:inherit}input,select,textarea{font-family:inherit;font-size:16px}a{color:inherit;text-decoration:none}::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-thumb{background:#cbd5e0;border-radius:3px}
+:root{--primary:#5B8DEE;--primary-dark:#3A6FD8;--primary-light:#E8F1FF;--green:#52C41A;--green-light:#F0FFF4;--red:#FF5C5C;--red-light:#FFF0F0;--orange:#FAAD14;--orange-light:#FFF7E6;--blue-m-bg:#E8F1FF;--pink-f-bg:#FFF0F5;--bg:#F0F4F8;--card:#fff;--border:#E2E8F0;--text:#2D3748;--text2:#718096;--text3:#A0AEC0;--radius:12px;--shadow:0 2px 12px rgba(0,0,0,.06);--shadow-lg:0 8px 30px rgba(0,0,0,.12)}
+#app{min-height:100vh}#topbar{position:fixed;top:0;left:0;right:0;height:56px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.06);display:flex;align-items:center;gap:10px;padding:0 16px;z-index:200}#menuToggle{width:36px;height:36px;display:none;align-items:center;justify-content:center;border-radius:8px;flex-shrink:0}#menuToggle:hover{background:var(--primary-light)}.app-title{font-size:17px;font-weight:700;color:var(--primary-dark);white-space:nowrap}.search-wrap{flex:1;max-width:300px;position:relative;margin-left:8px}.search-wrap input{width:100%;height:36px;border:1.5px solid var(--border);border-radius:18px;padding:0 16px 0 36px;background:var(--bg);outline:none}.search-wrap input:focus{border-color:var(--primary)}.search-icon{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--text3)}.search-results{position:absolute;top:40px;left:0;right:0;background:#fff;border:1px solid var(--border);border-radius:8px;box-shadow:var(--shadow-lg);max-height:300px;overflow-y:auto;display:none;z-index:300}.search-results.show{display:block}.search-item{padding:8px 14px;cursor:pointer;border-bottom:1px solid #f0f0f0}.search-item:hover{background:var(--primary-light)}.header-actions{margin-left:auto;display:flex;gap:6px;flex-shrink:0}.hdr-btn{width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:8px;color:var(--text2)}.hdr-btn:hover{background:var(--primary-light);color:var(--primary)}.hdr-btn svg{width:18px;height:18px}
+#sidebar{position:fixed;left:0;top:56px;bottom:0;width:200px;background:#fff;border-right:1px solid var(--border);z-index:100;overflow-y:auto;transition:transform .3s;padding:8px 0}.nav-item{display:flex;align-items:center;gap:10px;padding:12px 20px;font-size:14px;color:var(--text);cursor:pointer;transition:.2s;border-left:3px solid transparent}.nav-item:hover{background:var(--primary-light);color:var(--primary-dark)}.nav-item.active{background:var(--primary-light);color:var(--primary-dark);border-left-color:var(--primary);font-weight:600}.nav-item svg{width:20px;height:20px;flex-shrink:0}#sidebarOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:99}
+#content{margin-left:200px;margin-top:56px;padding:16px;min-height:calc(100vh - 56px)}.today-section{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:16px;overflow:hidden}.today-header{display:flex;align-items:center;gap:8px;padding:14px 20px;cursor:pointer;user-select:none}.today-header h2{font-size:16px;font-weight:700}.today-header .toggle-icon{margin-left:auto;transition:.3s;color:var(--text3)}.today-section.collapsed .toggle-icon{transform:rotate(-90deg)}.today-section.collapsed .today-body{display:none}.today-body{padding:0 20px 16px}.today-empty{color:var(--text3);font-size:14px;padding:12px 0}.today-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;margin-bottom:6px;font-size:14px}.today-item.overdue{background:var(--red-light);border-left:3px solid var(--red)}.today-item.today-task{background:var(--primary-light);border-left:3px solid var(--primary)}.today-item.upcoming{background:var(--orange-light);border-left:3px solid var(--orange)}.today-item .ti-label{flex:1}.ti-action{padding:4px 12px;border-radius:6px;background:#fff;font-size:12px;color:var(--primary);border:1px solid var(--primary);white-space:nowrap}
+.module{display:none}.module.active{display:block}.module-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}.module-header h2{font-size:18px;font-weight:700}.module-header .spacer{flex:1}
+.sub-tabs{display:flex;gap:4px;background:#fff;border-radius:10px;padding:4px;margin-bottom:12px}.sub-tab{padding:8px 16px;border-radius:8px;font-size:14px;color:var(--text2);cursor:pointer;transition:.2s}.sub-tab.active{background:var(--primary);color:#fff;font-weight:600}.sub-tab:not(.active):hover{background:var(--primary-light)}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;transition:.2s;white-space:nowrap}.btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:var(--primary-dark)}.btn-outline{border:1.5px solid var(--primary);color:var(--primary);background:#fff}.btn-outline:hover{background:var(--primary-light)}.btn-danger{background:var(--red);color:#fff}.btn-danger:hover{background:#e54848}.btn-ghost{color:var(--text2)}.btn-ghost:hover{background:var(--bg)}.btn-sm{padding:5px 10px;font-size:13px;border-radius:6px}.btn svg{width:16px;height:16px}
+.card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin-bottom:12px}.card-title{font-size:14px;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.form-group{margin-bottom:12px}.form-group label{display:block;font-size:13px;color:var(--text2);margin-bottom:4px;font-weight:500}.form-group input,.form-group select,.form-group textarea{width:100%;border:1.5px solid var(--border);border-radius:8px;padding:8px 12px;outline:none}.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--primary)}.form-group textarea{resize:vertical;min-height:60px}.form-row{display:flex;gap:10px}.form-row .form-group{flex:1}
+.badge{display:inline-flex;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:500}.badge-high{background:var(--red-light);color:var(--red)}.badge-medium{background:var(--orange-light);color:var(--orange)}.badge-low{background:var(--green-light);color:var(--green)}.badge-blue{background:var(--primary-light);color:var(--primary-dark)}.tag-chip{display:inline-flex;padding:2px 8px;border-radius:4px;font-size:12px;background:#f0f0f0;color:var(--text2);gap:4px;margin:1px}
+.todo-filters{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}.todo-filter{padding:5px 12px;border-radius:16px;font-size:13px;background:#fff;border:1px solid var(--border);cursor:pointer;color:var(--text2)}.todo-filter.active{background:var(--primary);color:#fff;border-color:var(--primary)}.todo-list{display:flex;flex-direction:column;gap:8px}.todo-item{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;background:#fff;border-radius:10px;box-shadow:var(--shadow);border-left:4px solid var(--border)}.todo-item.completed{opacity:.6}.todo-item.completed .todo-title{text-decoration:line-through;color:var(--text3)}.todo-item.overdue,.todo-item.high{border-left-color:var(--red)}.todo-item.medium{border-left-color:var(--orange)}.todo-item.low{border-left-color:var(--green)}.todo-check{width:22px;height:22px;border:2px solid var(--border);border-radius:6px;flex-shrink:0;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s;margin-top:1px}.todo-check.checked{background:var(--green);border-color:var(--green)}.todo-check svg{width:14px;height:14px;color:#fff;opacity:0}.todo-check.checked svg{opacity:1}.todo-content{flex:1;min-width:0}.todo-title{font-size:14px;font-weight:500}.todo-desc{font-size:13px;color:var(--text2);margin-top:2px;word-break:break-word}.todo-meta{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;align-items:center}.todo-deadline{font-size:12px;color:var(--text2)}.todo-deadline.overdue{color:var(--red);font-weight:600}.todo-actions{display:flex;gap:4px;flex-shrink:0}.todo-actions button{width:30px;height:30px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--text3)}.todo-actions button:hover{background:var(--bg);color:var(--text)}.todo-actions svg{width:16px;height:16px}.todo-batch-bar{display:flex;align-items:center;gap:10px;margin-bottom:10px;padding:8px 12px;background:var(--primary-light);border-radius:8px;font-size:13px}
+.schedule-table{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}.schedule-table th,.schedule-table td{border:1px solid var(--border);padding:0;text-align:center;height:48px;font-size:13px}.schedule-table th{background:#f7fafc;font-weight:600;color:var(--text2);font-size:12px}.schedule-table td{cursor:pointer;transition:.15s}.schedule-table td:hover{background:var(--primary-light)}.schedule-table td .cell-subject{font-weight:500;padding:4px 2px 1px}.schedule-table td .cell-class{font-size:11px;color:var(--text3)}.schedule-table td.my-subject{background:var(--primary-light)}.schedule-table td.my-subject .cell-subject{color:var(--primary-dark)}.schedule-table th:first-child{width:60px}.week-toggle-btn{padding:5px 14px;border-radius:8px;font-size:13px;border:1.5px solid var(--border);background:#fff;cursor:pointer;color:var(--text2)}.week-toggle-btn.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+.seating-wrap{overflow-x:auto;padding-bottom:8px}.podium{text-align:center;padding:10px;background:linear-gradient(135deg,var(--primary-light),#d6e8ff);border-radius:8px;margin-bottom:12px;font-size:14px;font-weight:600;color:var(--primary-dark)}.seat-grid{display:grid;gap:8px;min-width:fit-content}.seat{width:100%;min-height:70px;border:2px dashed var(--border);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:.2s;padding:4px;position:relative}.seat.empty:hover{border-color:var(--primary);background:var(--primary-light)}.seat.male{background:var(--blue-m-bg);border:2px solid #5B8DEE;border-style:solid}.seat.female{background:var(--pink-f-bg);border:2px solid #FF85A2;border-style:solid}.seat.selected{box-shadow:0 0 0 3px var(--primary);transform:scale(1.05)}.seat-name{font-size:13px;font-weight:600}.seat-meta{font-size:11px;color:var(--text3);margin-top:2px}.seat-num{position:absolute;top:2px;left:4px;font-size:10px;color:var(--text3)}.seating-dims{display:flex;gap:6px;align-items:center;font-size:13px}.seating-dims input{width:50px;height:32px;border:1.5px solid var(--border);border-radius:6px;text-align:center}.seat-legend{display:flex;gap:12px;font-size:12px;color:var(--text2);margin-bottom:10px}.legend-dot{width:14px;height:14px;border-radius:3px;display:inline-block;margin-right:4px}
+.duty-group{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin-bottom:12px}.duty-group-header{display:flex;align-items:center;gap:8px;margin-bottom:10px}.duty-group-title{font-weight:600;font-size:15px}.duty-tasks{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}.duty-task{display:flex;align-items:center;gap:8px;padding:8px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px}.duty-task.done{background:var(--green-light);border-color:var(--green)}.dt-check{width:18px;height:18px;border:2px solid var(--border);border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}.duty-task.done .dt-check{background:var(--green);border-color:var(--green)}.dt-check svg{width:12px;height:12px;color:#fff;opacity:0}.duty-task.done .dt-check svg{opacity:1}
+.profile-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}.profile-card{background:#fff;border-radius:10px;box-shadow:var(--shadow);padding:14px;cursor:pointer;transition:.2s;border-left:4px solid var(--border)}.profile-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}.profile-card.male{border-left-color:#5B8DEE}.profile-card.female{border-left-color:#FF85A2}.profile-card-header{display:flex;align-items:center;gap:8px;margin-bottom:8px}.profile-avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;color:#fff;flex-shrink:0}.profile-avatar.male{background:#5B8DEE}.profile-avatar.female{background:#FF85A2}.profile-name{font-weight:600;font-size:14px}.profile-info{font-size:12px;color:var(--text2);margin-bottom:6px}.profile-filters{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}.profile-filter-btn{padding:5px 12px;border-radius:16px;font-size:13px;background:#fff;border:1px solid var(--border);cursor:pointer;color:var(--text2)}.profile-filter-btn.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+.detail-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}.detail-back{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:#fff;box-shadow:var(--shadow);cursor:pointer}.detail-back:hover{background:var(--primary-light)}.detail-name{font-size:20px;font-weight:700}.detail-section{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin-bottom:12px}.detail-section-title{font-size:15px;font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:6px}.detail-row{display:flex;gap:8px;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px}.detail-row:last-child{border-bottom:none}.dr-label{width:80px;color:var(--text2);flex-shrink:0}.dr-value{flex:1}.violation-item,.comm-item{padding:10px;border-radius:8px;background:var(--bg);margin-bottom:8px;font-size:13px}.violation-item{border-left:3px solid var(--red)}.comm-item{border-left:3px solid var(--primary)}.vi-date,.comm-date{font-size:12px;color:var(--text3);margin-bottom:2px}
+.grade-stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;margin-bottom:12px}.stat-card{background:#fff;border-radius:10px;box-shadow:var(--shadow);padding:12px;text-align:center}.stat-value{font-size:22px;font-weight:700;color:var(--primary-dark)}.stat-label{font-size:12px;color:var(--text2);margin-top:2px}.grade-table{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin-bottom:12px}.grade-table th,.grade-table td{padding:8px 10px;text-align:center;border-bottom:1px solid #f0f0f0;font-size:13px}.grade-table th{background:#f7fafc;font-weight:600;color:var(--text2);font-size:12px}.grade-table tr:hover{background:var(--primary-light)}.rank-badge{display:inline-flex;width:22px;height:22px;border-radius:50%;align-items:center;justify-content:center;font-size:12px;font-weight:600}.rank-1{background:#FFD700;color:#fff}.rank-2{background:#C0C0C0;color:#fff}.rank-3{background:#CD7F32;color:#fff}.rank-other{color:var(--text2)}.chart-wrap{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin-bottom:12px;overflow-x:auto}.chart-title{font-size:14px;font-weight:600;margin-bottom:12px}
+.hw-assignment{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:14px;margin-bottom:10px}.hw-header{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}.hw-title{font-weight:600;font-size:15px;flex:1}.hw-status-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:6px}.hw-status-item{display:flex;align-items:center;gap:6px;padding:6px 10px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;cursor:pointer;transition:.2s}.hw-status-item:hover{border-color:var(--primary)}.hw-status-item.completed{background:var(--green-light);border-color:var(--green)}.hw-status-item.excellent{background:var(--primary-light);border-color:var(--primary)}.hw-status-item.late{background:var(--orange-light);border-color:var(--orange)}.hw-status-item.not_submitted{background:var(--red-light);border-color:var(--red)}.hsi-name{flex:1;font-weight:500}.hsi-status{font-size:11px;padding:1px 6px;border-radius:4px;background:rgba(255,255,255,.7)}
+.points-overview{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}.points-section{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}.points-section-title{font-size:15px;font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:6px}.rank-list{display:flex;flex-direction:column;gap:6px}.rank-row{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;font-size:13px}.rank-row:hover{background:var(--bg)}.rr-num{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:12px;background:#f0f0f0;color:var(--text2)}.rr-name{flex:1;font-weight:500}.rr-score{font-weight:700;font-size:15px}.rr-score.positive{color:var(--green)}.rr-score.negative{color:var(--red)}.points-log{max-height:300px;overflow-y:auto}.log-item{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px}.li-date{color:var(--text3);font-size:12px;width:80px;flex-shrink:0}.li-name{font-weight:500;width:70px;flex-shrink:0}.li-reason{flex:1;color:var(--text2)}.li-points{font-weight:700;flex-shrink:0}.li-points.add{color:var(--green)}.li-points.deduct{color:var(--red)}
+#modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:500;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto}#modal.show{display:flex}.modal-box{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-lg);max-width:560px;width:100%;margin:auto;animation:slideUp .2s ease}@keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}.modal-header{display:flex;align-items:center;padding:16px 20px;border-bottom:1px solid var(--border)}.modal-header h3{font-size:16px;font-weight:700;flex:1}.modal-close{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--text3);cursor:pointer}.modal-close:hover{background:var(--bg);color:var(--text)}.modal-body{padding:20px;max-height:60vh;overflow-y:auto}.modal-footer{display:flex;gap:8px;justify-content:flex-end;padding:12px 20px;border-top:1px solid var(--border)}.import-area{width:100%;min-height:120px;border:1.5px solid var(--border);border-radius:8px;padding:10px;font-family:monospace;font-size:13px;resize:vertical}.import-hint{font-size:12px;color:var(--text2);margin-top:6px;line-height:1.8}.import-hint code{background:var(--bg);padding:1px 4px;border-radius:3px;font-size:11px}
+#toastWrap{position:fixed;top:64px;right:16px;z-index:999;display:flex;flex-direction:column;gap:8px}.toast{background:#fff;border-radius:8px;padding:10px 16px;box-shadow:var(--shadow-lg);font-size:14px;border-left:4px solid var(--primary);max-width:320px}.toast.success{border-left-color:var(--green)}.toast.error{border-left-color:var(--red)}.toast.warn{border-left-color:var(--orange)}
+.empty-state{text-align:center;padding:40px 20px;color:var(--text3)}.empty-state svg{width:48px;height:48px;margin-bottom:8px;opacity:.4}.empty-state p{font-size:14px;margin-bottom:12px}.data-count-badge{font-size:12px;color:var(--text3);padding:2px 8px;background:var(--bg);border-radius:10px}.backup-reminder{background:var(--orange-light);color:var(--orange);padding:8px 14px;border-radius:8px;font-size:13px;margin-bottom:12px;display:flex;align-items:center;gap:6px}.checkbox-wrap{display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;margin:4px 0}.checkbox-wrap input{width:16px;height:16px}.sync-badge{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:10px;font-size:11px;font-weight:500}.sync-offline{background:var(--orange-light);color:var(--orange)}
+
+.act-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin-bottom:12px}.act-card-header{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}.act-card-title{font-weight:600;font-size:15px;flex:1}.act-date{font-size:12px;color:var(--text3)}.act-content{font-size:14px;color:var(--text2);margin-bottom:10px;white-space:pre-wrap;line-height:1.8}.img-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:6px}.img-thumb{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;cursor:pointer;transition:.2s;background:#f0f0f0}.img-thumb:hover{transform:scale(1.05);box-shadow:var(--shadow-lg)}.album-month{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin-bottom:12px}.album-month-title{display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px;margin-bottom:10px;color:var(--text)}.album-month-title svg{width:18px;height:18px;color:var(--primary)}.beh-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin-bottom:12px;border-left:4px solid var(--border)}.beh-card.award{border-left-color:var(--green)}.beh-card.violation{border-left-color:var(--red)}.beh-card-header{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}.beh-student{font-weight:600;font-size:14px}.beh-type{font-size:12px;padding:2px 8px;border-radius:10px;font-weight:500}.beh-type.award{background:var(--green-light);color:var(--green)}.beh-type.violation{background:var(--red-light);color:var(--red)}.beh-level{font-size:12px;padding:2px 8px;border-radius:4px;background:#f0f0f0;color:var(--text2)}.beh-title{font-weight:600;font-size:14px;margin-bottom:4px}.beh-desc{font-size:13px;color:var(--text2);margin-bottom:8px;white-space:pre-wrap;line-height:1.7}.upload-area{border:2px dashed var(--border);border-radius:8px;padding:20px;text-align:center;cursor:pointer;transition:.2s}.upload-area:hover{border-color:var(--primary);background:var(--primary-light)}.upload-area svg{width:32px;height:32px;color:var(--text3);margin-bottom:6px}.upload-area p{font-size:13px;color:var(--text2)}.form-img-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(70px,1fr));gap:6px;margin-top:8px}.form-img-wrap{position:relative}.form-img-thumb{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;display:block}.form-img-del{position:absolute;top:2px;right:2px;width:22px;height:22px;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;line-height:1}.form-img-del:hover{background:var(--red)}.img-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:600;display:none;align-items:center;justify-content:center;flex-direction:column}.img-lightbox.show{display:flex}.img-lightbox img{max-width:90vw;max-height:75vh;border-radius:8px}.img-lightbox-nav{display:flex;gap:12px;margin-top:10px;align-items:center}.img-lightbox-btn{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.2);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}.img-lightbox-btn:hover{background:rgba(255,255,255,.35)}.img-lightbox-count{color:#fff;font-size:14px}.img-lightbox-close{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.2);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center}.img-lightbox-close:hover{background:rgba(255,255,255,.35)}
+.stu-toolbar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;align-items:center}.stu-toolbar .btn{font-size:13px}.stu-toolbar .spacer{flex:1}.committee-badge{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;background:var(--primary-light);color:var(--primary-dark);margin-top:4px}.profile-avatar-img{width:100%;height:100%;border-radius:50%;object-fit:cover}.photo-match-row{display:flex;align-items:center;gap:8px;padding:8px;border-radius:8px;background:var(--bg);margin-bottom:6px}.photo-match-thumb{width:48px;height:48px;border-radius:8px;object-fit:cover;flex-shrink:0}.photo-match-select{flex:1;height:36px;border:1.5px solid var(--border);border-radius:8px;padding:0 8px;font-size:14px}.photo-match-status{font-size:12px;padding:2px 8px;border-radius:4px;flex-shrink:0}.photo-match-status.matched{background:var(--green-light);color:var(--green)}.photo-match-status.unmatched{background:var(--red-light);color:var(--red)}.committee-list-row{display:flex;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid #f0f0f0;font-size:13px}.committee-list-row:last-child{border-bottom:none}.committee-pos{font-weight:600;color:var(--primary-dark);min-width:80px}.committee-name{flex:1}.upload-drop-zone{border:2px dashed var(--border);border-radius:12px;padding:30px;text-align:center;cursor:pointer;transition:.2s;margin-bottom:12px}.upload-drop-zone:hover,.upload-drop-zone.dragover{border-color:var(--primary);background:var(--primary-light)}.upload-drop-zone svg{width:40px;height:40px;color:var(--text3);margin-bottom:8px}.upload-drop-zone p{font-size:14px;color:var(--text2)}.upload-progress{font-size:13px;color:var(--text2);margin-bottom:8px}
+@media(max-width:768px){#menuToggle{display:flex}#sidebar{transform:translateX(-100%);z-index:200;width:240px}#sidebar.open{transform:translateX(0)}#sidebarOverlay.active{display:block}#content{margin-left:0;padding:10px}.app-title{font-size:15px}.search-wrap{max-width:140px}.header-actions{gap:2px}.hdr-btn{width:32px;height:32px}.form-row{flex-direction:column}.points-overview{grid-template-columns:1fr}.schedule-table th,.schedule-table td{height:40px;font-size:12px}.schedule-table th:first-child{width:44px}.grade-stats{grid-template-columns:repeat(3,1fr)}.stat-value{font-size:18px}.seat{min-height:56px}.seat-name{font-size:12px}.modal-box{max-width:100%}#toastWrap{top:60px;right:8px;left:8px}.toast{max-width:100%}.hw-status-grid{grid-template-columns:repeat(auto-fill,minmax(100px,1fr))}.duty-tasks{grid-template-columns:1fr}.profile-list{grid-template-columns:1fr}.img-grid{grid-template-columns:repeat(auto-fill,minmax(60px,1fr))}.form-img-grid{grid-template-columns:repeat(auto-fill,minmax(60px,1fr))}.stu-toolbar .btn{font-size:12px;padding:5px 8px}.photo-match-row{flex-wrap:wrap}.photo-match-select{width:100%}}
+@media print{#topbar,#sidebar,#sidebarOverlay,.module-header .btn,.no-print,.today-section{display:none!important}#content{margin:0;padding:0}.module{display:block!important}.card{box-shadow:none;border:1px solid #ccc}}
+</style>
+</head>
+<body data-page-node-id="z6z0uqtjJelTDRhKSa5L1W">
+<div id="app" data-page-node-id="yIp8HsgAS9nKnwpbDwZO3n">
+  <header id="topbar" data-page-node-id="238KmJcsVMx4Y0GukrxuRV">
+    <button id="menuToggle" data-page-node-id="ILCUcZZnD0SrIT4YCwKDLQ"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="B2WUIqLH3OidUVWhY4o1b5"><line x1="3" y1="6" x2="21" y2="6" data-page-node-id="58o29FJr8F1y4mrLqcMxC3"/><line x1="3" y1="12" x2="21" y2="12" data-page-node-id="8kZqeaN4w1aVoTiSlvwk8b"/><line x1="3" y1="18" x2="21" y2="18" data-page-node-id="4wkCiniMKUVhUraVPaerEw"/></svg></button>
+    <div class="app-title" data-page-node-id="aODaDhkiF9c9zGdw47uncC">Ella和她的4班</div>
+    <div class="search-wrap" data-page-node-id="Pg5ErGQU6Q2mU0t2MgqMA4"><span class="search-icon" data-page-node-id="9ZcC2M7Exx98IJx1haYvwP"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="vVawOwXZKoJ8QgAlNMAtpJ"><circle cx="11" cy="11" r="8" data-page-node-id="EGcArCheCfBr4Ep8ZGunsM"/><line x1="21" y1="21" x2="16.65" y2="16.65" data-page-node-id="BbtAiWBDAwiBKXddNqHveF"/></svg></span><input id="globalSearch" placeholder="搜索学生..." autocomplete="off" data-page-node-id="9iKVJWTeB4PubVJBMxDtAw"><div class="search-results" id="searchResults" data-page-node-id="T6H9CtIwcVlPo2Wc0P3wHn"></div></div>
+    <span class="sync-badge sync-offline" data-page-node-id="wk2AwR7ZKTJlEM2nuwtWL4">本地存储</span>
+    <div class="header-actions" data-page-node-id="IuNGBF9FUrB15ojKvYT1ww">
+      <button class="hdr-btn" id="btnExport" title="导出" data-page-node-id="AY2nn0rtuCbRA7zxBBnTL1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="bLANF1InMjDVCKb1HmtfY0"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" data-page-node-id="nmevQKQqMtPfJBVhjzprpZ"/><polyline points="7 10 12 15 17 10" data-page-node-id="05EWapPkIx3iGQiaXJorrk"/><line x1="12" y1="15" x2="12" y2="3" data-page-node-id="vgoPRKBtoyXtAzqf2Y1evd"/></svg></button>
+      <button class="hdr-btn" id="btnImport" title="导入" data-page-node-id="tlAE1Ok5OBMXllh1MOqxcD"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="RWGL2ddt1pTn3uNxfCPpmF"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" data-page-node-id="G5inQ9MlHGGaaTSjn3QPqJ"/><polyline points="17 8 12 3 7 8" data-page-node-id="Ym2eqiREVleCma7eaPOLlX"/><line x1="12" y1="3" x2="12" y2="15" data-page-node-id="TzRD8LSC8g3yUjlx7xfi9o"/></svg></button>
+      <button class="hdr-btn" id="btnDrafts" title="草稿" data-page-node-id="zcAQQN7WdEHgp56OmJlqcm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="VPI4zzRZ75i6SCHNab16Wf"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-page-node-id="CC2g9uFzrwWOFZiqhlvKNt"/><polyline points="14 2 14 8 20 8" data-page-node-id="8BfkzpdXqIuw9SZKVwwZzy"/><line x1="16" y1="13" x2="8" y2="13" data-page-node-id="7QA3GSzf2yHDOrmKk1Hl4B"/><line x1="16" y1="17" x2="8" y2="17" data-page-node-id="WLGhD4Jf8mmYa6bQivZIvo"/></svg></button>
+      <button class="hdr-btn" id="btnSettings" title="设置" data-page-node-id="XB9l16WwRznbUTytGHWckv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="5T0o89BhihzPAEQUeDVHi1"><circle cx="12" cy="12" r="3" data-page-node-id="R33dqotl0JFaHx8hBDmWqi"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" data-page-node-id="nIlGjclKmPhjpixwRpd2R9"/></svg></button>
+    </div>
+  </header>
+  <nav id="sidebar" data-page-node-id="UZTNokyKkh7lHm91wUTMhI">
+    <div class="nav-item active" data-module="todos" data-page-node-id="zQbPgMJw6H533pDb8D8gg0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="vgYqGLQRuRcPGRiYEc8Ytu"><path d="M9 11l3 3L22 4" data-page-node-id="F8lCoMz7fhkFDBR1pDyV7f"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" data-page-node-id="8ec7UdsA04UscDSjK1zhIn"/></svg>待办事项</div>
+    <div class="nav-item" data-module="schedule" data-page-node-id="RtMxbYtAflq8hkvavEGm83"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="IbhYYwaJYcO59dHzpFIDF3"><rect x="3" y="4" width="18" height="18" rx="2" data-page-node-id="653gUVvzTFcQv2P6klmukO"/><line x1="16" y1="2" x2="16" y2="6" data-page-node-id="cQKAG8HAKiC0ZZJhA2VaUS"/><line x1="8" y1="2" x2="8" y2="6" data-page-node-id="GDj9Wl0nKn1Ukfwi1DPNB0"/><line x1="3" y1="10" x2="21" y2="10" data-page-node-id="q7k6g7BNzAs8ilwqGzIDeb"/></svg>班级课表</div>
+    <div class="nav-item" data-module="arrange" data-page-node-id="fabsnpz8PTcpiUZwLNBHPW"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="Cz8k05eHVRfhmJOG3y5AHE"><rect x="3" y="3" width="7" height="7" data-page-node-id="tV6g6Bex0E19xIyYsA71hQ"/><rect x="14" y="3" width="7" height="7" data-page-node-id="vbqdEvokYS60M1xbTzAJ8l"/><rect x="3" y="14" width="7" height="7" data-page-node-id="8FL7AgWwy78x9aMOHdtPdR"/><rect x="14" y="14" width="7" height="7" data-page-node-id="SXBt2ymlTU9KtsYWSrQDUL"/></svg>学生安排</div>
+    <div class="nav-item" data-module="profiles" data-page-node-id="aXp1VKIAbC0yOXGDf27kpW"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="axgNUyNmKfBpDgqxj5hlbf"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" data-page-node-id="VmQEZf0DLc9SwqmAFt3u6r"/><circle cx="9" cy="7" r="4" data-page-node-id="5fnEIChxWuNLJ74aKERLj0"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" data-page-node-id="lApEZ5A8GAW3D4H3qhrpHG"/><path d="M16 3.13a4 4 0 0 1 0 7.75" data-page-node-id="EQxABKH00IZlzMGOiI6vRW"/></svg>学生档案</div>
+    <div class="nav-item" data-module="grades" data-page-node-id="c2B4G9vRGfkOlvuVrYjALq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="YgHZNjMy8xuG58PwDupFrJ"><line x1="18" y1="20" x2="18" y2="10" data-page-node-id="ZMIjJUqkNU76vSTrl7vRGw"/><line x1="12" y1="20" x2="12" y2="4" data-page-node-id="GdK4klMb9DJ6OKp6anDHyP"/><line x1="6" y1="20" x2="6" y2="14" data-page-node-id="ugzYtRf4seH8aydl5iWx0z"/></svg>成绩作业</div>
+    <div class="nav-item" data-module="points" data-page-node-id="lmlYwDqAAElxab0SrJKJB5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="nan1mza4sjKmA4H7flqQp9"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" data-page-node-id="HX82zEDHfA2Tk618USEKh2"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" data-page-node-id="hESIqBkjZkpTchbFbF77JJ"/><path d="M4 22h16" data-page-node-id="CdjBSttL0LsHxAAxYtl60a"/><path d="M10 14.66V17c0 .55.47.98.97 1.21C12.15 18.75 13 20.24 13 22" data-page-node-id="zgflpsaKWB2HqXRas9iNcT"/><path d="M14 14.66V17c0 .55-.47.98-.97 1.21C11.85 18.75 11 20.24 11 22" data-page-node-id="QrB7Dc8eoWvvL7RrO1goeB"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z" data-page-node-id="Xm7TPDsHT3ZDELgu7dNssn"/></svg>积分排名</div>
+    <div class="nav-item" data-module="activities" data-page-node-id="WiBxyuqEkkVIkpTudyCjP3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="o9RLRHL7CvzjXCg0k3gVFO"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" data-page-node-id="898GDRCDi2NDvPzrIbfrrW"/><circle cx="12" cy="13" r="4" data-page-node-id="Oi8O7N5RvFBY0zBNbsEZdY"/></svg>活动记录</div>
+    <div class="nav-item" data-module="behaviors" data-page-node-id="HuCGBBr2bJ8xBMwWRXyt6D"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="FlYpb1jbdGJG3ZmmkjNhYU"><path d="M12 15c2.21 0 4-1.79 4-4V5H8v6c0 2.21 1.79 4 4 4z" data-page-node-id="ervFVm8GakbpJdF6k4r7BA"/><path d="M8 5H5a2 2 0 0 0-2 2v3a4 4 0 0 0 4 4" data-page-node-id="BhzbD9tsyGPCj1TOmWomid"/><path d="M16 5h3a2 2 0 0 1 2 2v3a4 4 0 0 1-4 4" data-page-node-id="z6BQqAbTXlXVDJJ26fdNZP"/><line x1="12" y1="15" x2="12" y2="22" data-page-node-id="YimpzTIUlT7Xp2nmBvipEb"/></svg>行为记录</div>
+    <div class="nav-item" data-module="album" data-page-node-id="sVtlU5J5LlSp3aGcbWYzO1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="pE4sHFHAQkRPN9LNJZ44H0"><rect x="3" y="3" width="18" height="18" rx="2" data-page-node-id="wkd7Z6wcB7EYTEy8c98YDe"/><circle cx="8.5" cy="8.5" r="1.5" data-page-node-id="4YbrISCK3bpDkZyYBCEHj6"/><polyline points="21 15 16 10 5 21" data-page-node-id="DMdRwymEKdQfq7f2UKsiQp"/></svg>班级相册</div>
+  </nav>
+  <div id="sidebarOverlay" data-page-node-id="ASVuNlozInBdyjBAgh5fPG"></div>
+  <main id="content" data-page-node-id="DFVMQYVwaAAc6rgEccCLfU">
+    <div class="today-section" id="todaySection" data-page-node-id="nqNxestn4zJ4MNa2aHxXGx"><div class="today-header" id="todayHeader" data-page-node-id="IN2n41hVmSEi7TQ9pb97ZI"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" data-page-node-id="UraJGNiav2aXfTsapilH1p"><circle cx="12" cy="12" r="10" data-page-node-id="vfbvy3foCgBwAkhP8t5C9F"/><polyline points="12 6 12 12 16 14" data-page-node-id="X04ZeBbABqF0GxynjqO3Q5"/></svg><h2 data-page-node-id="tLC39X0LEs47sMjDPjXPQY">今天要处理</h2><span class="toggle-icon" data-page-node-id="DbIVURZTd3igvaX2SxA0n4"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-page-node-id="al8wKulp5dVelEF5AXlSJA"><polyline points="6 9 12 15 18 9" data-page-node-id="1ZZowvALXVH9XQDuJbwbvD"/></svg></span></div><div class="today-body" id="todayBody" data-page-node-id="GVCu5gB9Da1iMYzlYoJywI"></div></div>
+    <div id="backupReminder" style="display:none" data-page-node-id="poAsHyxAwCXZs8PfB2glyl"></div>
+    <div class="module active" id="module-todos" data-page-node-id="iAFU03V9yccAxNa9jhQskg"></div>
+    <div class="module" id="module-schedule" data-page-node-id="FLUxN8NMWWfcAOl6CQD0Df"></div>
+    <div class="module" id="module-arrange" data-page-node-id="PACtG7p1ftlhNCU5pb3pU1"></div>
+    <div class="module" id="module-profiles" data-page-node-id="QSVqRpHAUHWGYADw74o2k0"></div>
+    <div class="module" id="module-grades" data-page-node-id="AuYw95At6DNEyAqPpt6zKu"></div>
+    <div class="module" id="module-points" data-page-node-id="Gfljua9KNzlj5mKDjtrdBy"></div>
+    <div class="module" id="module-activities" data-page-node-id="FD3X5I3ZvxACOuVOcjWAqg"></div>
+    <div class="module" id="module-behaviors" data-page-node-id="VV0mG8XtEItI45UFdEPMQE"></div>
+    <div class="module" id="module-album" data-page-node-id="WanB6ZDfQKw3bpq39kHOTw"></div>
+  </main>
+</div>
+<div id="modal" data-page-node-id="aT1m2aAyPyhyksqjDVmBqf"><div class="modal-box" data-page-node-id="FIVDUEguERPW9LZEyMnkUF"><div class="modal-header" data-page-node-id="3gGGM7tPBLZTvwhuoaYCac"><h3 id="modalTitle" data-page-node-id="RdnAMJnA8vMGJUcCfB9mBR">标题</h3><button class="modal-close" id="modalClose" data-page-node-id="xBHMFO3r1Mq0Okeqg3AE2O"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="HJFThF21eu0sAX0Vh1QFKl"><line x1="18" y1="6" x2="6" y2="18" data-page-node-id="3ZJsxINOetmzC3oFVh3o8F"/><line x1="6" y1="6" x2="18" y2="18" data-page-node-id="jzOVYDpEd7kw6S4h3wtq52"/></svg></button></div><div class="modal-body" id="modalBody" data-page-node-id="0wEFdd21DfsNmBIqrruU96"></div><div class="modal-footer" id="modalFooter" data-page-node-id="Gls4gRbOwP1PW7euVyhFdU"></div></div></div>
+<div id="toastWrap" data-page-node-id="sYPuhjteoWQbmbEqFsmvui"></div>
+<script id="app-script">
+(function(){
+'use strict';
+var P='wb_tw_',K=P+'data';
+var S={students:[],todos:[],schedule:[],seating:{rows:5,cols:6,seats:[]},duty:[],violations:[],communications:[],grades:[],exams:[],homework:[],points:[],drafts:{notices:[],comments:[]},activities:[],behaviors:[],committee:[],settings:{subjects:['语文','数学','英语','物理','化学','生物','政治','历史','地理','体育','音乐','美术','班会','自习'],mySubjects:['语文','数学','班会'],tags:['留守儿童','单亲家庭','特长生','学优生','学困生','转学生'],dutyPositions:['扫地','擦黑板','倒垃圾','关门窗','整理讲台'],weekType:'single'}};
+var U={module:'todos',arrangeTab:'seating',gradesTab:'grades',selectedSeat:null,selectedProfileId:null,todoFilter:'all',profileFilter:'all',selectedExamId:null,selectedExamAId:null,draftTab:'notices',behTab:'all',albumTab:'activity'};
+var _tmpImgs={};U.editImgs=[];
+
+// ===== STORAGE =====
+function save(){try{localStorage.setItem(K,JSON.stringify(S));checkBR();}catch(e){toast('存储空间不足','error');}}
+function load(){try{var d=localStorage.getItem(K);if(d){var p=JSON.parse(d);['students','todos','schedule','seating','duty','violations','communications','grades','exams','homework','points','drafts','activities','behaviors','committee'].forEach(function(k){if(p[k])S[k]=p[k];});if(p.settings)Object.assign(S.settings,p.settings);S.students.forEach(function(s){if(s.parentName&&!s.guardian1Name)s.guardian1Name=s.parentName;if(s.parentPhone&&!s.guardian1Phone)s.guardian1Phone=s.parentPhone;});return true;}}catch(e){}return false;}
+
+// ===== UTILS =====
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7);}
+function esc(s){if(s==null)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
+function todayStr(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+function fmtDate(s){if(!s)return'';return s.replace(/-/g,'/').slice(5);}
+function isOverdue(t){return!t.completed&&t.deadline&&t.deadline<todayStr();}
+function daysUntil(s){var t=new Date(s);var n=new Date();n.setHours(0,0,0,0);return Math.ceil((t-n)/86400000);}
+function getWeekStr(){var d=new Date(),y=d.getFullYear(),st=new Date(y,0,1),diff=(d-st)/86400000;return y+'-W'+Math.ceil((diff+st.getDay()+1)/7);}
+function getStu(id){return S.students.find(function(s){return s.id===id;});}
+function getStuName(id){var s=getStu(id);return s?s.name:'?';}
+function getGroupStu(g){return S.students.filter(function(s){return s.group===g;});}
+function getGroups(){var g={};S.students.forEach(function(s){if(!g[s.group])g[s.group]=[];g[s.group].push(s);});return g;}
+function toast(msg,type){var el=document.createElement('div');el.className='toast'+(type?' '+type:'');el.textContent=msg;document.getElementById('toastWrap').appendChild(el);setTimeout(function(){el.style.opacity='0';el.style.transition='.3s';setTimeout(function(){el.remove();},300);},2800);}
+function dl(filename,content,mime){var b=new Blob([content],{type:mime||'text/plain;charset=utf-8'});var u=URL.createObjectURL(b);var a=document.createElement('a');a.href=u;a.download=filename;a.click();setTimeout(function(){URL.revokeObjectURL(u);},100);}
+function parseCSV(text){var lines=text.replace(/\r/g,'').split('\n').filter(function(l){return l.trim();});var rows=[];lines.forEach(function(line){var c=[],cur='',q=false;for(var i=0;i<line.length;i++){var ch=line[i];if(ch==='"'){if(q&&line[i+1]==='"'){cur+='"';i++;}else q=!q;}else if((ch===','||ch==='\t')&&!q){c.push(cur.trim());cur='';}else cur+=ch;}c.push(cur.trim());rows.push(c);});return rows;}
+function colToNum(col){var n=0;for(var i=0;i<col.length;i++){n=n*26+(col.charCodeAt(i)-64);}return n;}
+var lens=[3,4,5,6,7,8,9,10,11,13,15,17,19,23,27,31,35,43,51,59,67,83,99,115,131,163,195,227,258],lext=[0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,0];
+var dists=[1,2,3,4,5,7,9,13,17,25,33,49,65,97,129,193,257,385,513,769,1025,1537,2049,3073,4097,6145,8193,12289,16385,24577],dext=[0,0,0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13];
+var fixedLen=[],i2=0;for(;i2<144;i2++)fixedLen.push(8);for(;i2<256;i2++)fixedLen.push(9);for(;i2<280;i2++)fixedLen.push(7);for(;i2<288;i2++)fixedLen.push(8);
+var fixedDist=[];for(i2=0;i2<30;i2++)fixedDist.push(5);
+function inflateRaw(data){var pos=0,bb=0,bc=0,out=[],eof=false,maxOut=50000000;
+function bits(n){while(bc<n){if(pos>=data.length){eof=true;return 0;}bb|=data[pos++]<<bc;bc+=8;}var v=bb&((1<<n)-1);bb>>>=n;bc-=n;return v;}
+function construct(cnt,sym,lengths,n){var offs=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],left=1,i;for(i=0;i<=15;i++)cnt[i]=0;for(i=0;i<n;i++)cnt[lengths[i]]++;if(cnt[0]===n)return 0;for(i=1;i<=15;i++){left<<=1;left-=cnt[i];if(left<0)return left;}offs[1]=0;for(i=1;i<15;i++)offs[i+1]=offs[i]+cnt[i];for(i=0;i<n;i++)if(lengths[i])sym[offs[lengths[i]]++]=i;return left;}
+function huffDecode(cnt,sym){var code=0,first=0,index=0,len;for(len=1;len<=15;len++){code|=bits(1);var c=cnt[len];if(code-c<first)return sym[index+(code-first)];index+=c;first+=c;first<<=1;code<<=1;}return -1;}
+function codes(lcnt,lsym,dcnt,dsym){for(;;){if(eof)return 0;var sym=huffDecode(lcnt,lsym);if(sym<0)return sym;if(sym===256)return 0;if(sym<256){out.push(sym);}else{sym-=257;if(sym>=29)return -2;var len=lens[sym]+bits(lext[sym]);sym=huffDecode(dcnt,dsym);if(sym<0)return sym;var dist=dists[sym]+bits(dext[sym]);var k=out.length-dist;while(len--)out.push(out[k++]);}if(out.length>maxOut)return -2;}}
+var lcnt=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],lsym=new Array(288),dcnt=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],dsym=new Array(30);
+var last=0;while(!last&&!eof){last=bits(1);var type=bits(2);
+if(type===0){bb=0;bc=0;var slen=bits(16);bits(16);while(slen--)out.push(data[pos++]);}
+else if(type===1){construct(lcnt,lsym,fixedLen,288);construct(dcnt,dsym,fixedDist,30);if(codes(lcnt,lsym,dcnt,dsym)<0)return null;}
+else if(type===2){var nlen=bits(5)+257,ndist=bits(5)+1,ncode=bits(4)+4,order=[16,17,18,0,8,7,9,6,10,5,11,4,12,3,13,2,14,1,15],ll=[];for(var o=0;o<19;o++)ll.push(0);for(o=0;o<ncode;o++)ll[order[o]]=bits(3);if(construct(lcnt,lsym,ll,19))return null;var lengths=[],idx=0;while(idx<nlen+ndist){var sym=huffDecode(lcnt,lsym);if(sym<0)return null;if(sym<16){lengths[idx++]=sym;}else{var cl=0,cc=0;if(sym===16){if(idx===0)return null;cl=lengths[idx-1];cc=3+bits(2);}else if(sym===17){cl=0;cc=3+bits(3);}else{cl=0;cc=11+bits(7);}if(idx+cc>nlen+ndist)return null;while(cc--)lengths[idx++]=cl;}}if(!lengths[256])return null;if(construct(lcnt,lsym,lengths,nlen))return null;if(construct(dcnt,dsym,lengths.slice(nlen),ndist))return null;if(codes(lcnt,lsym,dcnt,dsym)<0)return null;}
+else return null;}
+return new Uint8Array(out);}
+function inflateRawBytes(cd){return new Promise(function(res){var settled=false;function done(v){if(!settled){settled=true;res(v);}}function fb(){try{done(inflateRaw(cd));}catch(e){done(null);}}if(window.DecompressionStream){try{var st=new Blob([cd]).stream().pipeThrough(new DecompressionStream('deflate-raw'));var to=setTimeout(function(){done(inflateRaw(cd));},8000);new Response(st).arrayBuffer().then(function(ab){clearTimeout(to);done(new Uint8Array(ab));},function(){clearTimeout(to);fb();});}catch(e){fb();}}else{fb();}});}
+function parseXlsx(buf,allSheets){return new Promise(function(resolve,reject){try{var view=new DataView(buf),bytes=new Uint8Array(buf);var eocd=-1,st=Math.max(0,bytes.length-22-65536);for(var i=bytes.length-22;i>=st;i--){if(bytes[i]===0x50&&bytes[i+1]===0x4b&&bytes[i+2]===0x05&&bytes[i+3]===0x06){eocd=i;break;}}if(eocd<0){reject(new Error('不是有效的xlsx文件'));return;}var cdOffset=view.getUint32(eocd+16,true),cdCount=view.getUint16(eocd+10,true);var items=[],p=cdOffset;for(var k=0;k<cdCount;k++){if(bytes[p]!==0x50||bytes[p+1]!==0x4b||bytes[p+2]!==0x01||bytes[p+3]!==0x02)break;var method=view.getUint16(p+10,true),compSize=view.getUint32(p+20,true),nameLen=view.getUint16(p+28,true),extraLen=view.getUint16(p+30,true),commentLen=view.getUint16(p+32,true),lho=view.getUint32(p+42,true);var name=new TextDecoder().decode(bytes.subarray(p+46,p+46+nameLen));var lNameLen=view.getUint16(lho+26,true),lExtraLen=view.getUint16(lho+28,true),ds=lho+30+lNameLen+lExtraLen;items.push({name:name,method:method,compSize:compSize,ds:ds});p+=46+nameLen+extraLen+commentLen;}
+var entries={};Promise.all(items.map(function(it){return new Promise(function(rs){var cd=bytes.subarray(it.ds,it.ds+it.compSize);if(it.method===0){entries[it.name]=cd;rs();}else{inflateRawBytes(cd).then(function(ab){if(ab)entries[it.name]=ab;rs();});}});})).then(function(){
+var sheetPaths=[];var wb=entries['xl/workbook.xml'];if(wb){try{var wbDoc=new DOMParser().parseFromString(new TextDecoder().decode(wb),'application/xml');var sheets=wbDoc.getElementsByTagName('sheet');var rels=entries['xl/_rels/workbook.xml.rels'];var relMap={};if(rels){var relDoc=new DOMParser().parseFromString(new TextDecoder().decode(rels),'application/xml');var rl=relDoc.getElementsByTagName('Relationship');for(var r=0;r<rl.length;r++){relMap[rl[r].getAttribute('Id')]=rl[r].getAttribute('Target');}}for(var si=0;si<sheets.length;si++){var rid=sheets[si].getAttribute('r:id');var tgt=relMap[rid]||null;if(tgt){if(tgt.indexOf('/')!==0)tgt='xl/'+tgt;sheetPaths.push({name:sheets[si].getAttribute('name')||('Sheet'+(si+1)),path:tgt});}}}catch(e){}}
+if(!sheetPaths.length){for(var sp=1;entries['xl/worksheets/sheet'+sp+'.xml'];sp++){sheetPaths.push({name:'Sheet'+sp,path:'xl/worksheets/sheet'+sp+'.xml'});}}
+var shared=[];var ss=entries['xl/sharedStrings.xml'];if(ss){try{var ssDoc=new DOMParser().parseFromString(new TextDecoder().decode(ss),'application/xml');var sis=ssDoc.getElementsByTagName('si');for(var s=0;s<sis.length;s++){var ts=sis[s].getElementsByTagName('t'),txt='';for(var tt=0;tt<ts.length;tt++)txt+=ts[tt].textContent;shared.push(txt);}}catch(e){}}
+function parseSheetXml(sx){var sheetDoc=new DOMParser().parseFromString(new TextDecoder().decode(sx),'application/xml');var rows=sheetDoc.getElementsByTagName('row'),result=[];for(var i=0;i<rows.length;i++){var cells=rows[i].getElementsByTagName('c'),arr=[];for(var c=0;c<cells.length;c++){var cell=cells[c],ref=cell.getAttribute('r')||'',col=ref.replace(/[0-9]/g,''),colN=colToNum(col);while(arr.length<colN-1)arr.push('');var t=cell.getAttribute('t'),v=cell.getElementsByTagName('v')[0],isv=cell.getElementsByTagName('is')[0],val='';if(v)val=v.textContent;else if(isv){var tEl=isv.getElementsByTagName('t')[0];if(tEl)val=tEl.textContent;}if(t==='s'&&val!==''){var si=parseInt(val);val=shared[si]!=null?shared[si]:'';}arr[colN-1]=val;}var has=false;for(var j=0;j<arr.length;j++){if(String(arr[j]).trim()!==''){has=true;break;}}if(has)result.push(arr);}return result;}
+var outSheets=[];sheetPaths.forEach(function(sp){var sx2=entries[sp.path];if(sx2){try{var rr2=parseSheetXml(sx2);if(rr2.length)outSheets.push({name:sp.name,rows:rr2});}catch(e){}}});
+if(!outSheets.length){reject(new Error('未找到工作表数据'));return;}
+if(allSheets)resolve(outSheets);else resolve(outSheets[0].rows);});}catch(e){reject(e);}});}
+function toCSV(rows){return rows.map(function(r){return r.map(function(c){c=String(c==null?'':c);return c.indexOf(',')>=0||c.indexOf('"')>=0?'"'+c.replace(/"/g,'""')+'"':c;}).join(',');}).join('\n');}
+function checkBR(){var t=S.students.length+S.todos.length+S.points.length+S.grades.length+S.violations.length+S.communications.length+S.activities.length+S.behaviors.length;var el=document.getElementById('backupReminder');if(t>=30){el.className='backup-reminder';el.innerHTML='<b>!</b> 数据已积累'+t+'条，建议点击右上角导出备份';el.style.display='flex';}else el.style.display='none';}
+
+// ===== MODAL =====
+function openModal(title,body,footer){document.getElementById('modalTitle').textContent=title;document.getElementById('modalBody').innerHTML=body;document.getElementById('modalFooter').innerHTML=footer||'<button class="btn btn-primary" data-action="modal-confirm">确定</button><button class="btn btn-ghost" data-action="modal-close">取消</button>';document.getElementById('modal').classList.add('show');}
+function closeModal(){document.getElementById('modal').classList.remove('show');}
+function confirmDialog(msg,fn){openModal('确认','<p style="font-size:14px">'+esc(msg)+'</p>','<button class="btn btn-danger" id="confirmYes">确认</button><button class="btn btn-ghost" data-action="modal-close">取消</button>');document.getElementById('confirmYes').onclick=function(){closeModal();fn();};}
+
+// ===== NAV =====
+function nav(mod){U.module=mod;document.querySelectorAll('.nav-item').forEach(function(n){n.classList.toggle('active',n.dataset.module===mod);});document.querySelectorAll('.module').forEach(function(m){m.classList.remove('active');});document.getElementById('module-'+mod).classList.add('active');document.getElementById('sidebar').classList.remove('open');document.getElementById('sidebarOverlay').classList.remove('active');renderMod(mod);}
+function renderMod(mod){if(mod==='todos')renderTodos();else if(mod==='schedule')renderSchedule();else if(mod==='arrange')renderArrange();else if(mod==='profiles')renderProfiles();else if(mod==='grades')renderGradesMod();else if(mod==='points')renderPoints();else if(mod==='activities')renderActivities();else if(mod==='behaviors')renderBehaviors();else if(mod==='album')renderAlbum();renderToday();}
+
+// ===== TODAY =====
+function renderToday(){var b=document.getElementById('todayBody');var items=[];S.todos.filter(isOverdue).forEach(function(t){items.push({cls:'overdue',label:'<b>'+esc(t.title)+'</b>',sub:'已逾期 · '+fmtDate(t.deadline),act:'complete-todo',id:t.id});});S.todos.filter(function(t){return!t.completed&&t.deadline===todayStr();}).forEach(function(t){items.push({cls:'today-task',label:'<b>'+esc(t.title)+'</b>',sub:'今天截止',act:'complete-todo',id:t.id});});S.todos.filter(function(t){if(t.completed||!t.deadline)return false;var d=daysUntil(t.deadline);return d>0&&d<=3;}).forEach(function(t){items.push({cls:'upcoming',label:esc(t.title),sub:daysUntil(t.deadline)+'天后截止',act:'complete-todo',id:t.id});});var day=new Date().getDay();if(day>=1&&day<=5){var ts=S.schedule.filter(function(s){return s.day===day&&(s.weekType==='both'||s.weekType===S.settings.weekType);});if(ts.length)items.push({custom:'<div class="today-item today-task"><div class="ti-label"><div class="ti-title"><b>今日课程</b></div><div class="ti-sub">'+ts.map(function(s){var m=S.settings.mySubjects.indexOf(s.subject)>=0;return(m?'<b>':'')+esc(s.subject)+(m?'</b>':'');}).join(' · ')+'</div></div></div>'});}if(!items.length){b.innerHTML='<div class="today-empty">暂无待处理事项</div>';return;}b.innerHTML=items.map(function(it){if(it.custom)return it.custom;return '<div class="today-item '+it.cls+'"><div class="ti-label"><div class="ti-title">'+it.label+'</div><div class="ti-sub">'+it.sub+'</div></div>'+(it.act?'<button class="ti-action" data-action="'+it.act+'" data-id="'+it.id+'">完成</button>':'')+'</div>';}).join('');}
+
+// ===== MODULE 1: TODOS =====
+function renderTodos(){var c=document.getElementById('module-todos');var total=S.todos.length,active=S.todos.filter(function(t){return!t.completed;}).length,od=S.todos.filter(isOverdue).length;var h='<div class="module-header"><h2>待办事项</h2><span class="data-count-badge">'+active+'/'+total+'</span>';if(od)h+=' <span class="badge badge-high">'+od+'逾期</span>';h+='<div class="spacer"></div><button class="btn btn-outline btn-sm" data-action="export-todos">导出</button><button class="btn btn-primary btn-sm" data-action="add-todo">+ 新增</button></div>';h+='<div class="todo-filters">';['all','active','completed'].forEach(function(f){var lb={all:'全部',active:'进行中',completed:'已完成'}[f];h+='<div class="todo-filter'+(U.todoFilter===f?' active':'')+'" data-action="filter-todo" data-val="'+f+'">'+lb+'</div>';});h+='</div>';var fl=S.todos.filter(function(t){if(U.todoFilter==='active')return!t.completed;if(U.todoFilter==='completed')return t.completed;return true;}).sort(function(a,b){if(a.completed!==b.completed)return a.completed?1:-1;return(a.deadline||'9999')>(b.deadline||'9999')?1:-1;});if(!fl.length){h+='<div class="empty-state"><p>暂无待办</p><button class="btn btn-primary" data-action="add-todo">新增待办</button></div>';}else{h+='<div class="todo-list">';fl.forEach(function(t){var od=isOverdue(t);h+='<div class="todo-item '+(t.completed?'completed ':' ')+t.priority+(od?' overdue':'')+'"><div class="todo-check'+(t.completed?' checked':'')+'" data-action="toggle-todo" data-id="'+t.id+'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="todo-content"><div class="todo-title">'+esc(t.title)+'</div>'+(t.content?'<div class="todo-desc">'+esc(t.content)+'</div>':'')+'<div class="todo-meta"><span class="badge badge-blue">'+({teaching:'教学',class:'班级管理',communication:'家校沟通',other:'其他'}[t.category]||t.category)+'</span><span class="badge badge-'+t.priority+'">'+({high:'紧急',medium:'重要',low:'一般'}[t.priority])+'</span>'+(t.deadline?'<span class="todo-deadline'+(od?' overdue':'')+'">'+(od?'已逾期 · ':'')+fmtDate(t.deadline)+'</span>':'')+'</div></div><div class="todo-actions"><button data-action="edit-todo" data-id="'+t.id+'" title="编辑"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button><button data-action="delete-todo" data-id="'+t.id+'" title="删除"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button></div></div>';});h+='</div>';}c.innerHTML=h;}
+function showTodoForm(t){var e=!!t;t=t||{title:'',content:'',deadline:todayStr(),priority:'medium',category:'teaching'};var b='<div class="form-group"><label>标题</label><input id="tf-title" value="'+esc(t.title)+'"></div><div class="form-group"><label>内容</label><textarea id="tf-content">'+esc(t.content)+'</textarea></div><div class="form-row"><div class="form-group"><label>截止时间</label><input type="date" id="tf-deadline" value="'+esc(t.deadline)+'"></div><div class="form-group"><label>优先级</label><select id="tf-priority"><option value="high"'+(t.priority==='high'?' selected':'')+'>紧急</option><option value="medium"'+(t.priority==='medium'?' selected':'')+'>重要</option><option value="low"'+(t.priority==='low'?' selected':'')+'>一般</option></select></div></div><div class="form-group"><label>分类</label><select id="tf-category"><option value="teaching"'+(t.category==='teaching'?' selected':'')+'>教学</option><option value="class"'+(t.category==='class'?' selected':'')+'>班级管理</option><option value="communication"'+(t.category==='communication'?' selected':'')+'>家校沟通</option><option value="other"'+(t.category==='other'?' selected':'')+'>其他</option></select></div>';openModal(e?'编辑待办':'新增待办',b,'<button class="btn btn-primary" data-action="save-todo" data-id="'+(t.id||'')+'">'+(e?'保存':'添加')+'</button><button class="btn btn-ghost" data-action="modal-close">取消</button>');}
+function saveTodo(id){var d={title:val('tf-title'),content:val('tf-content'),deadline:val('tf-deadline'),priority:val('tf-priority'),category:val('tf-category')};if(!d.title){toast('请填标题','error');return;}if(id){var t=S.todos.find(function(x){return x.id===id;});if(t){Object.assign(t,d);toast('已保存','success');}}else{d.id=uid();d.completed=false;d.createdAt=todayStr();S.todos.push(d);toast('已添加','success');}save();closeModal();renderTodos();}
+function val(id){var el=document.getElementById(id);return el?el.value.trim():'';}
+
+// ===== MODULE 2: SCHEDULE =====
+function renderSchedule(){var c=document.getElementById('module-schedule');var days=['','周一','周二','周三','周四','周五'];var h='<div class="module-header"><h2>班级课表</h2><div style="display:flex;gap:6px"><button class="week-toggle-btn'+(S.settings.weekType==='single'?' active':'')+'" data-action="set-weektype" data-val="single">单周</button><button class="week-toggle-btn'+(S.settings.weekType==='double'?' active':'')+'" data-action="set-weektype" data-val="double">双周</button></div><div class="spacer"></div><button class="btn btn-outline btn-sm" data-action="import-schedule">导入</button><button class="btn btn-outline btn-sm no-print" onclick="window.print()">打印</button></div>';h+='<div style="overflow-x:auto"><table class="schedule-table"><thead><tr><th>节次</th>';for(var d=1;d<=5;d++)h+='<th>'+days[d]+'</th>';h+='</tr></thead><tbody>';for(var p=1;p<=8;p++){h+='<tr><td>第'+p+'节</td>';for(d=1;d<=5;d++){var it=getSchItem(d,p);var cls='';var ct='<div class="cell-subject" style="color:#ccc">+</div>';if(it){cls='has-item';if(S.settings.mySubjects.indexOf(it.subject)>=0)cls+=' my-subject';ct='<div class="cell-subject">'+esc(it.subject)+'</div>'+(it.class?'<div class="cell-class">'+esc(it.class)+'</div>':'');}h+='<td class="'+cls+'" data-action="edit-schedule" data-day="'+d+'" data-period="'+p+'">'+ct+'</td>';}h+='</tr>';}h+='</tbody></table></div><div style="margin-top:8px;font-size:12px;color:var(--text2)">蓝色高亮为我的课程（'+esc(S.settings.mySubjects.join('、'))+'），可在设置中修改</div>';c.innerHTML=h;}
+function getSchItem(day,period){return S.schedule.find(function(s){return s.day===day&&s.period===period&&(s.weekType==='both'||s.weekType===S.settings.weekType);});}
+function showSchForm(day,period){var it=getSchItem(day,period);var opts=S.settings.subjects.map(function(s){return'<option value="'+esc(s)+'"'+(it&&it.subject===s?' selected':'')+'>'+esc(s)+'</option>';}).join('');var b='<div class="form-row"><div class="form-group"><label>科目</label><select id="sf-subject"><option value="">- 清空 -</option>'+opts+'</select></div><div class="form-group"><label>班级</label><input id="sf-class" value="'+(it?esc(it.class):'')+'" placeholder="如：3班"></div></div><div class="form-group"><label>适用周次</label><select id="sf-weektype"><option value="both"'+(it&&it.weekType==='both'?' selected':'')+'>单双周通用</option><option value="single"'+(it&&it.weekType==='single'?' selected':'')+'>仅单周</option><option value="double"'+(it&&it.weekType==='double'?' selected':'')+'>仅双周</option></select></div>';openModal('编辑课表 · 第'+period+'节 '+['','周一','周二','周三','周四','周五'][day],b,'<button class="btn btn-primary" data-action="save-schedule" data-day="'+day+'" data-period="'+period+'">保存</button><button class="btn btn-ghost" data-action="modal-close">取消</button>');}
+function saveSchedule(day,period){var sub=val('sf-subject');var cls=val('sf-class');var wt=val('sf-weektype');var idx=S.schedule.findIndex(function(s){return s.day===day&&s.period===period&&(s.weekType==='both'||s.weekType===S.settings.weekType);});if(!sub){if(idx>=0)S.schedule.splice(idx,1);}else{if(idx>=0){S.schedule[idx].subject=sub;S.schedule[idx].class=cls;S.schedule[idx].weekType=wt;}else S.schedule.push({id:uid(),day:day,period:period,subject:sub,class:cls,weekType:wt});}save();closeModal();renderSchedule();}
+function showImportSch(){var b='<div class="form-group"><label>粘贴课表数据（从Excel复制）</label><textarea class="import-area" id="impSched" placeholder="节次,周一,周二,周三,周四,周五&#10;1,语文,数学,英语,物理,化学&#10;2,数学,语文,数学,语文,英语"></textarea></div><div class="import-hint">格式：每行一个节次，逗号或Tab分隔<br>示例：<code>1,语文,数学,英语,物理,化学</code></div>';openModal('导入课表',b,'<button class="btn btn-primary" data-action="do-import-schedule">导入</button><button class="btn btn-ghost" data-action="modal-close">取消</button>');}
+function doImportSch(){var text=document.getElementById('impSched').value;if(!text.trim()){toast('请粘贴数据','error');return;}var rows=parseCSV(text);var cnt=0;rows.forEach(function(row){if(!row[0]||isNaN(parseInt(row[0])))return;var p=parseInt(row[0]);if(p<1||p>8)return;for(var d=1;d<=5&&d<row.length;d++){var sub=(row[d]||'').trim();if(!sub)continue;var idx=S.schedule.findIndex(function(s){return s.day===d&&s.period===p&&(s.weekType==='both'||s.weekType===S.settings.weekType);});if(idx>=0)S.schedule[idx].subject=sub;else S.schedule.push({id:uid(),day:d,period:p,subject:sub,class:'',weekType:'both'});cnt++;}});save();closeModal();renderSchedule();toast('已导入'+cnt+'节','success');}
+
+// ===== MODULE 3: ARRANGE =====
+function renderArrange(){var c=document.getElementById('module-arrange');var h='<div class="sub-tabs"><div class="sub-tab'+(U.arrangeTab==='seating'?' active':'')+'" data-action="set-arrange-tab" data-val="seating">座次表</div><div class="sub-tab'+(U.arrangeTab==='duty'?' active':'')+'" data-action="set-arrange-tab" data-val="duty">值日表</div></div>';c.innerHTML=h;if(U.arrangeTab==='seating')renderSeating();else renderDuty();}
+function renderSeating(){var c=document.getElementById('module-arrange');var h='<div class="module-header"><h2>座次表</h2><div class="seating-dims"><span>行</span><input type="number" id="seatRows" value="'+S.seating.rows+'" min="1" max="10" style="width:40px;height:30px;border:1.5px solid var(--border);border-radius:6px;text-align:center"><span>列</span><input type="number" id="seatCols" value="'+S.seating.cols+'" min="1" max="10" style="width:40px;height:30px;border:1.5px solid var(--border);border-radius:6px;text-align:center"><button class="btn btn-outline btn-sm" data-action="resize-seating">应用</button></div><div class="spacer"></div><button class="btn btn-outline btn-sm" data-action="random-shuffle">随机换座</button><button class="btn btn-outline btn-sm no-print" onclick="window.print()">打印</button></div>';h+='<div class="seat-legend"><div class="legend-item"><span class="legend-dot" style="background:var(--blue-m-bg);border:2px solid #5B8DEE"></span>男生</div><div class="legend-item"><span class="legend-dot" style="background:var(--pink-f-bg);border:2px solid #FF85A2"></span>女生</div></div>';if(U.selectedSeat)h+='<div style="font-size:13px;color:var(--primary);margin-bottom:8px">已选中：'+esc(getStuName(U.selectedSeat))+'，点击目标位置调换</div>';h+='<div class="seating-wrap"><div class="podium">讲 台</div><div class="seat-grid" style="grid-template-columns:repeat('+S.seating.cols+',minmax(80px,1fr))">';for(var r=0;r<S.seating.rows;r++){for(var col=0;col<S.seating.cols;col++){var sid=S.seating.seats[r]&&S.seating.seats[r][col]?S.seating.seats[r][col]:null;var stu=sid?getStu(sid):null;var cls='seat '+(stu?(stu.gender==='男'?'male':'female'):'empty');if(sid===U.selectedSeat)cls+=' selected';h+='<div class="'+cls+'" data-action="click-seat" data-row="'+r+'" data-col="'+col+'"><span class="seat-num">'+(r*S.seating.cols+col+1)+'</span>'+(stu?'<div class="seat-name">'+esc(stu.name)+'</div><div class="seat-meta">第'+stu.group+'组</div>':'')+'</div>';}}h+='</div></div>';c.innerHTML+=h;}
+function ensureSeats(){var sg=S.seating;if(!sg.seats)sg.seats=[];for(var r=0;r<sg.rows;r++){if(!sg.seats[r])sg.seats[r]=[];for(var c=0;c<sg.cols;c++){if(sg.seats[r][c]===undefined)sg.seats[r][c]=null;}}}
+function handleSeat(r,col){ensureSeats();var cur=S.seating.seats[r]&&S.seating.seats[r][col]?S.seating.seats[r][col]:null;if(U.selectedSeat){if(cur===U.selectedSeat){U.selectedSeat=null;}else{for(var i=0;i<S.seating.rows;i++){for(var j=0;j<S.seating.cols;j++){if(S.seating.seats[i]&&S.seating.seats[i][j]===U.selectedSeat){S.seating.seats[i][j]=cur;break;}}}S.seating.seats[r][col]=U.selectedSeat;U.selectedSeat=null;save();}}else if(cur){U.selectedSeat=cur;}renderSeating();}
+function resizeSeat(){var rows=Math.max(1,Math.min(10,parseInt(document.getElementById('seatRows').value)||5));var cols=Math.max(1,Math.min(10,parseInt(document.getElementById('seatCols').value)||6));var ids=[];for(var r=0;r<S.seating.seats.length;r++){if(S.seating.seats[r])for(var c=0;c<S.seating.seats[r].length;c++)if(S.seating.seats[r][c])ids.push(S.seating.seats[r][c]);}var ns=[],idx=0;for(r=0;r<rows;r++){ns[r]=[];for(c=0;c<cols;c++){ns[r][c]=idx<ids.length?ids[idx++]:null;}}S.seating={rows:rows,cols:cols,seats:ns};save();renderSeating();}
+function randomShuffle(){ensureSeats();var ids=S.students.map(function(s){return s.id;});for(var i=ids.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=ids[i];ids[i]=ids[j];ids[j]=t;}var idx=0;for(var r=0;r<S.seating.rows;r++){for(var c=0;c<S.seating.cols;c++){S.seating.seats[r][c]=idx<ids.length?ids[idx++]:null;}}U.selectedSeat=null;save();renderSeating();toast('已随机排座','success');}
+function renderDuty(){var c=document.getElementById('module-arrange');var ws=getWeekStr();var h='<div class="module-header"><h2>值日表</h2><select id="dutyWeekSel" style="border:1.5px solid var(--border);border-radius:8px;padding:6px 10px">';for(var w=-2;w<=4;w++){var d=new Date();d.setDate(d.getDate()+w*7);var y=d.getFullYear(),st=new Date(y,0,1),diff=(d-st)/86400000,wk=Math.ceil((diff+st.getDay()+1)/7);var ws2=y+'-W'+wk;h+='<option value="'+ws2+'"'+(ws2===ws?' selected':'')+'>'+y+'第'+wk+'周</option>';}h+='</select><div class="spacer"></div><button class="btn btn-primary btn-sm" data-action="add-duty-group">新增值日组</button></div>';h+='<div style="margin-bottom:10px;font-size:13px;color:var(--text2)">岗位：'+S.settings.dutyPositions.map(function(p){return'<span class="tag-chip">'+esc(p)+'</span>';}).join('')+'</div>';var wd=S.duty.filter(function(d){return d.week===ws;});if(!wd.length){h+='<div class="empty-state"><p>本周暂无值日安排</p></div>';}else{wd.forEach(function(d){var gs=getGroupStu(d.group);h+='<div class="duty-group"><div class="duty-group-header"><span class="duty-group-title">第'+d.group+'组</span><span class="data-count-badge">'+gs.length+'人</span><div class="spacer"></div>';var inc=d.tasks.filter(function(t){return!t.completed;}).length;if(inc===0&&d.tasks.length>0)h+='<span class="badge badge-low">已完成</span>';if(inc>0)h+='<button class="btn btn-outline btn-sm" data-action="sync-duty-points" data-id="'+d.id+'">同步积分</button>';h+='<button class="btn btn-ghost btn-sm" data-action="delete-duty" data-id="'+d.id+'">删除</button></div><div class="duty-tasks">';d.tasks.forEach(function(t,idx){var sn=t.assigneeId?getStuName(t.assigneeId):'未分配';h+='<div class="duty-task'+(t.completed?' done':'')+'"><div class="dt-check" data-action="toggle-duty" data-id="'+d.id+'" data-idx="'+idx+'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-weight:500">'+esc(t.position)+'</span><span style="color:var(--text2);margin-left:auto">'+esc(sn)+'</span></div>';});h+='</div><div style="margin-top:8px"><button class="btn btn-ghost btn-sm" data-action="add-duty-task" data-id="'+d.id+'">+ 添加岗位</button></div></div>';});}c.innerHTML+=h;}
+function showAddDutyGroup(){var groups=Object.keys(getGroups());var b='<div class="form-group"><label>值日组</label><select id="df-group">';groups.forEach(function(g){b+='<option value="'+g+'">第'+g+'组 ('+getGroupStu(parseInt(g)).length+'人)</option>';});b+='</select></div><div class="form-group"><label>值日岗位</label>';S.settings.dutyPositions.forEach(function(p){b+='<div class="checkbox-wrap"><input type="checkbox" value="'+esc(p)+'" checked>'+esc(p)+'</div>';});b+='</div>';openModal('新增值日组',b,'<button class="btn btn-primary" data-action="save-duty-group">添加</button><button class="btn btn-ghost" data-action="modal-close">取消</button>');}
+function saveDutyGroup(){var g=parseInt(document.getElementById('df-group').value);var pos=[];document.querySelectorAll('.checkbox-wrap input:checked').forEach(function(cb){pos.push(cb.value);});var ws=getWeekStr();if(S.duty.find(function(d){return d.week===ws&&d.group===g;})){toast('该组本周已有值日','error');return;}var gs=getGroupStu(g);var tasks=pos.map(function(p,idx){return{position:p,assigneeId:idx<gs.length?gs[idx].id:null,completed:false};});S.duty.push({id:uid(),week:ws,group:g,tasks:tasks});save();closeModal();renderDuty();toast('已添加','success');}
+function showAddDutyTask(id){var b='<div class="form-group"><label>岗位名称</label><input id="dtf-position"></div><div class="form-group"><label>负责人</label><select id="dtf-assignee"><option value="">未分配</option>';S.students.forEach(function(s){b+='<option value="'+s.id+'">'+esc(s.name)+'</option>';});b+='</select></div>';openModal('添加值日岗位',b,'<button class="btn btn-primary" data-action="save-duty-task" data-id="'+id+'">添加</button><button class="btn btn-ghost" data-action="modal-close">取消</button>');}
+function saveDutyTask(id){var pos=val('dtf-position');if(!pos){toast('请输入岗位','error');return;}var aid=val('dtf-assignee');var d=S.duty.find(function(x){return x.id===id;});if(d)d.tasks.push({position:pos,assigneeId:aid||null,completed:false});save();closeModal();renderDuty();}
+function toggleDuty(id,idx){var d=S.duty.find(function(x){return x.id===id;});if(d&&d.tasks[idx]){d.tasks[idx].completed=!d.tasks[idx].completed;save();renderDuty();}}
+function syncDutyPoints(id){var d=S.duty.find(function(x){return x.id===id;});if(!d)return;var cnt=0;d.tasks.forEach(function(t){if(t.completed&&t.assigneeId){S.points.push({id:uid(),studentId:t.assigneeId,points:1,type:'add',reason:'值日完成：'+t.position,date:todayStr()});cnt++;}});if(cnt){save();toast('已为'+cnt+'名学生各加1分','success');}else toast('没有已完成的任务','warn');}
+// ===== MODULE 4: PROFILES =====
+function renderProfiles(){var c=document.getElementById('module-profiles');if(U.selectedProfileId){renderProfileDetail();return;}var h='<div class="module-header"><h2>学生档案</h2><span class="data-count-badge">'+S.students.length+'人</span><div class="spacer"></div><button class="btn btn-outline btn-sm" data-action="export-stu-csv">导出</button><button class="btn btn-primary btn-sm" data-action="add-student">+ 新增</button></div>';h+='<div class="stu-toolbar"><button class="btn btn-outline btn-sm" data-action="import-students"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>导入名单</button><button class="btn btn-outline btn-sm" data-action="import-committee"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>班委任职表</button><button class="btn btn-outline btn-sm" data-action="import-info-sheet"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>信息表</button><button class="btn btn-outline btn-sm" data-action="batch-photos"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>批量头像</button>';if(S.committee&&S.committee.length){h+='<div class="spacer"></div><span class="badge badge-blue">'+S.committee.length+'名班委</span>';}h+='</div>';h+='<div class="profile-filters"><div class="profile-filter-btn'+(U.profileFilter==='all'?' active':'')+'" data-action="filter-profile" data-val="all">全部</div>';S.settings.tags.forEach(function(t){h+='<div class="profile-filter-btn'+(U.profileFilter===t?' active':'')+'" data-action="filter-profile" data-val="'+esc(t)+'">'+esc(t)+'</div>';});h+='</div>';if(!S.students.length){h+='<div class="empty-state"><p>暂无学生数据</p><button class="btn btn-primary" data-action="import-students">导入名单</button></div>';c.innerHTML=h;return;}var fl=S.students.filter(function(s){if(U.profileFilter==='all')return true;return s.tags&&s.tags.indexOf(U.profileFilter)>=0;});h+='<div class="profile-list">';fl.forEach(function(s){var v=S.violations.filter(function(v){return v.studentId===s.id;}).length;var cm=S.communications.filter(function(c){return c.studentId===s.id;}).length;var cpos=S.committee.find(function(cp){return cp.studentId===s.id;});var av=s.photo?'<img class="profile-avatar-img" src="'+s.photo+'">':esc(s.name.charAt(0));h+='<div class="profile-card '+(s.gender==='男'?'male':'female')+'" data-action="view-profile" data-id="'+s.id+'"><div class="profile-card-header"><div class="profile-avatar '+(s.gender==='男'?'male':'female')+'">'+av+'</div><div><div class="profile-name">'+esc(s.name)+'</div><div class="profile-info">第'+s.group+'组 · '+esc(s.gender)+(s.studentNo?' · '+esc(s.studentNo):'')+'</div></div></div><div class="profile-info">'+esc(s.guardian1Phone||s.guardian1Name||'未填监护人电话')+'</div>'+(cpos?'<div class="committee-badge">'+esc(cpos.position)+'</div>':'')+(s.tags&&s.tags.length?'<div class="profile-tags">'+s.tags.map(function(t){return'<span class="tag-chip">'+esc(t)+'</span>';}).join('')+'</div>':'')+(v||cm?'<div style="margin-top:6px;font-size:12px;color:var(--text2)">违纪'+v+' · 沟通'+cm+'</div>':'')+'</div>';});h+='</div>';c.innerHTML=h;}
+function renderProfileDetail(){var c=document.getElementById('module-profiles');var s=getStu(U.selectedProfileId);if(!s){U.selectedProfileId=null;renderProfiles();return;}var v=S.violations.filter(function(v){return v.studentId===s.id;});var cm=S.communications.filter(function(c){return c.studentId===s.id;});var pts=S.points.filter(function(p){return p.studentId===s.id;});var tp=pts.reduce(function(a,p){return a+(p.type==='add'?p.points:-p.points);},0);var h='<div class="detail-header"><button class="detail-back" data-action="back-profiles"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></button><div class="profile-avatar '+(s.gender==='男'?'male':'female')+'" style="width:48px;height:48px;font-size:18px;overflow:hidden">'+(s.photo?'<img class="profile-avatar-img" src="'+s.photo+'">':esc(s.name.charAt(0)))+'</div><div><div class="detail-name">'+esc(s.name)+'</div><div style="font-size:13px;color:var(--text2)">'+esc(s.gender)+' · 第'+s.group+'组 · 积分'+tp+(function(){var cp=S.committee.find(function(c){return c.studentId===s.id;});return cp?' · <span style="color:var(--primary-dark);font-weight:600">'+esc(cp.position)+'</span>':'';})()+'</div></div><div class="spacer"></div><button class="btn btn-outline btn-sm" data-action="add-points-single" data-id="'+s.id+'">加减分</button><button class="btn btn-outline btn-sm" data-action="edit-student" data-id="'+s.id+'">编辑</button><button class="btn btn-outline btn-sm" data-action="set-photo" data-id="'+s.id+'">头像</button><button class="btn btn-danger btn-sm" data-action="delete-student" data-id="'+s.id+'">删除</button></div>';h+='<div class="detail-section"><div class="detail-section-title">基本信息</div>';h+='<div class="detail-row"><span class="dr-label">姓名</span><span class="dr-value">'+esc(s.name)+'</span></div><div class="detail-row"><span class="dr-label">学号</span><span class="dr-value">'+esc(s.studentNo||'未填写')+'</span></div><div class="detail-row"><span class="dr-label">性别</span><span class="dr-value">'+esc(s.gender)+'</span></div><div class="detail-row"><span class="dr-label">身份证号</span><span class="dr-value">'+esc(s.idCard||'未填写')+'</span></div><div class="detail-row"><span class="dr-label">毕业小学</span><span class="dr-value">'+esc(s.primarySchool||'未填写')+'</span></div><div class="detail-row"><span class="dr-label">家庭住址</span><span class="dr-value">'+esc(s.address||'未填写')+'</span></div><div class="detail-row"><span class="dr-label">监护人1</span><span class="dr-value">'+esc(s.guardian1Name||'未填写')+(s.guardian1Phone?' · '+esc(s.guardian1Phone):'')+'</span></div><div class="detail-row"><span class="dr-label">监护人2</span><span class="dr-value">'+esc(s.guardian2Name||'未填写')+(s.guardian2Phone?' · '+esc(s.guardian2Phone):'')+'</span></div><div class="detail-row"><span class="dr-label">组别</span><span class="dr-value">第'+s.group+'组</span></div>'+(s.tags&&s.tags.length?'<div class="detail-row"><span class="dr-label">标签</span><span class="dr-value">'+s.tags.map(function(t){return'<span class="tag-chip">'+esc(t)+'</span>';}).join(' ')+'</span></div>':'')+(s.notes?'<div class="detail-row"><span class="dr-label">备注</span><span class="dr-value">'+esc(s.notes)+'</span></div>':'')+'</div>';h+='<div class="detail-section"><div class="detail-section-title">违纪记录 <span class="data-count-badge">'+v.length+'</span><div class="spacer"></div><button class="btn btn-outline btn-sm" data-action="add-violation" data-id="'+s.id+'">+ 登记</button></div>';if(!v.length)h+='<div style="color:var(--text3);font-size:13px">暂无</div>';v.forEach(function(vi){h+='<div class="violation-item"><div class="vi-date">'+esc(vi.date)+'</div><div>'+esc(vi.event)+'</div>'+(vi.action?'<div style="color:var(--text2);font-size:12px;margin-top:2px">处理：'+esc(vi.action)+'</div>':'')+'<div style="margin-top:4px"><button class="btn btn-ghost btn-sm" data-action="delete-violation" data-id="'+vi.id+'">删除</button></div></div>';});h+='</div>';h+='<div class="detail-section"><div class="detail-section-title">家校沟通 <span class="data-count-badge">'+cm.length+'</span><div class="spacer"></div><button class="btn btn-outline btn-sm" data-action="add-communication" data-id="'+s.id+'">+ 记录</button></div>';if(!cm.length)h+='<div style="color:var(--text3);font-size:13px">暂无</div>';cm.forEach(function(ci){h+='<div class="comm-item"><div class="comm-date">'+esc(ci.date)+' · '+esc(ci.method)+'</div><div>'+esc(ci.content)+'</div>'+(ci.followUp?'<div style="color:var(--orange);font-size:12px;margin-top:2px">跟进：'+esc(ci.followUp)+'</div>':'')+'<div style="margin-top:4px"><button class="btn btn-ghost btn-sm" data-action="delete-communication" data-id="'+ci.id+'">删除</button></div></div>';});h+='</div>';c.innerHTML=h;}
+function showStuForm(stu){var e=!!stu;stu=stu||{name:'',studentNo:'',gender:'男',idCard:'',primarySchool:'',address:'',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:1,tags:[],notes:''};var b='<div class="form-row"><div class="form-group"><label>姓名</label><input id="sf-name" value="'+esc(stu.name)+'"></div><div class="form-group"><label>学号</label><input id="sf-no" value="'+esc(stu.studentNo||'')+'"></div></div><div class="form-row"><div class="form-group"><label>性别</label><select id="sf-gender"><option value="男"'+(stu.gender==='男'?' selected':'')+'>男</option><option value="女"'+(stu.gender==='女'?' selected':'')+'>女</option></select></div><div class="form-group"><label>身份证号</label><input id="sf-idcard" value="'+esc(stu.idCard||'')+'"></div></div><div class="form-row"><div class="form-group"><label>毕业小学</label><input id="sf-school" value="'+esc(stu.primarySchool||'')+'"></div><div class="form-group"><label>组别（值日用）</label><input type="number" id="sf-group" value="'+(stu.group||1)+'" min="1"></div></div><div class="form-group"><label>家庭住址</label><input id="sf-address" value="'+esc(stu.address||'')+'"></div><div class="form-row"><div class="form-group"><label>监护人1姓名</label><input id="sf-g1name" value="'+esc(stu.guardian1Name||'')+'"></div><div class="form-group"><label>监护人1手机号</label><input type="tel" id="sf-g1phone" value="'+esc(stu.guardian1Phone||'')+'"></div></div><div class="form-row"><div class="form-group"><label>监护人2姓名</label><input id="sf-g2name" value="'+esc(stu.guardian2Name||'')+'"></div><div class="form-group"><label>监护人2手机号</label><input type="tel" id="sf-g2phone" value="'+esc(stu.guardian2Phone||'')+'"></div></div><div class="form-row"><div class="form-group"><label>标签（逗号分隔）</label><input id="sf-tags" value="'+esc((stu.tags||[]).join(','))+'"></div></div><div class="form-group"><label>备注</label><textarea id="sf-notes">'+esc(stu.notes||'')+'</textarea></div>';openModal(e?'编辑学生':'新增学生',b,'<button class="btn btn-primary" data-action="save-student" data-id="'+(stu.id||'')+'">保存</button><button class="btn btn-ghost" data-action="modal-close">取消</button>');}
+function saveStudent(id){var nm=val('sf-name');if(!nm){toast('请填姓名','error');return;}var d={name:nm,studentNo:val('sf-no'),gender:val('sf-gender'),idCard:val('sf-idcard'),primarySchool:val('sf-school'),address:val('sf-address'),guardian1Name:val('sf-g1name'),guardian1Phone:val('sf-g1phone'),guardian2Name:val('sf-g2name'),guardian2Phone:val('sf-g2phone'),group:parseInt(val('sf-group'))||1,tags:val('sf-tags').split(/[,，]/).map(function(t){return t.trim();}).filter(Boolean),notes:val('sf-notes')};if(id){var s=getStu(id);if(s){Object.assign(s,d);toast('已保存','success');}}else{d.id=uid();S.students.push(d);toast('已添加','success');}save();closeModal();renderProfiles();renderArrange();}
+function showImportStu(){var b='<div class="form-group"><label>方式一：粘贴（从Excel复制单元格）</label><textarea class="import-area" id="impStu" placeholder="姓名,学号,性别,身份证号,毕业小学,家庭住址,监护人1姓名,监护人1手机号,监护人2姓名,监护人2手机号&#10;张明轩,2026001,男,330000201101010011,市实验小学,幸福路12号3幢201,张建国,13800000001,王芳,13800000002"></textarea><div style="margin-top:8px"><button class="btn btn-primary" data-action="do-import-students">导入粘贴内容</button></div></div><div class="import-hint">方式二：选择文件后<b>立即自动导入</b>，无需再点按钮<br>支持 .xlsx / .csv（旧版 .xls 请先在Excel中「另存为」.xlsx）<br>可含表头行，<b>自动按列名识别</b>（支持：姓名、学号、性别、身份证号、毕业小学、家庭住址、监护人1姓名、监护人1手机号、监护人2姓名、监护人2手机号，及常见同义写法如「家长电话」）；无表头则按此列顺序解析；<b>大文件解析较慢时可先另存为CSV再导入</b></div>';openModal('导入学生名单',b,'<button class="btn btn-ghost" data-action="modal-close">关闭</button>');var fi=document.createElement('input');fi.type='file';fi.accept='.xlsx,.csv';fi.id='stu-file-input';fi.style.cssText='display:block;font-size:14px;margin-top:6px;padding:8px;border:1px dashed #cbd5e1;border-radius:8px;width:100%;box-sizing:border-box';fi.onchange=function(e){var f=e.target.files[0];if(!f)return;var fn=(f.name||'').toLowerCase();if(fn.indexOf('.xls')>=0&&fn.indexOf('.xlsx')<0){toast('旧版 .xls 不支持，请先在Excel中「另存为」.xlsx 再导入','error');return;}toast('正在解析 '+f.name+'（如长时间无响应，可刷新页面后改用CSV导入）…','info');var inp=document.getElementById('stu-file-input');inp.disabled=true;var done=function(){inp.disabled=false;};if(fn.indexOf('.xlsx')>=0){var rd=new FileReader();rd.onload=function(ev){var toP=new Promise(function(_,rej){setTimeout(function(){rej(new Error('解析超时，文件可能过大或格式特殊，建议拆分后重试或改用CSV'));},15000);});Promise.race([parseXlsx(ev.target.result),toP]).then(function(rows){importStudentRows(rows,f.name);}).catch(function(err){toast('Excel解析失败：'+err.message+'（可改用CSV或直接粘贴）','error');done();});};rd.onerror=function(){toast('读取文件失败','error');done();};rd.readAsArrayBuffer(f);}else{var r=new FileReader();r.onload=function(ev){importStudentRows(parseCSV(ev.target.result),f.name);};r.onerror=function(){toast('读取文件失败','error');done();};r.readAsText(f,'UTF-8');}};document.querySelector('.import-hint').appendChild(fi);}
+function importStudentRows(rows,srcName){var HEAD={guardian2Phone:['监护人2手机','监护人2电话','监护2手机','监护2电话','监护人二手机','监护人二电话'],guardian2Name:['监护人2姓名','监护人二姓名','第二监护人'],guardian1Phone:['监护人1手机','监护人1电话','监护1手机','监护1电话','监护人手机','监护人电话','家长电话','家长手机','父亲电话','母亲电话'],guardian1Name:['监护人1姓名','监护人一姓名','监护人姓名','家长姓名','父亲姓名','母亲姓名','第一监护人'],name:['姓名','名字'],studentNo:['学号','学生编号'],gender:['性别'],idCard:['身份证','证件号码','证件号'],primarySchool:['毕业小学','毕业学校','原就读小学','原学校','小学'],address:['家庭住址','家庭地址','住址','地址'],group:['组别','小组'],tags:['标签'],notes:['备注','说明']};var map=null,start=0;for(var hr=0;hr<Math.min(rows.length,3);hr++){var line=rows[hr].map(function(x){return String(x||'').trim();});if(line.join(',').indexOf('姓名')>=0){map={};start=hr+1;rows[hr].forEach(function(cell,ci){var c=String(cell||'').trim().replace(/\s+/g,'');if(!c)return;for(var key in HEAD){if(map[key]==null&&HEAD[key].some(function(k){return c.indexOf(k)>=0;})){map[key]=ci;break;}}});var GENERIC={guardian1Phone:['联系电话','手机号','手机','电话']};for(var gk in GENERIC){if(map[gk]==null){for(var ci2=0;ci2<rows[hr].length;ci2++){var c2=String(rows[hr][ci2]||'').trim().replace(/\s+/g,'');if(c2&&GENERIC[gk].some(function(k){return c2.indexOf(k)>=0;})){map[gk]=ci2;break;}}}}break;}}if(!map){var oldFmt=rows.length&&rows[0]&&/^(男|女|男生|女生|male|female|M|F)$/i.test(String(rows[0][1]||'').trim());if(oldFmt){map={name:0,gender:1,group:2,tags:3,guardian1Name:5,guardian1Phone:6,notes:7};}else{map={};['name','studentNo','gender','idCard','primarySchool','address','guardian1Name','guardian1Phone','guardian2Name','guardian2Phone','group','tags','notes'].forEach(function(key,i){map[key]=i;});}}function pick(row,key){return map[key]!=null?String(row[map[key]]||'').trim():'';}var cnt=0;for(var i=start;i<rows.length;i++){var row=rows[i];if(!row)continue;var nm=pick(row,'name');if(!nm)continue;var gd=pick(row,'gender');if(/女|girl|female|F/i.test(gd)&&!/男/.test(gd))gd='女';else if(/男|boy|male|M/i.test(gd)&&!/女/.test(gd))gd='男';else gd='男';var g=parseInt(pick(row,'group'))||1;var tagsStr=pick(row,'tags');var tags=tagsStr?tagsStr.split(/[|｜;；,，]/).map(function(t){return t.trim();}).filter(Boolean):[];S.students.push({id:uid(),name:nm,studentNo:pick(row,'studentNo'),gender:gd,idCard:pick(row,'idCard'),primarySchool:pick(row,'primarySchool'),address:pick(row,'address'),guardian1Name:pick(row,'guardian1Name'),guardian1Phone:pick(row,'guardian1Phone'),guardian2Name:pick(row,'guardian2Name'),guardian2Phone:pick(row,'guardian2Phone'),group:g,tags:tags,notes:pick(row,'notes')});cnt++;}save();closeModal();renderProfiles();renderArrange();renderToday();toast((srcName?'已从「'+srcName+'」自动导入':'已导入')+cnt+'名学生（自动识别表头），已在「学生档案/座次表/值日表」同步更新','success');}
+function doImportStu(){var text=document.getElementById('impStu').value;if(!text.trim()){toast('请先粘贴数据','error');return;}importStudentRows(parseCSV(text),null);}
+// ===== COMMITTEE IMPORT =====
+function showImportCommittee(){if(!S.students.length){toast('请先导入学生名单','warn');return;}var b='<div class="form-group"><label>方式一：粘贴（从Excel复制，格式：姓名,职务）</label><textarea class="import-area" id="impComm" placeholder="姓名,职务\n张明轩,班长\n李思琪,学习委员"></textarea><div style="margin-top:8px"><button class="btn btn-primary" data-action="do-import-committee">导入粘贴内容</button></div></div><div class="import-hint">方式二：选择 .xlsx / .csv 文件后<b>立即自动导入</b><br>表格需含<b>姓名</b>和<b>职务</b>列（或「职务」「任职」「班委」等同义列名），也可含学号列用于精确匹配<br>导入后将<b>覆盖</b>原有班委任职表</div>';openModal('导入班委任职表',b,'<button class="btn btn-ghost" data-action="modal-close">关闭</button>');var fi=document.createElement('input');fi.type='file';fi.accept='.xlsx,.csv';fi.id='comm-file-input';fi.style.cssText='display:block;font-size:14px;margin-top:6px;padding:8px;border:1px dashed #cbd5e1;border-radius:8px;width:100%;box-sizing:border-box';fi.onchange=function(e){var f=e.target.files[0];if(!f)return;var fn=(f.name||'').toLowerCase();if(fn.indexOf('.xls')>=0&&fn.indexOf('.xlsx')<0){toast('旧版 .xls 不支持，请先另存为 .xlsx','error');return;}toast('正在解析 '+f.name+'…','info');var inp=document.getElementById('comm-file-input');inp.disabled=true;var done=function(){inp.disabled=false;};if(fn.indexOf('.xlsx')>=0){var rd=new FileReader();rd.onload=function(ev){var toP=new Promise(function(_,rej){setTimeout(function(){rej(new Error('解析超时'));},15000);});Promise.race([parseXlsx(ev.target.result),toP]).then(function(rows){importCommitteeRows(rows,f.name);done();}).catch(function(err){toast('解析失败：'+err.message,'error');done();});};rd.onerror=function(){toast('读取文件失败','error');done();};rd.readAsArrayBuffer(f);}else{var r=new FileReader();r.onload=function(ev){importCommitteeRows(parseCSV(ev.target.result),f.name);done();};r.onerror=function(){toast('读取文件失败','error');done();};r.readAsText(f,'UTF-8');}};document.querySelector('.import-hint').appendChild(fi);}
+function doImportCommittee(){var text=document.getElementById('impComm').value;if(!text.trim()){toast('请先粘贴数据','error');return;}importCommitteeRows(parseCSV(text),null);}
+function importCommitteeRows(rows,srcName){var nameCol=-1,posCol=-1,snoCol=-1,start=0;for(var hr=0;hr<Math.min(rows.length,3);hr++){var line=rows[hr].map(function(x){return String(x||'').trim();});var joined=line.join(',');if(joined.indexOf('姓名')>=0||joined.indexOf('名字')>=0){start=hr+1;for(var ci=0;ci<rows[hr].length;ci++){var c=String(rows[hr][ci]||'').trim().replace(/\s+/g,'');if(nameCol<0&&(c.indexOf('姓名')>=0||c.indexOf('名字')>=0))nameCol=ci;if(posCol<0&&(c.indexOf('职务')>=0||c.indexOf('任职')>=0||c.indexOf('班委')>=0||c.indexOf('职位')>=0||c.indexOf('岗位')>=0))posCol=ci;if(snoCol<0&&(c.indexOf('学号')>=0||c.indexOf('编号')>=0))snoCol=ci;}break;}}if(nameCol<0||posCol<0){if(rows.length&&rows[0].length>=2){nameCol=0;posCol=1;start=1;}else{toast('未识别到姓名/职务列','error');return;}}var entries=[],nf=[];for(var i=start;i<rows.length;i++){var row=rows[i];if(!row)continue;var nm=String(row[nameCol]||'').trim();var ps=String(row[posCol]||'').trim();if(!nm||!ps)continue;var stu=null;if(snoCol>=0&&row[snoCol]){stu=S.students.find(function(s){return s.studentNo===String(row[snoCol]).trim();});}if(!stu)stu=S.students.find(function(s){return s.name===nm;});if(stu){entries.push({studentId:stu.id,position:ps});}else{nf.push(nm);}}if(!entries.length){toast('未匹配到任何学生','error');return;}S.committee=entries;save();closeModal();renderProfiles();toast('已导入'+entries.length+'名班委'+(nf.length?'，未匹配：'+nf.join('、'):''),'success');}
+
+// ===== BATCH PHOTOS =====
+function showBatchPhotos(){if(!S.students.length){toast('请先导入学生名单','warn');return;}var b='<div class="upload-drop-zone" id="photoDropZone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><p>点击选择图片 或 拖拽图片到此处</p><p style="font-size:12px;color:var(--text3)">支持 jpg/png，文件名含学生姓名可自动匹配</p></div><div id="photoMatchList"></div>';openModal('批量上传头像',b,'<button class="btn btn-primary" data-action="save-batch-photos" id="saveBatchPhotosBtn" style="display:none">保存头像</button><button class="btn btn-ghost" data-action="modal-close">取消</button>');var dz=document.getElementById('photoDropZone');var fi=document.createElement('input');fi.type='file';fi.accept='image/*';fi.multiple=true;fi.style.display='none';dz.appendChild(fi);dz.onclick=function(){fi.click();};fi.onchange=function(e){processBatchPhotos(e.target.files);};dz.addEventListener('dragover',function(e){e.preventDefault();dz.classList.add('dragover');});dz.addEventListener('dragleave',function(){dz.classList.remove('dragover');});dz.addEventListener('drop',function(e){e.preventDefault();dz.classList.remove('dragover');if(e.dataTransfer.files)processBatchPhotos(e.dataTransfer.files);});}
+function processBatchPhotos(files){if(!files||!files.length)return;var photos=[];var pending=files.length;var list=document.getElementById('photoMatchList');list.innerHTML='<div class="upload-progress">正在处理 '+files.length+' 张图片…</div>';for(var i=0;i<files.length;i++){(function(file,idx){compressImg(file,function(data){if(data){var fname=file.name.replace(/\.[^.]+$/,'').trim();var matched=S.students.find(function(s){return s.name===fname||fname.indexOf(s.name)>=0||s.name.indexOf(fname)>=0;});photos.push({data:data,filename:file.name,studentId:matched?matched.id:null,studentName:matched?matched.name:''});}pending--;if(pending===0){U.batchPhotos=photos;renderPhotoMatchList(photos);}});})(files[i],i);}}
+function renderPhotoMatchList(photos){var list=document.getElementById('photoMatchList');if(!photos.length){list.innerHTML='';return;}var h='';photos.forEach(function(p,i){var matched=!!p.studentId;h+='<div class="photo-match-row"><img class="photo-match-thumb" src="'+p.data+'"><select class="photo-match-select" data-photo-idx="'+i+'"><option value="">--选择学生--</option>';S.students.forEach(function(s){var sel=(p.studentId===s.id)?' selected':'';var tag=(s.photo?'（已有头像）':'');h+='<option value="'+s.id+'"'+sel+'>'+esc(s.name)+tag+'</option>';});h+='</select><span class="photo-match-status '+(matched?'matched':'unmatched')+'">'+(matched?'已匹配：'+esc(p.studentName):'未匹配')+'</span></div>';});list.innerHTML=h;var btn=document.getElementById('saveBatchPhotosBtn');if(btn)btn.style.display='';list.querySelectorAll('.photo-match-select').forEach(function(sel){sel.onchange=function(){var idx=parseInt(sel.dataset.photoIdx);U.batchPhotos[idx].studentId=sel.value||null;var st=S.students.find(function(s){return s.id===sel.value;});U.batchPhotos[idx].studentName=st?st.name:'';sel.parentElement.querySelector('.photo-match-status').className='photo-match-status '+(sel.value?'matched':'unmatched');sel.parentElement.querySelector('.photo-match-status').textContent=sel.value?'已匹配：'+(st?st.name:''):'未匹配';};});}
+function saveBatchPhotos(){if(!U.batchPhotos||!U.batchPhotos.length){toast('没有图片','error');return;}var cnt=0;U.batchPhotos.forEach(function(p){if(p.studentId){var s=getStu(p.studentId);if(s){s.photo=p.data;cnt++;}}});save();closeModal();U.batchPhotos=null;renderProfiles();toast('已保存'+cnt+'名学生头像','success');}
+function setStudentPhoto(sid){var fi=document.createElement('input');fi.type='file';fi.accept='image/*';fi.onchange=function(e){var f=e.target.files[0];if(!f)return;compressImg(f,function(data){if(data){var s=getStu(sid);if(s){s.photo=data;save();renderProfileDetail();toast('头像已更新','success');}else toast('学生不存在','error');}else toast('图片处理失败','error');});};fi.click();}
+function showVioForm(sid){var b='<div class="form-group"><label>日期</label><input type="date" id="vf-date" value="'+todayStr()+'"></div><div class="form-group"><label>事件描述</label><textarea id="vf-event"></textarea></div><div class="form-group"><label>处理措施</label><input id="vf-action"></div>';openModal('登记违纪',b,'<button class="btn btn-primary" data-action="save-violation" data-id="'+sid+'">保存</button><button class="btn btn-ghost" data-action="modal-close">取消</button>');}
+function saveVio(sid){var ev=val('vf-event');if(!ev){toast('请填事件','error');return;}S.violations.push({id:uid(),studentId:sid,date:val('vf-date'),event:ev,action:val('vf-action')});save();closeModal();renderProfileDetail();toast('已登记','success');}
+function showCommForm(sid){var b='<div class="form-row"><div class="form-group"><label>日期</label><input type="date" id="cf-date" value="'+todayStr()+'"></div><div class="form-group"><label>方式</label><select id="cf-method"><option>电话</option><option>微信</option><option>面谈</option><option>家访</option><option>其他</option></select></div></div><div class="form-group"><label>沟通内容</label><textarea id="cf-content"></textarea></div><div class="form-group"><label>跟进事项</label><input id="cf-followup"></div>';openModal('记录家校沟通',b,'<button class="btn btn-primary" data-action="save-communication" data-id="'+sid+'">保存</button><button class="btn btn-ghost" data-action="modal-close">取消</button>');}
+function saveComm(sid){var ct=val('cf-content');if(!ct){toast('请填内容','error');return;}S.communications.push({id:uid(),studentId:sid,date:val('cf-date'),method:val('cf-method'),content:ct,followUp:val('cf-followup')});save();closeModal();renderProfileDetail();toast('已记录','success');}
+
+// ===== MODULE 5: GRADES & HOMEWORK =====
+function renderGradesMod(){var c=document.getElementById('module-grades');var h='<div class="sub-tabs"><div class="sub-tab'+(U.gradesTab==='grades'?' active':'')+'" data-action="set-grades-tab" data-val="grades">成绩分析</div><div class="sub-tab'+(U.gradesTab==='analysis'?' active':'')+'" data-action="set-grades-tab" data-val="analysis">学情分析</div><div class="sub-tab'+(U.gradesTab==='homework'?' active':'')+'" data-action="set-grades-tab" data-val="homework">作业追踪</div></div>';c.innerHTML=h;if(U.gradesTab==='grades')renderGrades();else if(U.gradesTab==='analysis')renderExamAnalysis();else renderHW();}
+function renderGrades(){var c=document.getElementById('module-grades');var h='<div class="module-header"><h2>成绩分析</h2><div class="spacer"></div><button class="btn btn-outline btn-sm" data-action="export-grades">导出</button><button class="btn btn-primary btn-sm" data-action="import-grades">导入成绩</button></div>';if(!S.grades.length){h+='<div class="empty-state"><p>暂无成绩数据</p><button class="btn btn-primary" data-action="import-grades">导入成绩</button></div>';c.innerHTML+=h;return;}var byExam={};S.grades.forEach(function(g){if(!byExam[g.examName])byExam[g.examName]=[];byExam[g.examName].push(g);});var exams=Object.keys(byExam);var ex=null;if(U.selectedExamId){ex=S.grades.find(function(g){return g.id===U.selectedExamId;});}if(!ex){ex=byExam[exams[0]][0];U.selectedExamId=ex.id;}var selExam=ex.examName;h+='<div style="margin-bottom:12px;display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span style="font-size:13px;color:var(--text2)">选择考试：</span>';exams.forEach(function(en){h+='<button class="week-toggle-btn'+(en===selExam?' active':'')+'" data-action="select-grade-exam" data-name="'+esc(en)+'">'+esc(en)+'</button>';});h+='</div>';var subs=byExam[selExam]||[];h+='<div style="margin-bottom:12px;display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span style="font-size:13px;color:var(--text2)">选择学科：</span>';subs.forEach(function(g){h+='<button class="week-toggle-btn'+(g.id===U.selectedExamId?' active':'')+'" data-action="select-grade-subject" data-id="'+g.id+'">'+esc(g.subject)+'</button>';});h+='</div>';var sc=Object.entries(ex.scores).map(function(a){return{sid:a[0],score:a[1]};}).sort(function(a,b){return b.score-a.score;});var vs=sc.map(function(s){return s.score;});var avg=(vs.reduce(function(a,b){return a+b;},0)/vs.length).toFixed(1);var mx=Math.max.apply(null,vs),mn=Math.min.apply(null,vs);var pass=vs.filter(function(v){return v>=60;}).length,exc=vs.filter(function(v){return v>=85;}).length;h+='<div class="grade-stats"><div class="stat-card"><div class="stat-value">'+avg+'</div><div class="stat-label">平均分</div></div><div class="stat-card"><div class="stat-value">'+mx+'</div><div class="stat-label">最高分</div></div><div class="stat-card"><div class="stat-value">'+mn+'</div><div class="stat-label">最低分</div></div><div class="stat-card"><div class="stat-value">'+(pass/vs.length*100).toFixed(0)+'%</div><div class="stat-label">及格率</div></div><div class="stat-card"><div class="stat-value">'+(exc/vs.length*100).toFixed(0)+'%</div><div class="stat-label">优秀率</div></div><div class="stat-card"><div class="stat-value">'+vs.length+'</div><div class="stat-label">参考人数</div></div></div>';h+='<div class="chart-wrap"><div class="chart-title">分数段分布</div>'+renderChart(vs)+'</div>';h+='<div style="overflow-x:auto"><table class="grade-table"><thead><tr><th>排名</th><th>姓名</th><th>组别</th><th>分数</th><th>评价</th></tr></thead><tbody>';sc.forEach(function(s,i){var st=getStu(s.sid);var rc=i===0?'rank-1':i===1?'rank-2':i===2?'rank-3':'rank-other';var ev=s.score>=90?'优秀':s.score>=80?'良好':s.score>=60?'及格':'需努力';h+='<tr><td><span class="rank-badge '+rc+'">'+(i+1)+'</span></td><td>'+esc(st?st.name:s.sid)+'</td><td>第'+(st?st.group:'?')+'组</td><td style="font-weight:500">'+s.score+'</td><td><span class="badge '+(s.score>=85?'badge-low':s.score>=60?'badge-blue':'badge-high')+'">'+ev+'</span></td></tr>';});h+='</tbody></table></div>';c.innerHTML+=h;}
+function renderChart(vs){var rg=[{l:'0-59',c:0,col:'#FF5C5C'},{l:'60-69',c:0,col:'#FAAD14'},{l:'70-79',c:0,col:'#FFB755'},{l:'80-89',c:0,col:'#5B8DEE'},{l:'90-100',c:0,col:'#52C41A'}];vs.forEach(function(v){if(v<60)rg[0].c++;else if(v<70)rg[1].c++;else if(v<80)rg[2].c++;else if(v<90)rg[3].c++;else rg[4].c++;});var mx=Math.max.apply(null,rg.map(function(r){return r.c;}));if(!mx)mx=1;var bw=50,gap=16,cw=rg.length*(bw+gap)+20,ch=160,bars='';rg.forEach(function(r,i){var h=(r.c/mx)*ch,x=i*(bw+gap)+10,y=ch-h+10;bars+='<rect x="'+x+'" y="'+y+'" width="'+bw+'" height="'+h+'" fill="'+r.col+'" rx="4"/><text x="'+(x+bw/2)+'" y="'+(y-5)+'" text-anchor="middle" font-size="13" font-weight="600" fill="#333">'+r.c+'</text><text x="'+(x+bw/2)+'" y="'+(ch+30)+'" text-anchor="middle" font-size="11" fill="#666">'+r.l+'</text>';});return '<svg viewBox="0 0 '+cw+' '+(ch+40)+'" width="100%" style="max-width:'+cw+'px">'+bars+'</svg>';}
+function showImportGrades(){var so=S.settings.subjects.map(function(s){return'<option>'+esc(s)+'</option>';}).join('');var b='<div class="form-row"><div class="form-group"><label>考试名称</label><input id="gf-exam" placeholder="如期中考试"></div><div class="form-group"><label>科目（单科/粘贴时使用）</label><select id="gf-subject">'+so+'</select></div></div><div class="form-group"><label>日期</label><input type="date" id="gf-date" value="'+todayStr()+'"></div><div class="form-group"><label>上传 Excel 成绩单</label><div id="gf-file-box" style="border:1.5px dashed #cbd5e1;border-radius:10px;padding:16px;text-align:center;color:var(--text3);font-size:13px;cursor:pointer;background:#f8fafc">点击选择 .xlsx / .csv 文件<br><span style="font-size:12px">选文件后立即自动导入；多科成绩单自动按科目列拆分</span></div></div><div style="margin:12px 0;display:flex;align-items:center;gap:8px;color:var(--text3);font-size:12px"><span style="flex:1;height:1px;background:var(--border)"></span>或粘贴<span style="flex:1;height:1px;background:var(--border)"></span></div><div class="form-group"><label>粘贴成绩（从Excel复制）</label><textarea class="import-area" id="impGrades" placeholder="姓名,分数&#10;张明轩,92"></textarea></div><div class="import-hint">粘贴格式：每行一名学生，如：<code>张明轩,92</code><br>Excel 成绩单支持表头：<b>姓名/学号</b> + 一个或多个科目列（如 语文、数学、英语），自动按科目拆分成多条成绩记录；匹配学生<b>优先学号、其次姓名</b>；旧版 .xls 请先在Excel中「另存为」.xlsx 再导入；大文件解析较慢时可先另存为CSV</div>';openModal('导入成绩',b,'<button class="btn btn-primary" data-action="do-import-grades">导入粘贴内容</button><button class="btn btn-ghost" data-action="modal-close">取消</button>');var box=document.getElementById('gf-file-box');var fi=document.createElement('input');fi.type='file';fi.accept='.xlsx,.csv';fi.style.cssText='display:none';box.onclick=function(){fi.click();};fi.onchange=function(e){var f=e.target.files[0];if(!f)return;var fn=(f.name||'').toLowerCase();if(fn.indexOf('.xls')>=0&&fn.indexOf('.xlsx')<0){toast('旧版 .xls 不支持，请先在Excel中「另存为」.xlsx 再导入','error');return;}var en=val('gf-exam');if(!en){toast('请先填写考试名称','error');return;}var meta={examName:en,date:val('gf-date')||todayStr(),defaultSubject:val('gf-subject'),srcName:f.name};box.innerHTML='<b>'+esc(f.name)+'</b><br><span style="font-size:12px">正在解析，请稍候…</span>';fi.disabled=true;var done=function(){fi.disabled=false;box.innerHTML='点击选择 .xlsx / .csv 文件<br><span style="font-size:12px">选文件后立即自动导入；多科成绩单自动按科目列拆分</span>';};if(fn.indexOf('.xlsx')>=0){var rd=new FileReader();rd.onload=function(ev){var toP=new Promise(function(_,rej){setTimeout(function(){rej(new Error('解析超时，文件可能过大，建议拆分后重试或改用CSV'));},15000);});Promise.race([parseXlsx(ev.target.result,true),toP]).then(function(sheets){importGradesSheets(sheets,meta);}).catch(function(err){toast('Excel解析失败：'+err.message+'（可改用CSV或粘贴）','error');done();});};rd.onerror=function(){toast('读取文件失败','error');done();};rd.readAsArrayBuffer(f);}else{var r=new FileReader();r.onload=function(ev){importGradesRows(parseCSV(ev.target.result),meta);};r.onerror=function(){toast('读取文件失败','error');done();};r.readAsText(f,'UTF-8');}};}
+function doImportGrades(){var en=val('gf-exam'),sub=val('gf-subject'),dt=val('gf-date');var text=document.getElementById('impGrades').value;if(!en){toast('请填考试名称','error');return;}if(!text.trim()){toast('请粘贴数据','error');return;}var rows=parseCSV(text);var sc={},cnt=0;rows.forEach(function(row,i){if(i===0&&!row[0]||isNaN(parseFloat(row[1])))return;if(!row[0]||!row[0].trim())return;var st=S.students.find(function(s){return s.name===row[0].trim();});if(st){var v=parseFloat(row[1]);if(!isNaN(v)){sc[st.id]=v;cnt++;}}});if(!cnt){toast('未匹配到学生','error');return;}var id=uid();S.grades.push({id:id,examName:en,subject:sub,date:dt,scores:sc});U.selectedExamId=id;save();closeModal();renderGradesMod();toast('已导入'+cnt+'条','success');}
+function importGradesRows(rows,meta){
+  if(!rows||!rows.length){toast('文件中没有数据','warn');return;}
+  var examName=meta.examName,date=meta.date||todayStr(),defaultSubject=meta.defaultSubject,srcName=meta.srcName;
+  // 0. 建立学生索引（学号->学生、姓名->学生、重名标记）
+  var byNo={},byName={},dupNames={};
+  S.students.forEach(function(s){
+    if(s.studentNo)byNo[String(s.studentNo).trim()]=s;
+    if(byName[s.name])dupNames[s.name]=true;else byName[s.name]=s;
+  });
+  // 1. 表头识别（前3行内找含 姓名/名字/学号/考号/学生 的行）
+  var nameIdx=-1,noIdx=-1,start=0,hasHeader=false;
+  for(var hr=0;hr<Math.min(rows.length,3);hr++){
+    var line=rows[hr].map(function(x){return String(x==null?'':x).trim();});
+    var joined=line.join(',');
+    if(/姓名|名字|学号|考号|编号|学生/.test(joined)){
+      hasHeader=true;start=hr+1;
+      rows[hr].forEach(function(cell,ci){
+        var c=String(cell==null?'':cell).trim().replace(/\s+/g,'');
+        if(!c)return;
+        if(nameIdx<0&&/姓名|名字|学生/.test(c)&&!/学号|考号/.test(c))nameIdx=ci;
+        if(noIdx<0&&/学号|考号|学籍号|编号/.test(c))noIdx=ci;
+      });
+      break;
+    }
+  }
+  var subjectCols=[];
+  if(!hasHeader){
+    // 2a. 无表头：自动找最像「姓名」的列（命中学生数最多的列）
+    var bestIdx=0,bestHit=0;
+    for(var ci=0;ci<rows[0].length;ci++){
+      var hit=0;
+      for(var ri=0;ri<rows.length;ri++){
+        var cv=String(rows[ri][ci]==null?'':rows[ri][ci]).trim();
+        if(cv&&byName[cv]&&!dupNames[cv])hit++;
+      }
+      if(hit>bestHit){bestHit=hit;bestIdx=ci;}
+    }
+    nameIdx=bestIdx;noIdx=-1;
+    // 其余数字列：第1个用所选科目，其余按「科目N」
+    var colN=0;
+    for(var ci3=0;ci3<rows[0].length;ci3++){
+      if(ci3===nameIdx)continue;
+      var hasNum=false;
+      for(var ri3=0;ri3<rows.length;ri3++){
+        var v3=parseFloat(String(rows[ri3][ci3]==null?'':rows[ri3][ci3]).replace(/[%％]/g,''));
+        if(!isNaN(v3)){hasNum=true;break;}
+      }
+      if(hasNum){colN++;subjectCols.push({idx:ci3,subject:colN===1?(defaultSubject||'成绩'):'科目'+colN});}
+    }
+  }else{
+    // 2b. 有表头：科目列 = 非姓名/学号列，且表头非空、该列含数字、非统计类列名
+    var header=rows[start-1];
+    header.forEach(function(cell,ci){
+      var c=String(cell==null?'':cell).trim().replace(/\s+/g,'');
+      if(!c)return;
+      if(ci===nameIdx||ci===noIdx)return;
+      if(/姓名|名字|学号|考号|学籍号|编号|证号|学生/.test(c))return;
+      if(/总分|排名|名次|平均|均分|等级|备注|序号|班级|学校|考场|评价|组别|小组|校次|班次|进退步|属性|缺考|实考|满分|最高|最低|标准差|优秀率|及格率|合格率|低分率/.test(c))return;
+      var hasNum=false;
+      for(var ri=start;ri<rows.length;ri++){
+        var v=parseFloat(String(rows[ri][ci]==null?'':rows[ri][ci]).replace(/[%％]/g,''));
+        if(!isNaN(v)){hasNum=true;break;}
+      }
+      if(hasNum){
+        var scSubject=c;
+        if(/分数|成绩|得分|总分/.test(c))scSubject=defaultSubject||c;
+        subjectCols.push({idx:ci,subject:scSubject});
+      }
+    });
+    // 若没识别出科目列，尝试「分数/成绩」类列
+    if(!subjectCols.length){
+      header.forEach(function(cell,ci){
+        var c=String(cell==null?'':cell).trim().replace(/\s+/g,'');
+        if(/分数|成绩|得分/.test(c))subjectCols.push({idx:ci,subject:defaultSubject||'成绩'});
+      });
+    }
+  }
+  if(!subjectCols.length){toast('未识别到成绩列，请检查表头（需要 姓名/学号 + 分数或科目列）','error');return;}
+  // 3. 逐科目导入
+  var created=0,matched=0,unmatched=[],firstId=null;
+  subjectCols.forEach(function(sc){
+    var scores={},cnt=0,unm=[];
+    for(var i=start;i<rows.length;i++){
+      var row=rows[i];if(!row)continue;
+      var idv=nameIdx>=0?String(row[nameIdx]==null?'':row[nameIdx]).trim():'';
+      var idn=noIdx>=0?String(row[noIdx]==null?'':row[noIdx]).trim():'';
+      var raw=String(row[sc.idx]==null?'':row[sc.idx]).replace(/[%％]/g,'');
+      var v=parseFloat(raw);
+      if(isNaN(v))continue;
+      if(!idv&&!idn)continue;
+      var st=null;
+      if(idn&&byNo[idn])st=byNo[idn];
+      if(!st&&idv&&byName[idv]&&!dupNames[idv])st=byName[idv];
+      if(!st){unm.push(idv||idn);continue;}
+      scores[st.id]=v;cnt++;
+    }
+    if(!cnt)return;
+    var id=uid();
+    S.grades.push({id:id,examName:examName,subject:sc.subject,date:date,scores:scores});
+    if(!firstId)firstId=id;
+    created++;matched+=cnt;unmatched=unmatched.concat(unm);
+  });
+  if(!created){toast('未匹配到任何有效成绩，请检查姓名/学号是否与档案一致','error');return;}
+  if(firstId)U.selectedExamId=firstId;
+  save();closeModal();renderGradesMod();
+  // 4. 结果提示
+  var msg='已导入 <b>'+created+'</b> 科成绩（'+(srcName||'成绩单')+'），共匹配 <b>'+matched+'</b> 人次。';
+  var uniqueUnm=[];unmatched.forEach(function(n){if(n&&uniqueUnm.indexOf(n)<0)uniqueUnm.push(n);});
+  if(uniqueUnm.length){
+    msg+='<div style="margin-top:12px;color:var(--red)"><b>'+uniqueUnm.length+' 人未匹配（档案中找不到，已跳过）：</b><br>'+esc(uniqueUnm.slice(0,30).join('、'))+(uniqueUnm.length>30?' 等':'')+'</div>';
+    msg+='<div style="margin-top:6px;font-size:12px;color:var(--text3)">请检查成绩单中的姓名/学号是否与「学生档案」一致。</div>';
+  }
+  openModal('导入结果',msg,'<button class="btn btn-primary" data-action="modal-close">知道了</button>');
+}
+// ===== 学情分析（进退步 / 优分率 / 辅导名单）=====
+var SUBJ_FULL={语文:100,数学:100,英语:100,物理:100,化学:100,生物:50,政治:60,历史:60,地理:50,总分:520};
+function parseFullExamSheet(rows,meta){
+  if(!rows||!rows.length)return null;
+  var hr=-1;
+  for(var i=0;i<Math.min(rows.length,4);i++){
+    var joined=rows[i].map(function(x){return String(x==null?'':x).trim();}).join(',');
+    if(/姓名|名字/.test(joined)&&/校次/.test(joined)){hr=i;break;}
+  }
+  if(hr<0)return null;
+  var header=rows[hr];
+  var nameIdx=-1,noIdx=-1;
+  for(var ci=0;ci<header.length;ci++){
+    var c=String(header[ci]==null?'':header[ci]).trim().replace(/\s+/g,'');
+    if(!c)continue;
+    if(nameIdx<0&&/姓名|名字/.test(c)){nameIdx=ci;continue;}
+    if(noIdx<0&&/考号|学号|编号/.test(c)){noIdx=ci;continue;}
+  }
+  if(nameIdx<0)return null;
+  var nxt=function(j){return String(header[j]==null?'':header[j]).trim().replace(/\s+/g,'');};
+  var subCols=[],subOrder=[];
+  for(var ci2=0;ci2<header.length-1;ci2++){
+    var c2=String(header[ci2]==null?'':header[ci2]).trim().replace(/\s+/g,'');
+    if(!c2||ci2===nameIdx||ci2===noIdx)continue;
+    if(/序号|姓名|名字|学号|考号|编号|学生|班级|学校|属性|组别|小组|备注|评价|考场|排名|名次|平均|均分|等级|标准差|优秀率|及格率|合格率|低分率|缺考|实考|满分|最高|最低|得分|次/.test(c2))continue;
+    if(nxt(ci2+1)==='校次'){subCols.push({score:ci2,sr:ci2+1,sd:ci2+2,cr:ci2+3,cd:ci2+4});subOrder.push(c2);}
+  }
+  if(!subCols.length)return null;
+  var byNo={},byName={},dup={};
+  S.students.forEach(function(s){
+    if(s.studentNo)byNo[String(s.studentNo).trim()]=s;
+    if(byName[s.name])dup[s.name]=true;else byName[s.name]=s;
+  });
+  var students={},unmatched=[],matched=0;
+  var fnum=function(v){var t=String(v==null?'':v);if(/缺考|不计排名|未扫|免考|病假/.test(t))return null;var n=parseFloat(t);return isNaN(n)?null:n;};
+  for(var ri=hr+1;ri<rows.length;ri++){
+    var row=rows[ri];if(!row)continue;
+    var nm=String(row[nameIdx]==null?'':row[nameIdx]).trim();
+    var no=String(noIdx>=0&&row[noIdx]!=null?String(row[noIdx]).trim():'');
+    if(!nm&&!no)continue;
+    var st=null;
+    if(no){
+      var tail=no.length>=2?no.slice(-2):no;
+      var tailN=parseInt(tail,10);
+      if(byNo[no])st=byNo[no];
+      else if(byNo[tail])st=byNo[tail];
+      else if(!isNaN(tailN)&&byNo[String(tailN)])st=byNo[String(tailN)];
+    }
+    if(!st&&nm&&byName[nm]&&!dup[nm])st=byName[nm];
+    if(!st){unmatched.push(nm||no);continue;}
+    var rec={no:no,s:{}};
+    subCols.forEach(function(sc,si){
+      rec.s[subOrder[si]]={sc:fnum(row[sc.score]),sr:fnum(row[sc.sr]),sd:fnum(row[sc.sd]),cr:fnum(row[sc.cr]),cd:fnum(row[sc.cd])};
+    });
+    students[st.id]=rec;matched++;
+  }
+  if(!matched)return null;
+  var subs=subOrder.filter(function(x){return x!=='总分';});
+  return {examName:meta.examName,date:meta.date||todayStr(),subjects:subs,students:students,unmatched:unmatched,matchCount:matched,newStudents:[]};
+}
+function importExamPayload(p){
+  if(!p||!p.students)return {dup:true};
+  if(S.exams.some(function(e){return e.name===p.examName&&e.date===p.date;}))return {dup:true};
+  (p.newStudents||[]).forEach(function(ns){
+    if(!S.students.some(function(x){return x.name===ns.name;}))S.students.push(ns);
+  });
+  var id=uid();
+  S.exams.push({id:id,name:p.examName,date:p.date,subjects:p.subjects,students:p.students,stats:p.stats||null});
+  (p.subjects||[]).concat(['总分']).forEach(function(sub){
+    var sc={};
+    Object.keys(p.students).forEach(function(sid){var v=p.students[sid].s[sub];if(v&&v.sc!=null)sc[sid]=v.sc;});
+    if(Object.keys(sc).length)S.grades.push({id:uid(),examName:p.examName,subject:sub,date:p.date,scores:sc});
+  });
+  U.selectedExamAId=id;
+  return {dup:false,id:id};
+}
+function importGradesSheets(sheets,meta){
+  if(!sheets||!sheets.length){toast('未找到工作表数据','error');return;}
+  var full=null;
+  for(var i=0;i<sheets.length;i++){var p=parseFullExamSheet(sheets[i].rows,meta);if(p&&p.matchCount){full=p;break;}}
+  if(full){
+    var r=importExamPayload(full);
+    if(r.dup){toast('「'+meta.examName+'」该考试已导入过，请修改考试名称或日期','warn');return;}
+    save();closeModal();renderGradesMod();
+    var msg='已导入 <b>'+esc(meta.examName)+'</b> 学情汇总表：<br>匹配 <b>'+full.matchCount+'</b> 名学生，覆盖 <b>'+full.subjects.length+'</b> 科 + 总分，含 校次/班次进退步。';
+    if(full.unmatched.length)msg+='<div style="margin-top:12px;color:var(--red)"><b>'+full.unmatched.length+' 人未匹配（已跳过）：</b>'+esc(full.unmatched.join('、'))+'</div>';
+    msg+='<div style="margin-top:8px;font-size:12px;color:var(--text3)">可到「成绩分析 → 学情分析」查看班级整体、个体进退步、优分率与辅导名单。</div>';
+    openModal('导入结果',msg,'<button class="btn btn-primary" data-action="modal-close">知道了</button>');
+    return;
+  }
+  var best=sheets[0];
+  sheets.forEach(function(sh){if(sh.rows.length>best.rows.length)best=sh;});
+  importGradesRows(best.rows,meta);
+}
+function examStatList(ex){
+  var fulls=ex.stats||{};
+  var out={subs:[],up:0,down:0,flat:0,ref:0,totalAvg:'-',totalExc:'-',totalPass:'-',totalLow:'-'};
+  var totalArr=[];
+  Object.keys(ex.students).forEach(function(sid){var rec=ex.students[sid];var t=rec.s['总分'];if(t&&t.sc!=null){totalArr.push(t.sc);if(t.cd>0)out.up++;else if(t.cd<0)out.down++;else if(t.cd===0)out.flat++;}});
+  out.ref=totalArr.length;
+  if(totalArr.length){var s=totalArr.reduce(function(a,b){return a+b;},0);out.totalAvg=(s/totalArr.length).toFixed(1);var exc=totalArr.filter(function(v){return v>=520*0.85;}).length;var pass=totalArr.filter(function(v){return v>=520*0.6;}).length;var low=totalArr.filter(function(v){return v<520*0.4;}).length;out.totalExc=(exc/totalArr.length*100).toFixed(1);out.totalPass=(pass/totalArr.length*100).toFixed(1);out.totalLow=(low/totalArr.length*100).toFixed(1);}
+  ex.subjects.concat(['总分']).forEach(function(sub){
+    var arr=[];
+    Object.keys(ex.students).forEach(function(sid){var v=ex.students[sid].s[sub];if(v&&v.sc!=null)arr.push(v.sc);});
+    var full=SUBJ_FULL[sub]||100;
+    var row={sub:sub,full:full,n:arr.length,avg:'-',mx:'-',mn:'-',exc:'-',pass:'-',low:'-',rank:fulls[sub]?fulls[sub].rank:null};
+    if(arr.length){var s2=arr.reduce(function(a,b){return a+b;},0);row.avg=(s2/arr.length).toFixed(1);row.mx=Math.max.apply(null,arr);row.mn=Math.min.apply(null,arr);var e2=arr.filter(function(v){return v>=full*0.85;}).length;var p2=arr.filter(function(v){return v>=full*0.6;}).length;var l2=arr.filter(function(v){return v<full*0.4;}).length;row.exc=(e2/arr.length*100).toFixed(1);row.pass=(p2/arr.length*100).toFixed(1);row.low=(l2/arr.length*100).toFixed(1);}
+    out.subs.push(row);
+  });
+  return out;
+}
+function buildExamSuggestions(st){
+  var tips=[];
+  st.subs.forEach(function(r){
+    if(r.n<1||r.sub==='总分')return;
+    var t=[];
+    if(r.pass!=='-'&&parseFloat(r.pass)<70)t.push('及格率偏低('+r.pass+'%)，需抓基础与补差');
+    if(r.exc!=='-'&&parseFloat(r.exc)<10)t.push('优秀率偏低('+r.exc+'%)，有培优空间');
+    if(r.low!=='-'&&parseFloat(r.low)>10)t.push('低分学生偏多('+r.low+'%)，建议一对一盯促');
+    if(r.rank!=null&&r.rank>3)t.push('年级排名第'+r.rank+'名，可向同类班级取经');
+    if(t.length)tips.push(r.sub+'：'+t.join('；'));
+  });
+  if(st.down>st.up)tips.push('班级整体有'+(st.down-st.up)+'人退步，注意近期学习状态与纪律');
+  if(!tips.length)tips.push('本次各科整体均衡，保持现状并持续关注进退步学生即可');
+  return tips;
+}
+function renderExamAnalysis(){
+  var c=document.getElementById('module-grades');
+  var h='<div class="module-header"><h2>学情分析</h2><div class="spacer"></div>'+(S.exams.length?'<button class="btn btn-outline btn-sm" data-action="copy-tutor">复制辅导名单</button>':'')+'<button class="btn btn-primary btn-sm" data-action="import-grades">导入成绩</button></div>';
+  if(!S.exams.length){h+='<div class="empty-state"><p>暂无学情数据</p><button class="btn btn-primary" data-action="import-grades">导入学情汇总表</button></div><div class="import-hint">支持导入学校下发的「全学科成绩汇总」表（表头含 <b>校次 / 班次 / 进退步</b>），导入后自动生成：班级整体情况、个体进退步、优分率/及格率/不及格率、各科辅导名单与建议。</div>';c.innerHTML+=h;return;}
+  var ex=S.exams.find(function(e){return e.id===U.selectedExamAId;})||S.exams[S.exams.length-1];
+  U.selectedExamAId=ex.id;
+  h+='<div style="margin-bottom:12px;display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span style="font-size:13px;color:var(--text2)">选择考试：</span>';
+  S.exams.forEach(function(e){h+='<button class="week-toggle-btn'+(e.id===ex.id?' active':'')+'" data-action="select-exama" data-id="'+e.id+'">'+esc(e.name)+'</button>';});
+  h+='</div>';
+  var st=examStatList(ex);
+  h+='<div class="grade-stats"><div class="stat-card"><div class="stat-value">'+st.totalAvg+'</div><div class="stat-label">总分平均</div></div><div class="stat-card"><div class="stat-value">'+st.totalExc+'%</div><div class="stat-label">总分优秀率</div></div><div class="stat-card"><div class="stat-value">'+st.totalPass+'%</div><div class="stat-label">总分及格率</div></div><div class="stat-card"><div class="stat-value">'+st.totalLow+'%</div><div class="stat-label">总分低分率</div></div><div class="stat-card"><div class="stat-value">'+st.ref+'</div><div class="stat-label">参考人数</div></div><div class="stat-card"><div class="stat-value"><span style="color:#52C41A">↑'+st.up+'</span> / <span style="color:#FF5C5C">↓'+st.down+'</span></div><div class="stat-label">进退步人数</div></div></div>';
+  h+='<div class="chart-wrap"><div class="chart-title">学科统计（优分率≥85% · 及格率≥60% · 低分率&lt;40%）</div><div style="overflow-x:auto"><table class="grade-table"><thead><tr><th>科目</th><th>满分</th><th>参考</th><th>平均</th><th>最高</th><th>最低</th><th>优秀率</th><th>及格率</th><th>不及格率</th><th>低分率</th><th>年级名次</th></tr></thead><tbody>';
+  st.subs.forEach(function(r){
+    h+='<tr><td><b>'+esc(r.sub)+'</b></td><td>'+r.full+'</td><td>'+r.n+'</td><td>'+r.avg+'</td><td>'+r.mx+'</td><td>'+r.mn+'</td><td style="color:#52C41A;font-weight:500">'+r.exc+'%</td><td style="color:#5B8DEE;font-weight:500">'+r.pass+'%</td><td style="color:'+(r.pass!=='-'&&parseFloat(r.pass)<60?'#FF5C5C':'var(--text2)')+'">'+(r.pass==='-'?'-':(100-parseFloat(r.pass)).toFixed(1))+'%</td><td style="color:'+(r.low!=='-'&&parseFloat(r.low)>10?'#FF5C5C':'var(--text2)')+'">'+r.low+'%</td><td>'+(r.rank!=null?'第'+r.rank+'名':'—')+'</td></tr>';
+  });
+  h+='</tbody></table></div></div>';
+  var rateSubs=st.subs.filter(function(r){return r.sub!=='总分'&&r.pass!=='-';});
+  var bw=26,gap=10,pw=bw*2+gap,ch=150,cw=rateSubs.length*(pw+8)+16,bars='';
+  rateSubs.forEach(function(r,i){
+    var x=i*(pw+8)+16;
+    var hp=Math.max(2,r.pass==='-'?0:parseFloat(r.pass));
+    var he=Math.max(2,r.exc==='-'?0:parseFloat(r.exc));
+    bars+='<rect x="'+x+'" y="'+(ch-hp)+'" width="'+bw+'" height="'+hp+'" fill="#5B8DEE" rx="3"/>';
+    bars+='<rect x="'+(x+bw+gap)+'" y="'+(ch-he)+'" width="'+bw+'" height="'+he+'" fill="#52C41A" rx="3"/>';
+    bars+='<text x="'+(x+bw/2)+'" y="'+(ch-hp-3)+'" font-size="9" text-anchor="middle" fill="#5B8DEE">'+(r.pass==='-'?'':r.pass)+'</text>';
+    bars+='<text x="'+(x+bw+gap+bw/2)+'" y="'+(ch-he-3)+'" font-size="9" text-anchor="middle" fill="#52C41A">'+(r.exc==='-'?'':r.exc)+'</text>';
+    bars+='<text x="'+(x+bw+gap/2)+'" y="'+(ch+14)+'" font-size="10" text-anchor="middle" fill="var(--text2)">'+esc(r.sub)+'</text>';
+  });
+  h+='<div class="chart-wrap"><div class="chart-title">各科及格率 / 优秀率（%）</div><div style="overflow-x:auto"><svg width="'+Math.max(cw,320)+'" height="'+(ch+30)+'" viewBox="0 0 '+Math.max(cw,320)+' '+(ch+30)+'" style="display:block">'+bars+'<rect x="10" y="0" width="10" height="10" fill="#5B8DEE"/><text x="24" y="9" font-size="10" fill="var(--text2)">及格率</text><rect x="90" y="0" width="10" height="10" fill="#52C41A"/><text x="104" y="9" font-size="10" fill="var(--text2)">优秀率</text></svg></div></div>';
+  var rows=[];
+  Object.keys(ex.students).forEach(function(sid){
+    var r2=ex.students[sid];var t=r2.s['总分'];
+    rows.push({sid:sid,rec:r2,cr:t&&t.cr!=null?t.cr:9999,cd:t&&t.cd!=null?t.cd:null,sd:t&&t.sd!=null?t.sd:null,sc:t&&t.sc!=null?t.sc:null});
+  });
+  rows.sort(function(a,b){return a.cr-b.cr;});
+  h+='<div class="chart-wrap"><div class="chart-title">个体进退步（按总分班次排序）</div><div style="overflow-x:auto"><table class="grade-table"><thead><tr><th>班次</th><th>姓名</th><th>总分</th><th>班次Δ</th><th>校次Δ</th><th>趋势</th><th>薄弱科目</th></tr></thead><tbody>';
+  rows.forEach(function(rw){
+    var st2=getStu(rw.sid);var nm=st2?st2.name:rw.sid;
+    var totCr=rw.cr===9999?null:rw.cr;
+    var trend=rw.cd==null?'缺考':rw.cd>0?'<span class="badge badge-low">进步'+rw.cd+'</span>':rw.cd<0?'<span class="badge badge-high">退步'+Math.abs(rw.cd)+'</span>':'<span class="badge badge-blue">持平</span>';
+    var weak=[];
+    ex.subjects.forEach(function(sub){
+      var v=rw.rec.s[sub];
+      if(v&&v.sc!=null&&v.cr!=null&&totCr!=null&&(v.cr-totCr)>=12)weak.push(esc(sub)+'(班'+v.cr+')');
+    });
+    h+='<tr><td>'+(totCr!=null?totCr:'—')+'</td><td>'+esc(nm)+'</td><td style="font-weight:500">'+(rw.sc!=null?rw.sc:'缺考')+'</td><td>'+(rw.cd!=null?rw.cd:'—')+'</td><td>'+(rw.sd!=null?rw.sd:'—')+'</td><td>'+trend+'</td><td style="color:var(--red);font-size:12px">'+(weak.join('、')||'—')+'</td></tr>';
+  });
+  h+='</tbody></table></div></div>';
+  h+='<div class="chart-wrap"><div class="chart-title">辅导名单与建议</div>';
+  var tips=buildExamSuggestions(st);
+  h+='<div style="margin-bottom:10px;padding:10px 12px;background:#FFF7E6;border-radius:8px;font-size:13px;line-height:1.7"><b>后续建议：</b><br>'+tips.map(function(t){return '· '+esc(t);}).join('<br>')+'</div>';
+  ex.subjects.forEach(function(sub){
+    var arr=[];
+    Object.keys(ex.students).forEach(function(sid){
+      var v=ex.students[sid].s[sub];
+      if(v&&v.sc!=null&&((v.cr!=null&&v.cr>=30)||(v.sd!=null&&v.sd<=-10)))arr.push({sid:sid,cr:v.cr,sd:v.sd});
+    });
+    arr.sort(function(a,b){return (b.cr||0)-(a.cr||0);});
+    var sr=st.subs.find(function(x){return x.sub===sub;});
+    h+='<div style="margin-bottom:10px;padding:10px 12px;background:#F0F7FF;border-radius:8px;font-size:13px"><b>'+esc(sub)+'</b>（及格率 '+(sr?sr.pass:'-')+'% · 优秀率 '+(sr?sr.exc:'-')+'%）· 需辅导 <b>'+arr.length+'</b> 人：<span>'+(arr.length?arr.map(function(a){return esc((getStu(a.sid)||{}).name||a.sid);}).join('、'):'暂无')+'</span></div>';
+  });
+  var focus=[];
+  rows.forEach(function(rw){if(rw.cd!=null&&(rw.cd<=-5||(rw.cr!==9999&&rw.cr>=30)))focus.push(rw.sid);});
+  h+='<div style="padding:10px 12px;background:#FFF1F0;border-radius:8px;font-size:13px"><b>重点关注名单</b>（总分退步≥5 或 班次后10）· <b>'+focus.length+'</b> 人：<span>'+(focus.length?focus.map(function(f){var nm2=(getStu(f)||{}).name||f;var r2=ex.students[f].s['总分'];return esc(nm2)+(r2&&r2.cd!=null&&r2.cd<=-5?'(退'+Math.abs(r2.cd)+')':'');}).join('、'):'暂无')+'</span></div>';
+  var abs=[];
+  Object.keys(ex.students).forEach(function(sid){var v=ex.students[sid].s['总分'];if(!v||v.sc==null)abs.push(sid);});
+  if(abs.length)h+='<div style="margin-top:10px;padding:10px 12px;background:#FFFBF0;border-radius:8px;font-size:13px"><b>缺考 / 未计成绩：</b><span style="color:var(--red)">'+abs.map(function(a){return esc((getStu(a)||{}).name||a);}).join('、')+'</span>（建议尽快安排补考并个别谈心）</div>';
+  h+='</div>';
+  if(S.exams.length>=2){
+    var list=S.exams.slice().sort(function(a,b){return a.date<b.date?-1:1;});
+    var last=list[list.length-1],prev=list[list.length-2];
+    h+='<div class="chart-wrap"><div class="chart-title">近两次考试总分对比：'+esc(prev.name)+' → '+esc(last.name)+'</div><div style="overflow-x:auto"><table class="grade-table"><thead><tr><th>姓名</th><th>'+esc(prev.name)+'</th><th>'+esc(last.name)+'</th><th>波动</th></tr></thead><tbody>';
+    var pps={},lps={};
+    Object.keys(prev.students).forEach(function(sid){var v=prev.students[sid].s['总分'];if(v&&v.sc!=null)pps[sid]=v.sc;});
+    Object.keys(last.students).forEach(function(sid){var v=last.students[sid].s['总分'];if(v&&v.sc!=null)lps[sid]=v.sc;});
+    var order=Object.keys(lps).map(function(sid){return{sid:sid,v:lps[sid]};}).sort(function(a,b){return b.v-a.v;});
+    var pAvg=0,lAvg=0;Object.keys(pps).forEach(function(k){pAvg+=pps[k];});Object.keys(lps).forEach(function(k){lAvg+=lps[k];});
+    order.forEach(function(o){
+      var pv=pps[o.sid];var lv=lps[o.sid];
+      var d=lv-pv;
+      h+='<tr><td>'+esc((getStu(o.sid)||{}).name||o.sid)+'</td><td>'+(pv!=null?pv:'—')+'</td><td style="font-weight:500">'+lv+'</td><td style="color:'+(d>0?'#52C41A':d<0?'#FF5C5C':'var(--text2)')+';font-weight:500">'+(pv!=null?(d>0?'+'+d:d<0?d:'0'):'—')+'</td></tr>';
+    });
+    h+='<tr style="background:#F5F5F5"><td><b>班级平均</b></td><td><b>'+(Object.keys(pps).length?(pAvg/Object.keys(pps).length).toFixed(1):'—')+'</b></td><td><b>'+(Object.keys(lps).length?(lAvg/Object.keys(lps).length).toFixed(1):'—')+'</b></td><td><b>'+(Object.keys(pps).length&&Object.keys(lps).length?((lAvg/Object.keys(lps).length)-(pAvg/Object.keys(pps).length)).toFixed(1):'')+'</b></td></tr>';
+    h+='</tbody></table></div></div>';
+  }
+  c.innerHTML+=h;
+}
+function copyTutorList(){
+  if(!S.exams.length){toast('暂无学情数据','warn');return;}
+  var ex=S.exams.find(function(e){return e.id===U.selectedExamAId;})||S.exams[S.exams.length-1];
+  var st=examStatList(ex);
+  var lines=[];
+  lines.push('【'+ex.name+' '+ex.date+' 辅导名单】');
+  lines.push('班级整体：总分平均'+st.totalAvg+'，优秀率'+st.totalExc+'%，及格率'+st.totalPass+'%，低分率'+st.totalLow+'%；参考'+st.ref+'人，进步'+st.up+'人、退步'+st.down+'人。');
+  lines.push('');
+  lines.push('一、各科辅导名单（班次≥30 或 校次退步≥10）：');
+  ex.subjects.forEach(function(sub){
+    var arr=[];
+    Object.keys(ex.students).forEach(function(sid){
+      var v=ex.students[sid].s[sub];
+      if(v&&v.sc!=null&&((v.cr!=null&&v.cr>=30)||(v.sd!=null&&v.sd<=-10)))arr.push((getStu(sid)||{}).name||sid);
+    });
+    var sr=st.subs.find(function(x){return x.sub===sub;});
+    lines.push('· '+sub+'（及格率'+(sr?sr.pass:'-')+'%）：'+(arr.length?arr.join('、'):'暂无'));
+  });
+  lines.push('');
+  lines.push('二、重点关注（总分退步≥5 或 班次后10）：');
+  var focus=[];
+  Object.keys(ex.students).forEach(function(sid){var v=ex.students[sid].s['总分'];if(v&&v.sc!=null&&v.cr!=null&&((v.cd!=null&&v.cd<=-5)||v.cr>=30))focus.push((getStu(sid)||{}).name||sid);});
+  lines.push(focus.length?focus.join('、'):'暂无');
+  var abs=[];
+  Object.keys(ex.students).forEach(function(sid){var v=ex.students[sid].s['总分'];if(!v||v.sc==null)abs.push((getStu(sid)||{}).name||sid);});
+  if(abs.length){lines.push('');lines.push('三、缺考需补考：'+abs.join('、'));}
+  lines.push('');
+  lines.push('后续建议：');
+  buildExamSuggestions(st).forEach(function(t){lines.push('· '+t);});
+  copyText(lines.join('\n'));
+}
+function copyText(t){
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){toast('已复制到剪贴板','success');},function(){fallbackCopy(t);});}
+  else fallbackCopy(t);
+}
+function fallbackCopy(t){
+  var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast('已复制到剪贴板','success');}catch(e){toast('复制失败，请手动复制','error');}document.body.removeChild(ta);
+}
+function renderHW(){var c=document.getElementById('module-grades');var h='<div class="module-header"><h2>作业追踪</h2><div class="spacer"></div><button class="btn btn-primary btn-sm" data-action="add-homework">布置作业</button></div>';if(!S.homework.length){h+='<div class="empty-state"><p>暂无作业记录</p><button class="btn btn-primary" data-action="add-homework">布置作业</button></div>';c.innerHTML+=h;return;}S.homework.slice().reverse().forEach(function(hw){var rec=Object.entries(hw.records||{});var st={completed:0,excellent:0,late:0,not_submitted:0};rec.forEach(function(a){if(st[a[1].status]!==undefined)st[a[1].status]++;});h+='<div class="hw-assignment"><div class="hw-header"><span class="hw-title">'+esc(hw.subject)+' · '+esc(hw.title)+'</span><span class="badge badge-blue">'+fmtDate(hw.date)+'</span><span class="badge badge-low">完成'+st.completed+'</span><span class="badge badge-blue">优秀'+st.excellent+'</span><span class="badge badge-medium">迟交'+st.late+'</span><span class="badge badge-high">未交'+st.not_submitted+'</span><div class="spacer"></div><button class="btn btn-outline btn-sm" data-action="sync-hw-points" data-id="'+hw.id+'">同步积分</button><button class="btn btn-ghost btn-sm" data-action="delete-homework" data-id="'+hw.id+'">删除</button></div><div class="hw-status-grid">';S.students.forEach(function(s){var r=hw.records[s.id]||{status:'not_submitted'};var lb={completed:'已完成',excellent:'优秀',late:'迟交',not_submitted:'未交'}[r.status];h+='<div class="hw-status-item '+r.status+'" data-action="cycle-hw" data-id="'+hw.id+'" data-sid="'+s.id+'"><span class="hsi-name">'+esc(s.name)+'</span><span class="hsi-status">'+lb+'</span></div>';});h+='</div><div style="margin-top:6px;font-size:12px;color:var(--text2)">点击切换状态</div></div>';});c.innerHTML+=h;}
+function showHWForm(){var so=S.settings.subjects.map(function(s){return'<option>'+esc(s)+'</option>';}).join('');var b='<div class="form-row"><div class="form-group"><label>科目</label><select id="hf-subject">'+so+'</select></div><div class="form-group"><label>日期</label><input type="date" id="hf-date" value="'+todayStr()+'"></div></div><div class="form-group"><label>作业标题</label><input id="hf-title"></div>';openModal('布置作业',b,'<button class="btn btn-primary" data-action="save-homework">布置</button><button class="btn btn-ghost" data-action="modal-close">取消</button>');}
+function saveHW(){var t=val('hf-title');if(!t){toast('请填标题','error');return;}var rec={};S.students.forEach(function(s){rec[s.id]={status:'not_submitted'};});S.homework.push({id:uid(),date:val('hf-date'),subject:val('hf-subject'),title:t,records:rec});save();closeModal();renderGradesMod();toast('已布置','success');}
+var hwCycle=['not_submitted','completed','excellent','late'];
+function cycleHW(hwid,sid){var hw=S.homework.find(function(h){return h.id===hwid;});if(!hw||!hw.records[sid])return;var ci=hwCycle.indexOf(hw.records[sid].status);hw.records[sid].status=hwCycle[(ci+1)%hwCycle.length];save();renderHW();}
+function syncHW(hwid){var hw=S.homework.find(function(h){return h.id===hwid;});if(!hw)return;var pts={completed:1,excellent:2,late:-1,not_submitted:-2};var cnt=0;Object.entries(hw.records).forEach(function(a){var p=pts[a[1].status];if(p){S.points.push({id:uid(),studentId:a[0],points:Math.abs(p),type:p>0?'add':'deduct',reason:'作业（'+hw.title+'）',date:hw.date});cnt++;}});save();toast('已同步'+cnt+'名学生积分','success');}
+
+// ===== MODULE 6: POINTS =====
+function renderPoints(){var c=document.getElementById('module-points');var h='<div class="module-header"><h2>积分排名</h2><div class="spacer"></div><button class="btn btn-outline btn-sm" data-action="batch-points">批量加减分</button><button class="btn btn-outline btn-sm" data-action="export-points">导出</button><button class="btn btn-danger btn-sm" data-action="reset-weekly">周度重置</button></div>';var st={};S.students.forEach(function(s){st[s.id]=S.points.filter(function(p){return p.studentId===s.id;}).reduce(function(a,p){return a+(p.type==='add'?p.points:-p.points);},0);});var gr=getGroups();var gt=Object.keys(gr).map(function(gid){return{group:parseInt(gid),total:gr[gid].reduce(function(a,s){return a+(st[s.id]||0);},0)};}).sort(function(a,b){return b.total-a.total;});h+='<div class="points-overview"><div class="points-section"><div class="points-section-title">小组排名</div>';var mg=Math.max.apply(null,gt.map(function(g){return Math.abs(g.total);}).concat([1]));gt.forEach(function(g,i){var pct=Math.abs(g.total)/mg*100;var col=g.total>=0?'var(--green)':'var(--red)';h+='<div style="margin-bottom:8px"><div style="display:flex;align-items:center;gap:6px;margin-bottom:2px"><span class="rank-badge '+(i===0?'rank-1':i===1?'rank-2':i===2?'rank-3':'rank-other')+'">'+(i+1)+'</span><span style="font-weight:500">第'+g.group+'组</span><span style="flex:1"></span><span style="font-weight:700;color:'+col+'">'+g.total+'</span></div><div style="height:8px;background:var(--bg);border-radius:4px;overflow:hidden"><div style="height:100%;width:'+pct+'%;background:'+col+';border-radius:4px;transition:.3s"></div></div></div>';});h+='</div><div class="points-section"><div class="points-section-title">个人排名</div><div class="rank-list">';var ss=S.students.slice().sort(function(a,b){return(st[b.id]||0)-(st[a.id]||0);});ss.forEach(function(s,i){var t=st[s.id]||0;h+='<div class="rank-row"><span class="rr-num '+(i<3?'rank-'+(i+1):'')+'">'+(i+1)+'</span><span class="rr-name">'+esc(s.name)+'</span><span style="font-size:12px;color:var(--text2)">第'+s.group+'组</span><span class="rr-score '+(t>=0?'positive':'negative')+'">'+(t>=0?'+':'')+t+'</span></div>';});h+='</div></div></div>';h+='<div class="card"><div class="card-title">加减分明细 <span class="data-count-badge">'+S.points.length+'</span></div>';if(!S.points.length)h+='<div style="color:var(--text3);font-size:13px">暂无</div>';else{h+='<div class="points-log">';S.points.slice().reverse().slice(0,50).forEach(function(p){h+='<div class="log-item"><span class="li-date">'+esc(p.date)+'</span><span class="li-name">'+esc(getStuName(p.studentId))+'</span><span class="li-reason">'+esc(p.reason)+'</span><span class="li-points '+(p.type==='add'?'add':'deduct')+'">'+(p.type==='add'?'+':'-')+p.points+'</span></div>';});h+='</div>';}h+='</div>';c.innerHTML=h;}
+function showAddPtsModal(sid){var b='<div class="form-group"><label>学生</label><input value="'+esc(getStuName(sid))+'" disabled></div><div class="form-row"><div class="form-group"><label>分值</label><input type="number" id="pf-points" value="1" min="1"></div><div class="form-group"><label>类型</label><select id="pf-type"><option value="add">加分</option><option value="deduct">扣分</option></select></div></div><div class="form-group"><label>原因</label><input id="pf-reason"></div>';openModal('加减分',b,'<button class="btn btn-primary" data-action="save-pts-single" data-id="'+sid+'">确定</button><button class="btn btn-ghost" data-action="modal-close">取消</button>');}
+function savePtsSingle(sid){var p=parseInt(val('pf-points'));var t=val('pf-type');var r=val('pf-reason');if(!p||p<=0){toast('分值无效','error');return;}if(!r){toast('请填原因','error');return;}S.points.push({id:uid(),studentId:sid,points:p,type:t,reason:r,date:todayStr()});save();closeModal();renderPoints();toast('已操作','success');}
+function showBatchPts(){var b='<div class="form-row"><div class="form-group"><label>分值</label><input type="number" id="bf-points" value="1" min="1"></div><div class="form-group"><label>类型</label><select id="bf-type"><option value="add">加分</option><option value="deduct">扣分</option></select></div></div><div class="form-group"><label>原因</label><input id="bf-reason"></div><div class="form-group"><label>学生姓名（每行一个或逗号分隔）</label><textarea id="bf-names" placeholder="张明轩&#10;李思琪,王浩然"></textarea></div>';openModal('批量加减分',b,'<button class="btn btn-primary" data-action="save-batch-pts">确定</button><button class="btn btn-ghost" data-action="modal-close">取消</button>');}
+function saveBatchPts(){var p=parseInt(val('bf-points')),t=val('bf-type'),r=val('bf-reason');var ns=document.getElementById('bf-names').value;if(!p||p<=0){toast('分值无效','error');return;}if(!r){toast('请填原因','error');return;}if(!ns.trim()){toast('请输入姓名','error');return;}var names=ns.split(/[\n,，]/).map(function(n){return n.trim();}).filter(Boolean);var cnt=0,nf=[];names.forEach(function(n){var s=S.students.find(function(st){return st.name===n;});if(s){S.points.push({id:uid(),studentId:s.id,points:p,type:t,reason:r,date:todayStr()});cnt++;}else nf.push(n);});save();closeModal();renderPoints();if(cnt)toast('已操作'+cnt+'名','success');if(nf.length)toast('未找到：'+nf.join('、'),'warn');}
+function resetWeekly(){confirmDialog('周度重置将清空所有积分记录（不可恢复），确定？',function(){var csv=toCSV([['日期','学生','类型','分值','原因']].concat(S.points.map(function(p){return[p.date,getStuName(p.studentId),p.type==='add'?'加分':'扣分',p.points,p.reason];})));dl('积分记录_'+todayStr()+'.csv','\uFEFF'+csv,'text/csv;charset=utf-8');S.points=[];save();renderPoints();toast('已重置并导出','success');});}
+
+// ===== IMAGE UTILS =====
+function compressImg(file,cb){
+  var r=new FileReader();
+  r.onload=function(ev){
+    var img=new Image();
+    img.onload=function(){
+      var canvas=document.createElement('canvas');
+      var maxW=800,maxH=800;
+      var w=img.width,h=img.height;
+      if(w>h){if(w>maxW){h=Math.round(h*maxW/w);w=maxW;}}else{if(h>maxH){w=Math.round(w*maxH/h);h=maxH;}}
+      canvas.width=w;canvas.height=h;
+      var ctx=canvas.getContext('2d');
+      ctx.drawImage(img,0,0,w,h);
+      var data=canvas.toDataURL('image/jpeg',0.7);
+      if(data.length>500000)data=canvas.toDataURL('image/jpeg',0.45);
+      cb(data);
+    };
+    img.onerror=function(){cb(null);};
+    img.src=ev.target.result;
+  };
+  r.onerror=function(){cb(null);};
+  r.readAsDataURL(file);
+}
+function showImgLightbox(images,idx){
+  U.imgPreview={images:images,idx:idx};
+  renderImgLightbox();
+}
+function renderImgLightbox(){
+  var p=U.imgPreview;
+  if(!p||!p.images||!p.images.length)return;
+  var el=document.getElementById('imgLightbox');
+  if(!el){
+    el=document.createElement('div');
+    el.id='imgLightbox';
+    el.className='img-lightbox';
+    document.body.appendChild(el);
+  }
+  var h='<button class="img-lightbox-close" id="imgLBClose"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>';
+  h+='<img src="'+p.images[p.idx]+'">';
+  h+='<div class="img-lightbox-nav">';
+  h+='<button class="img-lightbox-btn" id="imgLBPrev" '+(p.idx>0?'':'style="opacity:.3;cursor:default"')+'><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>';
+  h+='<span class="img-lightbox-count">'+(p.idx+1)+' / '+p.images.length+'</span>';
+  h+='<button class="img-lightbox-btn" id="imgLBNext" '+(p.idx<p.images.length-1?'':'style="opacity:.3;cursor:default"')+'><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>';
+  h+='</div>';
+  el.innerHTML=h;
+  el.classList.add('show');
+  var cl=document.getElementById('imgLBClose');
+  if(cl)cl.onclick=function(){el.classList.remove('show');U.imgPreview=null;};
+  var pr=document.getElementById('imgLBPrev');
+  var nx=document.getElementById('imgLBNext');
+  if(pr)pr.onclick=function(e){e.stopPropagation();if(p.idx>0){p.idx--;renderImgLightbox();}};
+  if(nx)nx.onclick=function(e){e.stopPropagation();if(p.idx<p.images.length-1){p.idx++;renderImgLightbox();}};
+  el.onclick=function(e){if(e.target===el){el.classList.remove('show');U.imgPreview=null;}};
+}
+
+// ===== MODULE 7: ACTIVITIES =====
+function renderActivities(){
+  var c=document.getElementById('module-activities');
+  _tmpImgs={};
+  var h='<div class="module-header"><h2>活动记录</h2><span class="data-count-badge">'+S.activities.length+'条</span><div class="spacer"></div><button class="btn btn-outline btn-sm" data-action="exp-activities-csv">导出</button><button class="btn btn-primary btn-sm" data-action="add-activity">+ 新增</button></div>';
+  if(!S.activities.length){
+    h+='<div class="empty-state"><p>暂无活动记录</p><button class="btn btn-primary" data-action="add-activity">新增活动</button></div>';
+    c.innerHTML=h;
+    return;
+  }
+  S.activities.slice().reverse().forEach(function(a){
+    _tmpImgs['act_'+a.id]=a.images||[];
+    h+='<div class="act-card">';
+    h+='<div class="act-card-header"><span class="act-date">'+esc(a.date)+'</span><span class="act-card-title">'+esc(a.title)+'</span><div class="spacer"></div><button class="btn btn-ghost btn-sm" data-action="edit-activity" data-id="'+a.id+'">编辑</button><button class="btn btn-ghost btn-sm" data-action="delete-activity" data-id="'+a.id+'">删除</button></div>';
+    if(a.content)h+='<div class="act-content">'+esc(a.content)+'</div>';
+    if(a.images&&a.images.length){
+      h+='<div class="img-grid">';
+      a.images.forEach(function(img,idx){
+        h+='<img class="img-thumb" src="'+img+'" data-action="preview-img" data-key="act_'+a.id+'" data-idx="'+idx+'">';
+      });
+      h+='</div>';
+    }
+    h+='</div>';
+  });
+  c.innerHTML=h;
+}
+function renderAlbum(){
+  var c=document.getElementById('module-album');
+  _tmpImgs={};
+  var actWithImg=S.activities.filter(function(a){return a.images&&a.images.length;});
+  var totalPics=actWithImg.reduce(function(s,a){return s+a.images.length;},0);
+  var h='<div class="module-header"><h2>班级相册</h2><span class="data-count-badge">'+totalPics+'张照片</span><div class="spacer"></div><button class="btn btn-outline btn-sm" data-action="exp-activities-csv">导出</button></div>';
+  h+='<div class="sub-tabs"><div class="sub-tab'+(U.albumTab==='activity'?' active':'')+'" data-action="set-album-tab" data-val="activity">按活动</div><div class="sub-tab'+(U.albumTab==='month'?' active':'')+'" data-action="set-album-tab" data-val="month">按月份</div></div>';
+  if(!actWithImg.length){
+    h+='<div class="empty-state"><p>相册还没有照片</p><p style="font-size:12px;color:var(--text2)">在「活动记录」里给活动添加图片，照片会自动汇总到这里</p><button class="btn btn-primary" data-action="add-activity">去活动记录添加</button></div>';
+    c.innerHTML=h;
+    return;
+  }
+  var acts=actWithImg.slice().sort(function(x,y){return(y.date||'').localeCompare(x.date||'');});
+  if(U.albumTab==='activity'){
+    acts.forEach(function(a){
+      _tmpImgs['alb_act_'+a.id]=a.images;
+      h+='<div class="act-card"><div class="act-card-header"><span class="act-date">'+esc(a.date)+'</span><span class="act-card-title">'+esc(a.title)+'</span><span class="data-count-badge">'+a.images.length+'张</span></div>';
+      h+='<div class="img-grid">';
+      a.images.forEach(function(img,idx){
+        h+='<img class="img-thumb" src="'+img+'" data-action="preview-img" data-key="alb_act_'+a.id+'" data-idx="'+idx+'" alt="'+esc(a.title)+'">';
+      });
+      h+='</div></div>';
+    });
+  }else{
+    var months={};
+    acts.forEach(function(a){
+      var mk=(a.date||'').slice(0,7);
+      if(!months[mk])months[mk]=[];
+      months[mk]=months[mk].concat(a.images);
+    });
+    var mkeys=Object.keys(months).sort().reverse();
+    mkeys.forEach(function(mk){
+      var imgs=months[mk];
+      _tmpImgs['alb_mon_'+mk]=imgs;
+      h+='<div class="album-month"><div class="album-month-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>'+mk.replace('-','年')+'月<span class="data-count-badge">'+imgs.length+'张</span></div>';
+      h+='<div class="img-grid">';
+      imgs.forEach(function(img,idx){
+        h+='<img class="img-thumb" src="'+img+'" data-action="preview-img" data-key="alb_mon_'+mk+'" data-idx="'+idx+'">';
+      });
+      h+='</div></div>';
+    });
+  }
+  h+='<div style="margin-top:10px;font-size:12px;color:var(--text2)">相册照片来自「活动记录」模块，点击照片可放大查看</div>';
+  c.innerHTML=h;
+}
+function showActivityForm(a){
+  var e=!!a;
+  a=a||{title:'',date:todayStr(),content:'',images:[]};
+  a.images=a.images||[];
+  var b='<div class="form-group"><label>活动标题</label><input id="af-title" value="'+esc(a.title)+'"></div>';
+  b+='<div class="form-group"><label>日期</label><input type="date" id="af-date" value="'+esc(a.date)+'"></div>';
+  b+='<div class="form-group"><label>活动内容</label><textarea id="af-content" style="min-height:100px">'+esc(a.content)+'</textarea></div>';
+  b+='<div class="form-group"><label>活动图片（最多9张）</label>';
+  b+='<div class="upload-area" id="actUploadArea"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><p>点击上传图片</p></div>';
+  b+='<div class="form-img-grid" id="actImgGrid"></div>';
+  b+='</div>';
+  openModal(e?'编辑活动':'新增活动',b,'<button class="btn btn-primary" data-action="save-activity" data-id="'+(a.id||'')+'">'+(e?'保存':'添加')+'</button><button class="btn btn-ghost" data-action="modal-close">取消</button>');
+  U.editImgs=a.images.slice();
+  renderFormImgs('actImgGrid',U.editImgs,'act');
+  setupImgUpload('actUploadArea','act');
+}
+function setupImgUpload(areaId,prefix){
+  var ua=document.getElementById(areaId);
+  if(!ua)return;
+  ua.onclick=function(){
+    var fi=document.createElement('input');
+    fi.type='file';
+    fi.accept='image/*';
+    fi.multiple=true;
+    fi.onchange=function(ev){
+      var files=Array.from(ev.target.files);
+      var remaining=9-U.editImgs.length;
+      if(remaining<=0){toast('最多9张图片','warn');return;}
+      files=files.slice(0,remaining);
+      if(!files.length)return;
+      var done=0;
+      toast('正在处理'+files.length+'张图片...','info');
+      files.forEach(function(f){
+        compressImg(f,function(data){
+          if(data)U.editImgs.push(data);
+          done++;
+          if(done===files.length){
+            renderFormImgs(prefix==='act'?'actImgGrid':'behImgGrid',U.editImgs,prefix);
+            toast('已添加'+done+'张图片','success');
+          }
+        });
+      });
+    };
+    fi.click();
+  };
+}
+function renderFormImgs(containerId,imgs,prefix){
+  var el=document.getElementById(containerId);
+  if(!el)return;
+  if(!imgs.length){el.innerHTML='';return;}
+  el.innerHTML=imgs.map(function(img,idx){
+    return '<div class="form-img-wrap"><img class="form-img-thumb" src="'+img+'"><button class="form-img-del" data-action="del-form-img" data-prefix="'+prefix+'" data-idx="'+idx+'">&times;</button></div>';
+  }).join('');
+}
+function saveActivity(id){
+  var d={title:val('af-title'),date:val('af-date'),content:val('af-content'),images:(U.editImgs||[]).slice()};
+  if(!d.title){toast('请填标题','error');return;}
+  if(id){
+    var a=S.activities.find(function(x){return x.id===id;});
+    if(a){Object.assign(a,d);toast('已保存','success');}
+  }else{
+    d.id=uid();d.createdAt=todayStr();
+    S.activities.push(d);
+    toast('已添加','success');
+  }
+  U.editImgs=[];
+  save();closeModal();renderActivities();
+}
+
+// ===== MODULE 8: BEHAVIORS =====
+function renderBehaviors(){
+  var c=document.getElementById('module-behaviors');
+  _tmpImgs={};
+  var h='<div class="module-header"><h2>行为记录</h2><span class="data-count-badge">'+S.behaviors.length+'条</span><div class="spacer"></div><button class="btn btn-outline btn-sm" data-action="exp-behaviors-csv">导出</button><button class="btn btn-primary btn-sm" data-action="add-behavior">+ 新增</button></div>';
+  h+='<div class="sub-tabs"><div class="sub-tab'+(U.behTab==='all'?' active':'')+'" data-action="set-beh-tab" data-val="all">全部</div><div class="sub-tab'+(U.behTab==='award'?' active':'')+'" data-action="set-beh-tab" data-val="award">获奖</div><div class="sub-tab'+(U.behTab==='violation'?' active':'')+'" data-action="set-beh-tab" data-val="violation">违纪</div></div>';
+  var fl=S.behaviors.filter(function(b){return U.behTab==='all'||b.type===U.behTab;});
+  if(!fl.length){
+    h+='<div class="empty-state"><p>暂无行为记录</p><button class="btn btn-primary" data-action="add-behavior">新增记录</button></div>';
+    c.innerHTML=h;
+    return;
+  }
+  fl.slice().reverse().forEach(function(b){
+    var sn=b.studentId?getStuName(b.studentId):b.studentName||'';
+    _tmpImgs['beh_'+b.id]=b.images||[];
+    h+='<div class="beh-card '+b.type+'">';
+    h+='<div class="beh-card-header"><span class="beh-student">'+esc(sn)+'</span><span class="beh-type '+b.type+'">'+(b.type==='award'?'获奖':'违纪')+'</span>';
+    if(b.level)h+='<span class="beh-level">'+esc(b.level)+'</span>';
+    h+='<span style="font-size:12px;color:var(--text3)">'+esc(b.date)+'</span>';
+    h+='<div class="spacer"></div><button class="btn btn-ghost btn-sm" data-action="edit-behavior" data-id="'+b.id+'">编辑</button><button class="btn btn-ghost btn-sm" data-action="delete-behavior" data-id="'+b.id+'">删除</button></div>';
+    h+='<div class="beh-title">'+esc(b.title)+'</div>';
+    if(b.description)h+='<div class="beh-desc">'+esc(b.description)+'</div>';
+    if(b.images&&b.images.length){
+      h+='<div class="img-grid">';
+      b.images.forEach(function(img,idx){
+        h+='<img class="img-thumb" src="'+img+'" data-action="preview-img" data-key="beh_'+b.id+'" data-idx="'+idx+'">';
+      });
+      h+='</div>';
+    }
+    h+='</div>';
+  });
+  c.innerHTML=h;
+}
+function showBehaviorForm(b){
+  var e=!!b;
+  b=b||{studentId:'',date:todayStr(),type:'award',level:'',title:'',description:'',images:[]};
+  b.images=b.images||[];
+  var stuOpts='<option value="">- 选择学生 -</option>'+S.students.map(function(s){return'<option value="'+s.id+'"'+(b.studentId===s.id?' selected':'')+'>'+esc(s.name)+'</option>';}).join('');
+  var awardLevels=['校级','区级','市级','省级','国家级'];
+  var vioLevels=['轻度','中度','重度'];
+  var levels=b.type==='award'?awardLevels:vioLevels;
+  var levelOpts=levels.map(function(l){return'<option value="'+l+'"'+(b.level===l?' selected':'')+'>'+l+'</option>';}).join('');
+  var b2='<div class="form-row"><div class="form-group"><label>学生</label><select id="bf-student">'+stuOpts+'</select></div><div class="form-group"><label>日期</label><input type="date" id="bf-date" value="'+esc(b.date)+'"></div></div>';
+  b2+='<div class="form-row"><div class="form-group"><label>类型</label><select id="bf-type"><option value="award"'+(b.type==='award'?' selected':'')+'>获奖</option><option value="violation"'+(b.type==='violation'?' selected':'')+'>违纪</option></select></div><div class="form-group"><label>级别</label><select id="bf-level">'+levelOpts+'</select></div></div>';
+  b2+='<div class="form-group"><label>标题/事件</label><input id="bf-title" value="'+esc(b.title)+'"></div>';
+  b2+='<div class="form-group"><label>详细描述</label><textarea id="bf-desc" style="min-height:80px">'+esc(b.description)+'</textarea></div>';
+  b2+='<div class="form-group"><label>图片（最多9张）</label>';
+  b2+='<div class="upload-area" id="behUploadArea"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><p>点击上传图片</p></div>';
+  b2+='<div class="form-img-grid" id="behImgGrid"></div>';
+  b2+='</div>';
+  openModal(e?'编辑行为记录':'新增行为记录',b2,'<button class="btn btn-primary" data-action="save-behavior" data-id="'+(b.id||'')+'">'+(e?'保存':'添加')+'</button><button class="btn btn-ghost" data-action="modal-close">取消</button>');
+  U.editImgs=b.images.slice();
+  renderFormImgs('behImgGrid',U.editImgs,'beh');
+  setupImgUpload('behUploadArea','beh');
+  var bt=document.getElementById('bf-type');
+  if(bt)bt.onchange=function(){
+    var t=this.value;
+    var lvls=t==='award'?awardLevels:vioLevels;
+    var ls=document.getElementById('bf-level');
+    if(ls)ls.innerHTML=lvls.map(function(l){return'<option value="'+l+'">'+l+'</option>';}).join('');
+  };
+}
+function saveBehavior(id){
+  var sid=val('bf-student');
+  var d={studentId:sid,date:val('bf-date'),type:val('bf-type'),level:val('bf-level'),title:val('bf-title'),description:val('bf-desc'),images:(U.editImgs||[]).slice()};
+  if(!d.title){toast('请填标题','error');return;}
+  if(sid){var s=getStu(sid);d.studentName=s?s.name:'';}else{d.studentName='全班';}
+  if(id){
+    var b=S.behaviors.find(function(x){return x.id===id;});
+    if(b){Object.assign(b,d);toast('已保存','success');}
+  }else{
+    d.id=uid();d.createdAt=todayStr();
+    S.behaviors.push(d);
+    toast('已添加','success');
+  }
+  U.editImgs=[];
+  save();closeModal();renderBehaviors();
+}
+
+// ===== SETTINGS =====
+function showSettings(){var b='<div class="form-group"><label>我的课程（逗号分隔）</label><input id="set-my" value="'+esc(S.settings.mySubjects.join(','))+'"></div><div class="form-group"><label>学科列表</label><input id="set-sub" value="'+esc(S.settings.subjects.join(','))+'"></div><div class="form-group"><label>学生标签</label><input id="set-tag" value="'+esc(S.settings.tags.join(','))+'"></div><div class="form-group"><label>值日岗位</label><input id="set-duty" value="'+esc(S.settings.dutyPositions.join(','))+'"></div><hr style="border:none;border-top:1px solid var(--border);margin:16px 0"><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-outline btn-sm" data-action="clear-sample">清空示例</button><button class="btn btn-danger btn-sm" data-action="clear-all">清空所有</button></div>';openModal('设置',b,'<button class="btn btn-primary" data-action="save-settings">保存</button><button class="btn btn-ghost" data-action="modal-close">关闭</button>');}
+function saveSettings(){function pl(s){return s.split(/[,，]/).map(function(v){return v.trim();}).filter(Boolean);}S.settings.mySubjects=pl(val('set-my'));S.settings.subjects=pl(val('set-sub'));S.settings.tags=pl(val('set-tag'));S.settings.dutyPositions=pl(val('set-duty'));save();closeModal();toast('已保存','success');renderMod(U.module);}
+
+// ===== DRAFTS =====
+function showDrafts(){var b='<div class="sub-tabs" style="margin-bottom:12px"><div class="sub-tab active" id="dTN" data-action="draft-tab" data-val="notices">班级通知</div><div class="sub-tab" id="dTC" data-action="draft-tab" data-val="comments">评语草稿</div></div><div id="draftList"></div><div style="margin-top:8px"><button class="btn btn-primary btn-sm" data-action="add-draft">新增草稿</button></div>';openModal('通知/评语草稿',b,'<button class="btn btn-ghost" data-action="modal-close">关闭</button>');renderDraftList('notices');}
+function renderDraftList(tab){U.draftTab=tab;document.getElementById('dTN').classList.toggle('active',tab==='notices');document.getElementById('dTC').classList.toggle('active',tab==='comments');var list=S.drafts[tab]||[];var h='';if(!list.length)h='<div style="color:var(--text3);font-size:13px;padding:8px 0">暂无草稿</div>';list.forEach(function(d){h+='<div style="padding:10px;border:1px solid var(--border);border-radius:8px;margin-bottom:8px"><div style="font-weight:600;font-size:14px">'+esc(d.title)+'</div><div style="font-size:13px;color:var(--text2);margin:4px 0;white-space:pre-wrap">'+esc(d.content)+'</div><div style="display:flex;gap:4px"><button class="btn btn-outline btn-sm" data-action="copy-draft" data-id="'+d.id+'">复制</button><button class="btn btn-ghost btn-sm" data-action="delete-draft" data-id="'+d.id+'">删除</button></div></div>';});document.getElementById('draftList').innerHTML=h;}
+function showAddDraft(){var ic=U.draftTab==='comments';var b='<div class="form-group"><label>'+(ic?'标题/学生名':'通知标题')+'</label><input id="df-title"></div><div class="form-group"><label>内容</label><textarea id="df-content" style="min-height:100px"></textarea></div>';openModal(ic?'新增评语':'新增通知',b,'<button class="btn btn-primary" data-action="save-draft">保存</button><button class="btn btn-ghost" data-action="modal-close">取消</button>');}
+function saveDraft(){var t=val('df-title'),c=val('df-content');if(!t){toast('请填标题','error');return;}S.drafts[U.draftTab].push({id:uid(),title:t,content:c,date:todayStr()});save();closeModal();showDrafts();toast('已保存','success');}
+function copyDraft(id){var d=S.drafts[U.draftTab].find(function(x){return x.id===id;});if(!d)return;var txt=d.title+'\n'+d.content;if(navigator.clipboard){navigator.clipboard.writeText(txt).then(function(){toast('已复制','success');});}else{var ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();toast('已复制','success');}}
+function deleteDraft(id){S.drafts[U.draftTab]=S.drafts[U.draftTab].filter(function(x){return x.id!==id;});save();renderDraftList(U.draftTab);}
+
+// ===== EXPORT/IMPORT =====
+function showExportMenu(){var b='<div style="font-size:14px;line-height:2"><p style="margin-bottom:8px">选择导出内容：</p><button class="btn btn-outline" style="width:100%;margin-bottom:6px;justify-content:flex-start" data-action="exp-all-json">导出全部数据（JSON备份）</button><button class="btn btn-outline" style="width:100%;margin-bottom:6px;justify-content:flex-start" data-action="exp-students-csv">导出学生名单（CSV）</button><button class="btn btn-outline" style="width:100%;margin-bottom:6px;justify-content:flex-start" data-action="exp-todos-csv">导出待办清单（CSV）</button><button class="btn btn-outline" style="width:100%;margin-bottom:6px;justify-content:flex-start" data-action="exp-grades-csv">导出成绩报表（CSV）</button><button class="btn btn-outline" style="width:100%;margin-bottom:6px;justify-content:flex-start" data-action="exp-points-csv">导出积分明细（CSV）</button><button class="btn btn-outline" style="width:100%;margin-bottom:6px;justify-content:flex-start" data-action="exp-activities-csv">导出活动记录（CSV）</button><button class="btn btn-outline" style="width:100%;margin-bottom:6px;justify-content:flex-start" data-action="exp-behaviors-csv">导出行为记录（CSV）</button></div>';openModal('导出数据',b,'<button class="btn btn-ghost" data-action="modal-close">关闭</button>');}
+function showImportMenu(){var b='<div style="font-size:14px;line-height:2"><p style="margin-bottom:8px">选择导入方式：</p><button class="btn btn-outline" style="width:100%;margin-bottom:6px;justify-content:flex-start" data-action="imp-json">导入JSON备份（恢复全部数据）</button><div style="margin-top:8px;font-size:13px;color:var(--text2)">也可以在各模块内单独导入学生名单、课表、成绩等</div></div>';openModal('导入数据',b,'<button class="btn btn-ghost" data-action="modal-close">关闭</button>');}
+
+// ===== SAMPLE STUDENT DATA（虚构示例名单，非真实学生，仅用于演示） =====
+var SAMPLE_STUDENTS=[
+    {id:'r1',name:'王小明',studentNo:'1',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路1号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:1,tags:[],notes:''},
+    {id:'r2',name:'李浩然',studentNo:'2',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路3号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:1,tags:[],notes:''},
+    {id:'r3',name:'张宇',studentNo:'3',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路5号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:1,tags:[],notes:''},
+    {id:'r4',name:'刘洋',studentNo:'4',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路7号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:1,tags:[],notes:''},
+    {id:'r5',name:'陈晨',studentNo:'5',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路9号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:1,tags:[],notes:''},
+    {id:'r6',name:'杨帆',studentNo:'6',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路11号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:1,tags:[],notes:''},
+    {id:'r7',name:'赵磊',studentNo:'7',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路13号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:1,tags:[],notes:''},
+    {id:'r8',name:'周涛',studentNo:'8',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路15号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:1,tags:[],notes:''},
+    {id:'r9',name:'吴迪',studentNo:'9',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路17号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:1,tags:[],notes:''},
+    {id:'r10',name:'徐峰',studentNo:'10',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路19号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:1,tags:[],notes:''},
+    {id:'r11',name:'孙浩',studentNo:'11',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路21号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:1,tags:[],notes:''},
+    {id:'r12',name:'马超',studentNo:'12',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路23号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:2,tags:[],notes:''},
+    {id:'r13',name:'朱明',studentNo:'13',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路25号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:2,tags:[],notes:''},
+    {id:'r14',name:'胡杰',studentNo:'14',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路27号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:2,tags:[],notes:''},
+    {id:'r15',name:'郭强',studentNo:'15',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路29号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:2,tags:[],notes:''},
+    {id:'r16',name:'何斌',studentNo:'16',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路31号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:2,tags:[],notes:''},
+    {id:'r17',name:'高翔',studentNo:'17',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路33号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:2,tags:[],notes:''},
+    {id:'r18',name:'林凯',studentNo:'18',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路35号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:2,tags:[],notes:''},
+    {id:'r19',name:'罗鹏',studentNo:'19',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路37号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:2,tags:[],notes:''},
+    {id:'r20',name:'郑毅',studentNo:'20',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路39号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:2,tags:[],notes:''},
+    {id:'r21',name:'梁宇',studentNo:'21',gender:'男',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路41号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:2,tags:[],notes:''},
+    {id:'r22',name:'王芳',studentNo:'22',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路43号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:3,tags:[],notes:''},
+    {id:'r23',name:'李娜',studentNo:'23',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路45号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:3,tags:[],notes:''},
+    {id:'r24',name:'张敏',studentNo:'24',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路47号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:3,tags:[],notes:''},
+    {id:'r25',name:'刘婷',studentNo:'25',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路49号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:3,tags:[],notes:''},
+    {id:'r26',name:'陈静',studentNo:'26',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路51号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:3,tags:[],notes:''},
+    {id:'r27',name:'杨雪',studentNo:'27',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路53号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:3,tags:[],notes:''},
+    {id:'r28',name:'赵莉',studentNo:'28',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路55号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:3,tags:[],notes:''},
+    {id:'r29',name:'周欣',studentNo:'29',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路57号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:3,tags:[],notes:''},
+    {id:'r30',name:'吴倩',studentNo:'30',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路59号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:3,tags:[],notes:''},
+    {id:'r31',name:'徐露',studentNo:'31',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路61号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:3,tags:[],notes:''},
+    {id:'r32',name:'孙悦',studentNo:'32',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路63号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:3,tags:[],notes:''},
+    {id:'r33',name:'马琳',studentNo:'33',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路65号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:3,tags:[],notes:''},
+    {id:'r34',name:'朱迪',studentNo:'34',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路67号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:4,tags:[],notes:''},
+    {id:'r35',name:'胡艳',studentNo:'35',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路69号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:4,tags:[],notes:''},
+    {id:'r36',name:'郭晶',studentNo:'36',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路71号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:4,tags:[],notes:''},
+    {id:'r37',name:'何雨',studentNo:'37',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路73号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:4,tags:[],notes:''},
+    {id:'r38',name:'高媛',studentNo:'38',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路75号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:4,tags:[],notes:''},
+    {id:'r39',name:'林婉',studentNo:'39',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路77号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:4,tags:[],notes:''},
+    {id:'r40',name:'罗颖',studentNo:'40',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路79号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:4,tags:[],notes:''},
+    {id:'r41',name:'郑洁',studentNo:'41',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路81号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:4,tags:[],notes:''},
+    {id:'r42',name:'梁静',studentNo:'42',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路83号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:4,tags:[],notes:''},
+    {id:'r43',name:'谢琳',studentNo:'43',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路85号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:4,tags:[],notes:''},
+    {id:'r44',name:'韩露',studentNo:'44',gender:'女',idCard:'',primarySchool:'示例小学',address:'示例市示例区示例路87号',guardian1Name:'',guardian1Phone:'',guardian2Name:'',guardian2Phone:'',group:4,tags:[],notes:''}
+];
+
+// ===== SAMPLE DATA =====
+function initSampleData(){
+  S.students=SAMPLE_STUDENTS.map(function(s){return Object.assign({},s);});
+  S.todos=[
+    {id:'t1',title:'准备周一班会课PPT',content:'主题：新学期学习方法指导',deadline:'2026-08-21',priority:'high',category:'teaching',completed:false,createdAt:'2026-08-20'},
+    {id:'t2',title:'收齐上周作业',content:'语文作文+数学练习册',deadline:'2026-08-19',priority:'high',category:'class',completed:false,createdAt:'2026-08-18'},
+    {id:'t3',title:'整理学生档案',content:'更新转学生信息',deadline:'2026-08-25',priority:'medium',category:'class',completed:false,createdAt:'2026-08-20'},
+    {id:'t4',title:'准备期中考试安排',content:'排考场+监考安排',deadline:'2026-08-30',priority:'medium',category:'teaching',completed:false,createdAt:'2026-08-20'}
+  ];
+  var sch=[[1,'语文','3班'],[2,'数学','3班'],[3,'英语','3班'],[4,'物理','3班'],[5,'化学','3班'],[6,'体育',''],[7,'班会',''],[8,'自习','']];
+  var days2=[[1,2,1,4,3],[2,1,2,1,2],[3,3,3,5,3],[4,4,5,3,1],[5,5,4,2,4],[6,6,6,6,6],[7,7,7,7,7],[8,8,8,8,8]];
+  for(var p=0;p<8;p++){for(var d=1;d<=5;d++){var s=sch[days2[p][d-1]-1];S.schedule.push({id:uid(),day:d,period:p+1,subject:s[1],class:s[2],weekType:'both'});}}
+  S.seating={rows:5,cols:6,seats:[]};
+  var ws=getWeekStr();
+  S.duty=[];
+  S.violations=[];
+  S.communications=[];
+  S.grades=[];
+  S.homework=[];
+  S.points=[];S.activities=[];S.behaviors=[];
+  S.drafts={notices:[{id:uid(),title:'家长会通知',content:'各位家长好：定于本周五下午3点召开家长会，请准时参加。',date:'2026-08-20'}],comments:[]};
+  save();
+}
+
+// ===== EVENT DELEGATION =====
+document.addEventListener('click',function(e){
+  // Nav items
+  var navEl=e.target.closest('.nav-item');
+  if(navEl){nav(navEl.dataset.module);return;}
+  // Action buttons
+  var actEl=e.target.closest('[data-action]');
+  if(!actEl)return;
+  var a=actEl.dataset.action;
+  var id=actEl.dataset.id;
+  
+  if(a==='modal-close'){closeModal();return;}
+  if(a==='filter-todo'){U.todoFilter=actEl.dataset.val;renderTodos();return;}
+  if(a==='set-weektype'){S.settings.weekType=actEl.dataset.val;save();renderSchedule();return;}
+  if(a==='set-arrange-tab'){U.arrangeTab=actEl.dataset.val;renderArrange();return;}
+  if(a==='set-grades-tab'){U.gradesTab=actEl.dataset.val;renderGradesMod();return;}
+  if(a==='filter-profile'){U.profileFilter=actEl.dataset.val;renderProfiles();return;}
+  if(a==='select-grade-exam'){var en=actEl.dataset.name;var byExam={};S.grades.forEach(function(g){if(!byExam[g.examName])byExam[g.examName]=[];byExam[g.examName].push(g);});var g2=byExam[en]?byExam[en][0]:null;if(g2){U.selectedExamId=g2.id;save();}renderGrades();return;}if(a==='select-grade-subject'){U.selectedExamId=id;renderGrades();return;}
+  if(a==='select-exama'){U.selectedExamAId=id;renderExamAnalysis();return;}
+  if(a==='copy-tutor'){copyTutorList();return;}
+  if(a==='draft-tab'){renderDraftList(actEl.dataset.val);return;}
+  
+  if(a==='add-todo'){showTodoForm();return;}
+  if(a==='edit-todo'){showTodoForm(S.todos.find(function(t){return t.id===id;}));return;}
+  if(a==='save-todo'){saveTodo(id);return;}
+  if(a==='toggle-todo'){var t=S.todos.find(function(x){return x.id===id;});if(t){t.completed=!t.completed;save();renderTodos();renderToday();}return;}
+  if(a==='delete-todo'){confirmDialog('确认删除该待办？',function(){S.todos=S.todos.filter(function(t){return t.id!==id;});save();renderTodos();renderToday();});return;}
+  if(a==='export-todos'){var csv=toCSV([['标题','内容','截止时间','优先级','分类','状态']].concat(S.todos.map(function(t){return[t.title,t.content,t.deadline,t.priority,t.category,t.completed?'已完成':'进行中'];})));dl('待办清单_'+todayStr()+'.csv','\uFEFF'+csv,'text/csv;charset=utf-8');return;}
+  
+  if(a==='edit-schedule'){showSchForm(parseInt(actEl.dataset.day),parseInt(actEl.dataset.period));return;}
+  if(a==='save-schedule'){saveSchedule(parseInt(actEl.dataset.day),parseInt(actEl.dataset.period));return;}
+  if(a==='import-schedule'){showImportSch();return;}
+  if(a==='do-import-schedule'){doImportSch();return;}
+  
+  if(a==='click-seat'){handleSeat(parseInt(actEl.dataset.row),parseInt(actEl.dataset.col));return;}
+  if(a==='resize-seat'){resizeSeat();return;}
+  if(a==='random-shuffle'){randomShuffle();return;}
+  
+  if(a==='add-duty-group'){showAddDutyGroup();return;}
+  if(a==='save-duty-group'){saveDutyGroup();return;}
+  if(a==='add-duty-task'){showAddDutyTask(id);return;}
+  if(a==='save-duty-task'){saveDutyTask(id);return;}
+  if(a==='toggle-duty'){toggleDuty(id,parseInt(actEl.dataset.idx));return;}
+  if(a==='delete-duty'){confirmDialog('确认删除？',function(){S.duty=S.duty.filter(function(d){return d.id!==id;});save();renderDuty();renderToday();});return;}
+  if(a==='sync-duty-points'){syncDutyPoints(id);return;}
+  
+  if(a==='view-profile'){U.selectedProfileId=id;renderProfiles();return;}
+  if(a==='back-profiles'){U.selectedProfileId=null;renderProfiles();return;}
+  if(a==='add-student'){showStuForm();return;}
+  if(a==='edit-student'){showStuForm(getStu(id));return;}
+  if(a==='save-student'){saveStudent(id);return;}
+  if(a==='delete-student'){confirmDialog('确认删除该学生？相关记录将保留。',function(){S.students=S.students.filter(function(s){return s.id!==id;});save();U.selectedProfileId=null;renderProfiles();});return;}
+  if(a==='import-students'){showImportStu();return;}
+  if(a==='import-committee'){showImportCommittee();return;}
+  if(a==='do-import-committee'){doImportCommittee();return;}
+  if(a==='import-info-sheet'){showImportStu();return;}
+  if(a==='batch-photos'){showBatchPhotos();return;}
+  if(a==='save-batch-photos'){saveBatchPhotos();return;}
+  if(a==='set-photo'){setStudentPhoto(id);return;}
+  if(a==='export-stu-csv'){var csv=toCSV([['姓名','学号','性别','身份证号','毕业小学','家庭住址','监护人1姓名','监护人1手机号','监护人2姓名','监护人2手机号','组别','标签','备注']].concat(S.students.map(function(s){return[s.name,s.studentNo||'',s.gender,s.idCard||'',s.primarySchool||'',s.address||'',s.guardian1Name||'',s.guardian1Phone||'',s.guardian2Name||'',s.guardian2Phone||'',s.group,(s.tags||[]).join('|'),s.notes||''];})));dl('学生名单_'+todayStr()+'.csv','\uFEFF'+csv,'text/csv;charset=utf-8');return;}
+  if(a==='do-import-students'){doImportStu();return;}
+  if(a==='add-violation'){showVioForm(id);return;}
+  if(a==='save-violation'){saveVio(id);return;}
+  if(a==='delete-violation'){confirmDialog('确认删除？',function(){S.violations=S.violations.filter(function(v){return v.id!==id;});save();renderProfileDetail();});return;}
+  if(a==='add-communication'){showCommForm(id);return;}
+  if(a==='save-communication'){saveComm(id);return;}
+  if(a==='delete-communication'){confirmDialog('确认删除？',function(){S.communications=S.communications.filter(function(c){return c.id!==id;});save();renderProfileDetail();});return;}
+  if(a==='add-points-single'){showAddPtsModal(id);return;}
+  
+  if(a==='import-grades'){showImportGrades();return;}
+  if(a==='do-import-grades'){doImportGrades();return;}
+  if(a==='export-grades'){var g=S.grades.find(function(x){return x.id===U.selectedExamId;})||S.grades[0];if(!g){toast('暂无成绩','warn');return;}var csv=toCSV([['排名','姓名','组别','分数']].concat(Object.entries(g.scores).map(function(a,i){var st=getStu(a[0]);return[i+1,st?st.name:a[0],st?st.group:'?',a[1]];})));dl('成绩_'+g.examName+'_'+g.subject+'.csv','\uFEFF'+csv,'text/csv;charset=utf-8');return;}
+  
+  if(a==='add-homework'){showHWForm();return;}
+  if(a==='save-homework'){saveHW();return;}
+  if(a==='cycle-hw'){cycleHW(id,actEl.dataset.sid);return;}
+  if(a==='sync-hw-points'){syncHW(id);return;}
+  if(a==='delete-homework'){confirmDialog('确认删除？',function(){S.homework=S.homework.filter(function(h){return h.id!==id;});save();renderGradesMod();});return;}
+  
+  if(a==='batch-points'){showBatchPts();return;}
+  if(a==='save-batch-pts'){saveBatchPts();return;}
+  if(a==='save-pts-single'){savePtsSingle(id);return;}
+  if(a==='export-points'){var csv=toCSV([['日期','学生','类型','分值','原因']].concat(S.points.map(function(p){return[p.date,getStuName(p.studentId),p.type==='add'?'加分':'扣分',p.points,p.reason];})));dl('积分明细_'+todayStr()+'.csv','\uFEFF'+csv,'text/csv;charset=utf-8');return;}
+  if(a==='exp-activities-csv'){var csv=toCSV([['日期','标题','内容']].concat(S.activities.map(function(a){return[a.date,a.title,a.content];})));dl('活动记录_'+todayStr()+'.csv','\uFEFF'+csv,'text/csv;charset=utf-8');closeModal();return;}
+  if(a==='exp-behaviors-csv'){var csv=toCSV([['日期','学生','类型','级别','标题','描述']].concat(S.behaviors.map(function(b){return[b.date,b.studentId?getStuName(b.studentId):b.studentName||'',b.type==='award'?'获奖':'违纪',b.level,b.title,b.description];})));dl('行为记录_'+todayStr()+'.csv','\uFEFF'+csv,'text/csv;charset=utf-8');closeModal();return;}
+  if(a==='reset-weekly'){resetWeekly();return;}
+  
+  if(a==='preview-img'){var key=actEl.dataset.key;var pidx=parseInt(actEl.dataset.idx);if(_tmpImgs[key])showImgLightbox(_tmpImgs[key],pidx);return;}
+  if(a==='del-form-img'){var fIdx=parseInt(actEl.dataset.idx);U.editImgs.splice(fIdx,1);var prefix=actEl.dataset.prefix;renderFormImgs(prefix==='act'?'actImgGrid':'behImgGrid',U.editImgs,prefix);return;}
+  if(a==='set-beh-tab'){U.behTab=actEl.dataset.val;renderBehaviors();return;}
+  if(a==='set-album-tab'){U.albumTab=actEl.dataset.val;renderAlbum();return;}
+  
+  if(a==='add-activity'){showActivityForm();return;}
+  if(a==='edit-activity'){showActivityForm(S.activities.find(function(x){return x.id===id;}));return;}
+  if(a==='save-activity'){saveActivity(id);return;}
+  if(a==='delete-activity'){confirmDialog('确认删除该活动记录？',function(){S.activities=S.activities.filter(function(x){return x.id!==id;});save();renderActivities();});return;}
+  
+  if(a==='add-behavior'){showBehaviorForm();return;}
+  if(a==='edit-behavior'){showBehaviorForm(S.behaviors.find(function(x){return x.id===id;}));return;}
+  if(a==='save-behavior'){saveBehavior(id);return;}
+  if(a==='delete-behavior'){confirmDialog('确认删除该行为记录？',function(){S.behaviors=S.behaviors.filter(function(x){return x.id!==id;});save();renderBehaviors();});return;}
+  
+  if(a==='save-settings'){saveSettings();return;}
+  if(a==='clear-sample'){confirmDialog('确认清空示例数据？将保留你自己添加的数据。',function(){S.todos=[];S.schedule=[];S.grades=[];S.homework=[];S.points=[];S.violations=[];S.communications=[];S.duty=[];S.seating={rows:3,cols:6,seats:[]};S.activities=[];S.behaviors=[];save();closeModal();renderMod(U.module);toast('已清空示例数据','success');});return;}
+  if(a==='clear-all'){confirmDialog('确认清空所有数据？此操作不可恢复！',function(){S.students=[];S.todos=[];S.schedule=[];S.grades=[];S.homework=[];S.points=[];S.violations=[];S.communications=[];S.duty=[];S.seating={rows:5,cols:6,seats:[]};S.drafts={notices:[],comments:[]};S.activities=[];S.behaviors=[];S.committee=[];save();closeModal();renderMod(U.module);toast('已清空','success');});return;}
+  
+  if(a==='add-draft'){showAddDraft();return;}
+  if(a==='save-draft'){saveDraft();return;}
+  if(a==='copy-draft'){copyDraft(id);return;}
+  if(a==='delete-draft'){deleteDraft(id);return;}
+  
+  if(a==='exp-all-json'){dl('Ella和她的4班_备份_'+todayStr()+'.json',JSON.stringify(S,null,2),'application/json');closeModal();return;}
+  if(a==='exp-students-csv'){var csv=toCSV([['姓名','学号','性别','身份证号','毕业小学','家庭住址','监护人1姓名','监护人1手机号','监护人2姓名','监护人2手机号','组别','标签','备注']].concat(S.students.map(function(s){return[s.name,s.studentNo||'',s.gender,s.idCard||'',s.primarySchool||'',s.address||'',s.guardian1Name||'',s.guardian1Phone||'',s.guardian2Name||'',s.guardian2Phone||'',s.group,(s.tags||[]).join('|'),s.notes||''];})));dl('学生名单.csv','\uFEFF'+csv,'text/csv;charset=utf-8');closeModal();return;}
+  if(a==='exp-todos-csv'){var csv=toCSV([['标题','内容','截止时间','优先级','分类','状态']].concat(S.todos.map(function(t){return[t.title,t.content,t.deadline,t.priority,t.category,t.completed?'已完成':'进行中'];})));dl('待办清单.csv','\uFEFF'+csv,'text/csv;charset=utf-8');closeModal();return;}
+  if(a==='exp-grades-csv'){var g=S.grades.find(function(x){return x.id===U.selectedExamId;})||S.grades[0];if(!g){toast('暂无成绩','warn');return;}var csv=toCSV([['排名','姓名','组别','分数']].concat(Object.entries(g.scores).map(function(a,i){var st=getStu(a[0]);return[i+1,st?st.name:a[0],st?st.group:'?',a[1]];})));dl('成绩报表.csv','\uFEFF'+csv,'text/csv;charset=utf-8');closeModal();return;}
+  if(a==='exp-points-csv'){var csv=toCSV([['日期','学生','类型','分值','原因']].concat(S.points.map(function(p){return[p.date,getStuName(p.studentId),p.type==='add'?'加分':'扣分',p.points,p.reason];})));dl('积分明细.csv','\uFEFF'+csv,'text/csv;charset=utf-8');closeModal();return;}
+  
+  if(a==='imp-json'){var fi=document.createElement('input');fi.type='file';fi.accept='.json';fi.onchange=function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(ev){try{var d=JSON.parse(ev.target.result);['students','todos','schedule','seating','duty','violations','communications','grades','homework','points','drafts','activities','behaviors','committee','settings'].forEach(function(k){if(d[k])S[k]=d[k];});save();closeModal();renderMod(U.module);toast('已恢复','success');}catch(err){toast('文件格式错误','error');}};r.readAsText(f,'UTF-8');};fi.click();return;}
+  
+  if(a==='complete-todo'){var t=S.todos.find(function(x){return x.id===id;});if(t){t.completed=true;save();renderTodos();renderToday();toast('已完成','success');}return;}
+  if(a==='nav-arrange'){U.arrangeTab='duty';nav('arrange');return;}
+});
+
+// Today toggle
+document.getElementById('todayHeader').addEventListener('click',function(){document.getElementById('todaySection').classList.toggle('collapsed');});
+// Sidebar toggle
+document.getElementById('menuToggle').addEventListener('click',function(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebarOverlay').classList.toggle('active');});
+document.getElementById('sidebarOverlay').addEventListener('click',function(){document.getElementById('sidebar').classList.remove('open');document.getElementById('sidebarOverlay').classList.remove('active');});
+document.getElementById('modalClose').addEventListener('click',closeModal);
+document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
+document.getElementById('btnExport').addEventListener('click',showExportMenu);
+document.getElementById('btnImport').addEventListener('click',showImportMenu);
+document.getElementById('btnSettings').addEventListener('click',showSettings);
+document.getElementById('btnDrafts').addEventListener('click',showDrafts);
+
+// Search
+document.getElementById('globalSearch').addEventListener('input',function(e){
+  var q=e.target.value.trim();var sr=document.getElementById('searchResults');
+  if(!q){sr.classList.remove('show');return;}
+  var results=S.students.filter(function(s){return s.name.indexOf(q)>=0;});
+  if(!results.length){sr.innerHTML='<div class="search-item" style="color:var(--text3)">未找到学生</div>';}
+  else{sr.innerHTML=results.map(function(s){return'<div class="search-item" data-action="search-click" data-id="'+s.id+'"><b>'+esc(s.name)+'</b><span class="si-tag">'+esc(s.gender)+' · 第'+s.group+'组</span>'+(s.tags&&s.tags.length?'<span class="si-tag">'+esc(s.tags.join('/'))+'</span>':'')+'</div>';}).join('');}
+  sr.classList.add('show');
+});
+document.getElementById('searchResults').addEventListener('click',function(e){
+  var item=e.target.closest('.search-item[data-action="search-click"]');
+  if(!item)return;
+  U.selectedProfileId=item.dataset.id;
+  nav('profiles');
+  document.getElementById('globalSearch').value='';
+  document.getElementById('searchResults').classList.remove('show');
+});
+
+// ===== INIT =====
+if(!load()){initSampleData();}
+renderMod('todos');
+renderToday();
+})();
+</script>
+</body>
+</html>
