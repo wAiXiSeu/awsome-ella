@@ -25,10 +25,7 @@ async function mk(withGw: boolean) {
   const engine = new SyncEngine({
     store, outbox, meta, gateway, ownerUid: () => 'u-1',
     now: () => 0, setTimeoutFn: () => 0, clearTimeoutFn: () => {},
-    images: {
-      getBlob: id => db.images.get(id).then(r => r?.blob),
-      markUploaded: async id => { await db.images.update(id, { uploaded: true }) },
-    },
+    images,                          // the real ImageStore (getBlob + markUploaded), as in bootstrap.ts
   })
   return { db, meta, outbox, store, images, gateway, engine }
 }

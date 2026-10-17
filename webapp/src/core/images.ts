@@ -39,6 +39,9 @@ export class ImageStore {
   /** Viewing always reads local (spec §5.5) — offline photos are visible immediately. */
   async getBlob(imageId: string): Promise<Blob | undefined> { return (await this.db.images.get(imageId))?.blob }
   async isUploaded(imageId: string): Promise<boolean> { return !!(await this.db.images.get(imageId))?.uploaded }
+
+  /** Called by SyncEngine once the object exists remotely; the blob stays local (spec §5.5). */
+  async markUploaded(imageId: string): Promise<void> { await this.db.images.update(imageId, { uploaded: true }) }
 }
 
 /**

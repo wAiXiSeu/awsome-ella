@@ -34,6 +34,15 @@ async function mk(withGw = true) {
 }
 
 describe('SyncEngine.push (spec §5.1/§5.2/§7)', () => {
+  it('no gateway (local-only) still reports the queue: 已保存 ≠ 已同步 (spec §5.1)', async () => {
+    const m = await mk(false)
+    const states: number[] = []
+    m.engine.onState = s => { states.push(s.pending) }
+    await m.store.put('notes', { id: 'n1', title: 'a' })
+    expect(await m.engine.pushOnce()).toBe(0)                // nothing attempted, no network at all
+    expect(states).toEqual([1])                              // …but the UI is told it is queued
+    expect(await m.outbox.count()).toBe(1)                   // intact for when credentials arrive
+  })
   it('pushes all entries in seq order as one batch; outbox drains', async () => {
     const { store, outbox, gateway, engine } = await mk()
     for (let i = 0; i < 3; i++) await store.put('notes', { id: 'n' + i, title: 'T' + i })

@@ -43,9 +43,11 @@ export class SyncEngine {
 
   /** Push ready entries in `seq` order, batched per table (spec §5.2). Returns rows pushed. */
   async pushOnce(): Promise<number> {
-    if (!this.d.gateway) return 0                       // local-only mode (no credentials yet)
+    // Both early exits still emit: "待同步 N 条" is a local signal, so it must be visible offline
+    // and while signed out (spec §5.1 separates 已保存 from 已同步; §7 keeps the queue surfaced).
+    if (!this.d.gateway) { await this.emit(); return 0 }              // local-only mode (no credentials yet)
     const uid = this.d.ownerUid()
-    if (!uid) return 0                                  // auth expired: keep the queue (spec §7)
+    if (!uid) { await this.emit(); return 0 }                          // auth expired: keep the queue (spec §7)
     const now = this.d.now()
     const ready = await this.d.outbox.listReady(now, BATCH)
     if (!ready.length) return 0
