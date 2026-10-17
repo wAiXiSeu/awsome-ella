@@ -20,7 +20,7 @@ export interface TableDef {
 
 export const TABLE_DEFS: TableDef[] = [
   { name: 'students', legacyKey: 'students',
-    columns: ['name', 'studentNo', 'gender', 'primarySchool', 'address', 'guardian1Name', 'guardian1Phone', 'guardian2Name', 'guardian2Phone', 'group', 'tags', 'notes', 'photoPath'],
+    columns: ['name', 'studentNo', 'gender', 'primarySchool', 'address', 'guardian1Name', 'guardian1Phone', 'guardian2Name', 'guardian2Phone', 'group', 'tags', 'notes', 'photoPath', 'guardian1Email'],
     dropColumns: ['idCard'], photoColumn: 'photo', jsonColumns: ['tags'] },
   { name: 'notices', legacyKey: 'drafts', legacySubKey: 'notices', columns: ['title', 'content', 'date'] },
   { name: 'comments', legacyKey: 'drafts', legacySubKey: 'comments', columns: ['title', 'content', 'date'] },

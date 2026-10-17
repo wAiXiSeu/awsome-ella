@@ -1,0 +1,4 @@
+姓名,学号,家长电话,邮箱
+张三,01,13800000001,zs@example.com
+李四,02,1390,li@example.com
+王五,03,,not-an-email
