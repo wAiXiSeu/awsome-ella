@@ -4,6 +4,7 @@
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "types": ["vite/client", "node"],
     "allowArbitraryExtensions": true,
+    "resolveJsonModule": true,
 
     /* Strictness (plan Task 1 Step 5).
        erasableSyntaxOnly is intentionally NOT enabled: the core modules use constructor

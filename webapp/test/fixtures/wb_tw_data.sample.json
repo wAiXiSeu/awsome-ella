@@ -1,0 +1,29 @@
+{
+  "students": [
+    { "id": "m3abc01", "name": "张三", "studentNo": "01", "gender": "男", "idCard": "11010120100101001X",
+      "primarySchool": "一小", "address": "某路1号", "guardian1Name": "张父", "guardian1Phone": "13800000001",
+      "guardian2Name": "张母", "guardian2Phone": "13800000002", "group": 1, "tags": ["学优生"], "notes": "",
+      "photo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==" },
+    { "id": "m3abc02", "name": "李四", "studentNo": "02", "gender": "女", "idCard": "",
+      "primarySchool": "", "address": "", "guardian1Name": "", "guardian1Phone": "",
+      "guardian2Name": "", "guardian2Phone": "", "group": 2, "tags": [], "notes": "", "parentName": "李父", "parentPhone": "13900000002" }
+  ],
+  "todos": [ { "id": "t1", "title": "交表", "content": "", "deadline": "2026-10-20", "priority": "high", "category": "通知", "completed": false } ],
+  "schedule": [ { "id": "sc1", "day": 1, "period": 1, "subject": "语文", "class": "一班", "weekType": "both" } ],
+  "seating": { "rows": 5, "cols": 6, "seats": [ { "r": 0, "c": 0, "studentId": "m3abc01" } ] },
+  "duty": [ { "id": "d1", "week": "2026-W42", "group": 1, "tasks": [ { "position": "扫地", "assigneeId": "m3abc01", "completed": false } ] } ],
+  "violations": [ { "id": "v1", "studentId": "m3abc01", "date": "2026-10-19", "event": "迟到", "action": "提醒" } ],
+  "communications": [ { "id": "c1", "studentId": "m3abc02", "date": "2026-10-19", "method": "电话", "content": "反馈", "followUp": "" } ],
+  "grades": [ { "id": "g1", "examName": "期中", "subject": "语文", "date": "2026-10-19", "scores": { "m3abc01": 95 } } ],
+  "exams": [
+    { "id": "e1", "name": "期中考试", "date": "2026-10-19", "subjects": ["语文"], "students": [ { "id": "m3abc01", "total": 95 } ], "stats": { "avg": 95 } },
+    { "id": "e2", "name": "月考", "date": "2026-10-01", "subjects": ["语文", "数学"], "students": [], "stats": null }
+  ],
+  "homework": [ { "id": "h1", "date": "2026-10-19", "subject": "语文", "title": "背诵", "records": { "m3abc01": { "status": "completed" } } } ],
+  "points": [ { "id": "p1", "studentId": "m3abc01", "points": 1, "type": "add", "reason": "值日", "date": "2026-10-19" } ],
+  "drafts": { "notices": [ { "id": "dn1", "title": "放假", "content": "通知", "date": "2026-10-19" } ], "comments": [] },
+  "activities": [ { "id": "a1", "title": "运动会", "date": "2026-10-19", "content": "", "images": ["data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg=="] } ],
+  "behaviors": [ { "id": "b1", "studentId": "m3abc01", "date": "2026-10-19", "type": "good", "level": 1, "title": "助人", "description": "", "images": [] } ],
+  "committee": [ { "id": "cm1", "studentId": "m3abc02", "position": "班长" } ],
+  "settings": { "subjects": ["语文"], "mySubjects": ["语文"], "tags": ["学优生"], "dutyPositions": ["扫地"], "weekType": "single" }
+}
