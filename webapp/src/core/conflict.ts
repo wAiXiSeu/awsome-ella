@@ -21,10 +21,3 @@ function tieBreak(local: RowBase, incoming: RowBase): boolean {
 
 /** ISO strings compare lexicographically: all server stamps are UTC `timestamptz` rendered with `Z`. */
 export function isoMax(a: string, b: string): string { return a >= b ? a : b }
-
-/** Highest server stamp among rows; null when none is stamped yet. */
-export function maxUpdatedAt(rows: RowBase[]): string | null {
-  let max: string | null = null
-  for (const r of rows) if (typeof r.updatedAt === 'string') max = max === null ? r.updatedAt : isoMax(max, r.updatedAt)
-  return max
-}
