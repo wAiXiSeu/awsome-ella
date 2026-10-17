@@ -24,6 +24,7 @@ async function mk(withGw = true) {
   const engine = new SyncEngine({
     store, outbox, meta, gateway, ownerUid: () => 'u-1',
     now: () => t, setTimeoutFn: (fn) => { timers.push(fn); return timers.length }, clearTimeoutFn: () => {},
+    images: null,
   })
   return {
     db, store, outbox, gateway, engine,
@@ -78,5 +79,20 @@ describe('SyncEngine.push (spec §5.1/§5.2/§7)', () => {
     await store.put('notes', { id: 'n1' })
     expect(await engine.pushOnce()).toBe(0)
     expect(await outbox.count()).toBe(1)
+  })
+
+  it('upload_image entries are routed away from upsertRows (never sent as rows)', async () => {
+    const m = await mk()
+    const { db, store, outbox, gateway, engine } = m
+    await store.put('notes', { id: 'n1', title: 'a' })
+    await db.outbox.put({ seq: 99, table: '__image__', recordId: 'img-x', op: 'upload_image',
+      payload: { imageId: 'img-x', objectPath: 'albums/img-x', seq: 99, deviceId: 'dev-A' },
+      attempts: 0, nextAttemptAt: 0, blocked: false })
+    expect(await engine.pushOnce()).toBe(1)                    // only the row pushed
+    expect(gateway!.uploadCalls.length).toBe(0)                // images: null → nothing uploaded
+    expect(gateway!.upsertCalls.length).toBe(1)
+    expect(gateway!.upsertCalls[0].rows.map(r => r.id)).toEqual(['n1'])
+    expect(JSON.stringify(gateway!.upsertCalls[0].rows)).not.toContain('imageId')
+    expect(await outbox.count()).toBe(1)                       // upload kept queued, marked failed
   })
 })

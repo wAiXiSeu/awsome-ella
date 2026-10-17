@@ -20,6 +20,8 @@ export interface SyncEngineDeps {
   now: () => number
   setTimeoutFn: (fn: () => void, ms: number) => unknown
   clearTimeoutFn: (h: unknown) => void
+  /** Blob store adapter (Task 12). Null in tests/UI shells that never touch images. */
+  images: { getBlob(id: string): Promise<Blob | undefined>; markUploaded(id: string): Promise<void> } | null
 }
 
 const BATCH = 50
@@ -48,9 +50,30 @@ export class SyncEngine {
     const ready = await this.d.outbox.listReady(now, BATCH)
     if (!ready.length) return 0
 
+    // Blob uploads go first: an entry takes its seq at add time, so any row that references
+    // the object has a higher seq and pushes after the object exists (spec §5.5).
+    const uploads = ready.filter(e => e.op === 'upload_image')
+    const rest = ready.filter(e => e.op !== 'upload_image')
     let pushed = 0
+    for (const e of uploads) {
+      const p = e.payload as { imageId: string; objectPath: string }
+      if (!this.d.images) { await this.d.outbox.markFailed(e.seq, 'no image store', backoffDelay(e.attempts), this.d.now()); continue }
+      const blob = await this.d.images.getBlob(p.imageId)
+      try {
+        if (!blob) throw new PermissionDeniedError('local blob missing for ' + p.imageId) // unrecoverable → blocked + surfaced (spec §7)
+        await this.d.gateway.uploadObject(p.objectPath, blob)
+        await this.d.images.markUploaded(p.imageId)
+        await this.d.outbox.markDone(e.seq)
+        pushed++
+        this.lastError = null
+      } catch (err) {
+        if (err instanceof PermissionDeniedError) { await this.d.outbox.markBlocked(e.seq, String(err)); this.lastError = String(err) }
+        else { await this.d.outbox.markFailed(e.seq, String(err), backoffDelay(e.attempts), this.d.now()); this.scheduleRetry() }
+      }
+    }
+
     const byTable = new Map<string, OutboxEntry[]>()
-    for (const e of ready) {
+    for (const e of rest) {
       const arr = byTable.get(e.table) ?? []
       arr.push(e)
       byTable.set(e.table, arr)

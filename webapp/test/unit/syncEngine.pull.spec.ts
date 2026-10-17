@@ -38,6 +38,7 @@ async function mk() {
   const engine = new SyncEngine({
     store, outbox: new Outbox(db), meta, gateway, ownerUid: () => 'u-1',
     now: () => 0, setTimeoutFn: () => 0, clearTimeoutFn: () => {},
+    images: null,
   })
   return { db, meta, store, gateway, engine }
 }
