@@ -8,7 +8,7 @@ export function incomingWins(local: RowBase | null, incoming: RowBase): boolean 
   if (!local) return true
   const lu = local.updatedAt, iu = incoming.updatedAt
   if (lu === null && iu === null) return tieBreak(local, incoming)
-  if (lu === null) return false   // unpushed local yields: only server stamps count (spec §5.4)
+  if (lu === null) return true    // local never confirmed by the server: server-stamped data wins (spec §5.4)
   if (iu === null) return false   // unstamped incoming never overwrites a stamped local
   if (lu !== iu) return iu > lu
   return tieBreak(local, incoming)

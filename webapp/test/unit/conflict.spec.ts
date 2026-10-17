@@ -17,8 +17,11 @@ describe('incomingWins (spec §5.4)', () => {
     expect(incomingWins(R({ deviceId: 'BBB' }), R({ deviceId: 'CCC' }))).toBe(true))
   it('fully equal: incoming wins (idempotent put, no jitter)', () =>
     expect(incomingWins(R(), R())).toBe(true))
+  // Plan Task 4 wrote `false` here while its own title, its prose rule (plan line 362), Task 5,
+  // Task 7 and acceptance criterion A2 all require the opposite: a row the server has never
+  // confirmed must yield to server-stamped data, otherwise two devices can never converge.
   it('unpushed local (updatedAt null) loses to any stamped incoming', () =>
-    expect(incomingWins(R({ updatedAt: null, seq: 999 }), R({ updatedAt: '2020-01-01T00:00:00Z', seq: 1 }))).toBe(false))
+    expect(incomingWins(R({ updatedAt: null, seq: 999 }), R({ updatedAt: '2020-01-01T00:00:00Z', seq: 1 }))).toBe(true))
   it('incoming without stamp never overwrites stamped local', () =>
     expect(incomingWins(R({ updatedAt: '2026-10-17T00:00:00Z' }), R({ updatedAt: null }))).toBe(false))
   it('both unstamped: falls through to seq then deviceId', () => {
