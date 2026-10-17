@@ -3,7 +3,7 @@ import type { Table } from 'dexie'
 import { openDb, type WbDb } from '../../src/core/db'
 import { MetaStore } from '../../src/core/meta'
 import { LocalStore } from '../../src/core/localStore'
-import type { Row, RowBase } from '../../src/core/types'
+import type { Row } from '../../src/core/types'
 
 async function makeLocal(db: WbDb) {
   await db.registerTable('notes')
@@ -51,7 +51,7 @@ describe('LocalStore write path (spec §5.1)', () => {
     expect(raw!.deletedAt).not.toBeNull()
     const ob = await db.outbox.toArray()
     expect(ob[1].op).toBe('delete')
-    expect((ob[1].payload as RowBase).deletedAt).not.toBeNull()
+    expect((ob[1].payload as Row).deletedAt).not.toBeNull()
   })
 
   it('pendingCount mirrors outbox size', async () => {
