@@ -16,28 +16,45 @@ export interface TableDef {
   photoColumn?: string               // single dataURL -> blob store (students.photo)
   fkColumns?: string[]               // studentId values remapped to derived uuids
   jsonColumns?: string[]             // fields stored as jsonb
+  /** Remote column types keyed by the JS field name; anything unlisted is `text` (spec §4). */
+  sql?: Record<string, 'uuid' | 'jsonb' | 'boolean' | 'double precision'>
 }
 
 export const TABLE_DEFS: TableDef[] = [
   { name: 'students', legacyKey: 'students',
     columns: ['name', 'studentNo', 'gender', 'primarySchool', 'address', 'guardian1Name', 'guardian1Phone', 'guardian2Name', 'guardian2Phone', 'group', 'tags', 'notes', 'photoPath', 'guardian1Email'],
-    dropColumns: ['idCard'], photoColumn: 'photo', jsonColumns: ['tags'] },
+    dropColumns: ['idCard'], photoColumn: 'photo', jsonColumns: ['tags'],
+    sql: { tags: 'jsonb', group: 'double precision' } },
   { name: 'notices', legacyKey: 'drafts', legacySubKey: 'notices', columns: ['title', 'content', 'date'] },
   { name: 'comments', legacyKey: 'drafts', legacySubKey: 'comments', columns: ['title', 'content', 'date'] },
-  { name: 'todos', legacyKey: 'todos', columns: ['title', 'content', 'deadline', 'priority', 'category', 'completed'] },
-  { name: 'schedule', legacyKey: 'schedule', columns: ['day', 'period', 'subject', 'class', 'weekType'] },
-  { name: 'seating', legacyKey: 'seating', singleton: true, columns: ['rows', 'cols', 'seats'], jsonColumns: ['seats'] },
-  { name: 'duty', legacyKey: 'duty', columns: ['week', 'group', 'tasks'], jsonColumns: ['tasks'] },
-  { name: 'violations', legacyKey: 'violations', columns: ['studentId', 'date', 'event', 'action'], fkColumns: ['studentId'] },
-  { name: 'communications', legacyKey: 'communications', columns: ['studentId', 'date', 'method', 'content', 'followUp'], fkColumns: ['studentId'] },
-  { name: 'grades', legacyKey: 'grades', columns: ['examName', 'subject', 'date', 'scores'], jsonColumns: ['scores'] },
-  { name: 'exams', legacyKey: 'exams', columns: ['name', 'date', 'subjects', 'students', 'stats'], jsonColumns: ['subjects', 'students', 'stats'] },
-  { name: 'homework', legacyKey: 'homework', columns: ['date', 'subject', 'title', 'records'], jsonColumns: ['records'] },
-  { name: 'points', legacyKey: 'points', columns: ['studentId', 'points', 'type', 'reason', 'date'], fkColumns: ['studentId'] },
-  { name: 'activities', legacyKey: 'activities', columns: ['title', 'date', 'content', 'imagePaths'], imageColumns: ['images'] },
-  { name: 'behaviors', legacyKey: 'behaviors', columns: ['studentId', 'date', 'type', 'level', 'title', 'description', 'imagePaths'], imageColumns: ['images'], fkColumns: ['studentId'] },
-  { name: 'committee', legacyKey: 'committee', columns: ['studentId', 'position'], fkColumns: ['studentId'] },
-  { name: 'settings', legacyKey: 'settings', singleton: true, columns: ['subjects', 'mySubjects', 'tags', 'dutyPositions', 'weekType'], jsonColumns: ['subjects', 'mySubjects', 'tags', 'dutyPositions'] },
+  { name: 'todos', legacyKey: 'todos', columns: ['title', 'content', 'deadline', 'priority', 'category', 'completed'],
+    sql: { completed: 'boolean' } },
+  { name: 'schedule', legacyKey: 'schedule', columns: ['day', 'period', 'subject', 'class', 'weekType'],
+    sql: { day: 'double precision', period: 'double precision' } },
+  { name: 'seating', legacyKey: 'seating', singleton: true, columns: ['rows', 'cols', 'seats'], jsonColumns: ['seats'],
+    sql: { rows: 'double precision', cols: 'double precision', seats: 'jsonb' } },
+  { name: 'duty', legacyKey: 'duty', columns: ['week', 'group', 'tasks'], jsonColumns: ['tasks'],
+    sql: { group: 'double precision', tasks: 'jsonb' } },
+  { name: 'violations', legacyKey: 'violations', columns: ['studentId', 'date', 'event', 'action'], fkColumns: ['studentId'],
+    sql: { studentId: 'uuid' } },
+  { name: 'communications', legacyKey: 'communications', columns: ['studentId', 'date', 'method', 'content', 'followUp'], fkColumns: ['studentId'],
+    sql: { studentId: 'uuid' } },
+  { name: 'grades', legacyKey: 'grades', columns: ['examName', 'subject', 'date', 'scores'], jsonColumns: ['scores'],
+    sql: { scores: 'jsonb' } },
+  { name: 'exams', legacyKey: 'exams', columns: ['name', 'date', 'subjects', 'students', 'stats'], jsonColumns: ['subjects', 'students', 'stats'],
+    sql: { subjects: 'jsonb', students: 'jsonb', stats: 'jsonb' } },
+  { name: 'homework', legacyKey: 'homework', columns: ['date', 'subject', 'title', 'records'], jsonColumns: ['records'],
+    sql: { records: 'jsonb' } },
+  { name: 'points', legacyKey: 'points', columns: ['studentId', 'points', 'type', 'reason', 'date'], fkColumns: ['studentId'],
+    sql: { studentId: 'uuid', points: 'double precision' } },
+  { name: 'activities', legacyKey: 'activities', columns: ['title', 'date', 'content', 'imagePaths'], imageColumns: ['images'],
+    sql: { imagePaths: 'jsonb' } },
+  { name: 'behaviors', legacyKey: 'behaviors', columns: ['studentId', 'date', 'type', 'level', 'title', 'description', 'imagePaths'], imageColumns: ['images'], fkColumns: ['studentId'],
+    sql: { studentId: 'uuid', level: 'double precision', imagePaths: 'jsonb' } },
+  { name: 'committee', legacyKey: 'committee', columns: ['studentId', 'position'], fkColumns: ['studentId'],
+    sql: { studentId: 'uuid' } },
+  { name: 'settings', legacyKey: 'settings', singleton: true, columns: ['subjects', 'mySubjects', 'tags', 'dutyPositions', 'weekType'], jsonColumns: ['subjects', 'mySubjects', 'tags', 'dutyPositions'],
+    sql: { subjects: 'jsonb', mySubjects: 'jsonb', tags: 'jsonb', dutyPositions: 'jsonb' } },
 ]
 
 export function tableDef(name: string): TableDef | undefined { return TABLE_DEFS.find(d => d.name === name) }
